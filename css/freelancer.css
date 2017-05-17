@@ -524,3 +524,13 @@ div#maincontent {
 .modal-body img {
   width: 100%;
 }
+
+.press {
+  background: #2C3E50; 
+  color: white;
+  font-style: italic;
+}
+
+.press a {
+  color: white;
+}
