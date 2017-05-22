@@ -539,3 +539,7 @@ div#maincontent {
   color: white; 
   text-decoration: underline
 }
+
+h5 {
+  text-align: center;
+}
