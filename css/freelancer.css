@@ -543,3 +543,8 @@ div#maincontent {
 h5 {
   text-align: center;
 }
+
+#contact a {
+  color: white; 
+  text-decoration: underline;
+}
