@@ -548,3 +548,8 @@ h5 {
   color: white; 
   text-decoration: underline;
 }
+
+.btn {
+  background-color: #A85253;
+  color: white;
+}
