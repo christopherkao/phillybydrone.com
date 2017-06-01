@@ -553,3 +553,8 @@ h5 {
   background-color: #A85253;
   color: white;
 }
+
+.logos img {
+  max-width: 150px;
+  padding: 10px;
+}
