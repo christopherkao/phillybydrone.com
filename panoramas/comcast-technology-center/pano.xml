@@ -35,7 +35,7 @@
 
 	<scene name="scene_35" title="Floor 35" onstart="" lat="" lng="" heading="">
 		<!-- view settings -->
-		<view hlookat="60" vlookat="0" fovtype="MFOV" fov="75" fovmin="45" fovmax="90" vlookatmax="-25" vlookatmin="90" limitview="range"/>
+		<view hlookat="330" vlookat="0" fovtype="MFOV" fov="75" fovmin="45" fovmax="90" vlookatmax="-25" vlookatmin="90" limitview="range"/>
 
 		<preview url="pano.tiles/preview.jpg" />
 
