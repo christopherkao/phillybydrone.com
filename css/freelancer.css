@@ -70,7 +70,7 @@ header {
   text-align: center;
   /*background: #A85253;*/
   /*background: url("../img/portfolio/penn-college-hall.jpg");*/
-  background: url("../img/portfolio/high-res-comcast-technology-center.jpg");
+  /*background: url("../img/portfolio/high-res-comcast-technology-center.jpg");*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -535,6 +535,15 @@ div#maincontent {
   color: white;
 }
 
+.value {
+  background: #567B8E;
+  color: white;
+}
+
+.value a {
+  color: white;
+}
+
 .success a {
   color: white; 
   text-decoration: underline
@@ -555,6 +564,6 @@ h5 {
 }
 
 .logos img {
-  max-width: 150px;
+  max-width: 125px;
   padding: 10px;
 }
