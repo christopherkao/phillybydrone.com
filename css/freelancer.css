@@ -13,6 +13,9 @@ p {
 p.small {
   font-size: 16px;
 }
+ol li {
+  font-size: 20px;
+}
 a,
 a:hover,
 a:focus,
@@ -69,7 +72,6 @@ hr.star-primary:after {
 header {
   text-align: center;
   /*background: #A85253;*/
-  /*background: url("../img/portfolio/penn-college-hall.jpg");*/
   /*background: url("../img/portfolio/high-res-comcast-technology-center.jpg");*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -566,4 +568,12 @@ h5 {
 .logos img {
   max-width: 125px;
   padding: 10px;
+}
+
+iframe {
+  border: 0px;
+}
+
+header {
+  background-color: #A85253;
 }
