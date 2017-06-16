@@ -577,3 +577,30 @@ iframe {
 header {
   background-color: #A85253;
 }
+
+#aerial-panoramas { 
+  background: #567B8E;
+  color: white;
+}
+
+#aerial-panoramas a {
+  color: white;
+}
+
+#aerial-photography {
+  background: #2C3E50;
+  color: white;
+}
+
+#aerial-photography a {
+  color: white;
+}
+
+#aerial-cinematography {
+  background: #233140;
+  color: white;
+}
+
+#aerial-cinematography a {
+  color: white;
+}
