@@ -71,8 +71,9 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  /*background: #A85253;*/
-  /*background: url("../img/portfolio/high-res-comcast-technology-center.jpg");*/
+  height: 600px;
+  background: url("../img/portfolio/schuylkill-yards.jpg");
+  background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -387,6 +388,14 @@ fieldset[disabled] .btn-primary.active {
   background-color: #A85253;
   border-color: #A85253;
 }
+
+.btn:focus,
+.btn:hover {
+  color: white;
+  background-color: #96494a;
+  border-color: #96494a;
+}
+
 .btn-success:active,
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
@@ -558,6 +567,16 @@ h5 {
 #contact a {
   color: white; 
   text-decoration: underline;
+}
+
+#contact {
+  background-color: #2C3E50;
+  color: white;
+}
+
+#contact textarea,
+#contact input {
+  color: white;
 }
 
 .btn {
