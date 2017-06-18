@@ -106,7 +106,7 @@ h4 {
 	display: block;
 	width: 100%;
 	height: 127px;
-	background: #2D257D url(../_images/logo_schuylkill.png) no-repeat top center;
+	background: #2D257D url(../images/logo_schuylkill.png) no-repeat top center;
 	background-size: 170px 127px;
 	text-decoration: none;
 }
