@@ -21,8 +21,6 @@
 	               controlbar_offset="0"
 	               />
 
-   <control mousefovchange="0.0" />
-
 	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
 	
 	<action name="startup">
