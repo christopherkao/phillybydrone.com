@@ -1,0 +1,1 @@
+Prepare templates for other buildings that will be shooting during sunset today.
