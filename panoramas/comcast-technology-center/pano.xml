@@ -4,7 +4,9 @@
 	<include url="skin/vtourskin.xml" />
 	
 	<!-- set skin settings: bingmaps? gyro? thumbnail controlling? tooltips? -->
-	<skin_settings bingmaps="false"
+	<skin_settings mousetype="moveto"
+								 mousefovchange="0" 
+								 bingmaps="false"
 	               bingmaps_key=""
 	               bingmaps_zoombuttons="false"
 	               gyro="true"
