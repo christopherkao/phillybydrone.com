@@ -71,8 +71,8 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  height: 600px;
-  background: url("../img/portfolio/schuylkill-yards.jpg");
+  /*height: 600px;*/
+  /*background: url("../img/portfolio/schuylkill-yards.jpg");*/
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
