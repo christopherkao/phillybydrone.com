@@ -72,7 +72,7 @@ hr.star-primary:after {
 header {
   text-align: center;
   /*height: 600px;*/
-  background: url("../img/portfolio/schuylkill-yards.jpg");
+  background: url("../img/portfolio/comcast-cover-photo.jpg");
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -585,7 +585,7 @@ h5 {
 }
 
 .logos img {
-  max-width: 125px;
+  width: 100px;
   padding: 10px;
 }
 
