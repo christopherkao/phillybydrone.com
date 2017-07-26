@@ -585,8 +585,8 @@ h5 {
 }
 
 .logos img {
-  width: 100px;
-  padding: 10px;
+  max-width: 100px;
+  padding: 5px;
 }
 
 iframe {
