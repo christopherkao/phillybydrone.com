@@ -71,7 +71,6 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  /*height: 600px;*/
   background: url("../img/portfolio/comcast-cover-photo.jpg");
   background-position: center;
   -webkit-background-size: cover;

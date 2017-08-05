@@ -1,0 +1,10 @@
+header {
+  text-align: center;
+  background: url("../img/portfolio/seven-tower-bridge-cover-photo.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
