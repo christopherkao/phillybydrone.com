@@ -1,0 +1,14 @@
+header {
+  text-align: center;
+  background: url("../img/portfolio/rail-park-cover-photo.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+.col-sm-6 {
+  margin-bottom: 20px;
+}
