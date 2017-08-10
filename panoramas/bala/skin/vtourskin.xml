@@ -1318,7 +1318,7 @@ tween(hotspot[pop20-name].alpha,1);
 
 	<!-- context menu - http://krpano.com/docu/xml/#contextmenu -->
 	<contextmenu>
-		<item name="ab" caption="Created by AboveInteractive.com" onclick="openurl(http://aboveinteractive.com);"/>
+		<item name="ab" caption="Created by PhillyByDrone.com" onclick="openurl(http://aboveinteractive.com);"/>
 		<item name="fs" caption="FULLSCREEN" />
 		<item name="cc" caption="Change Controlmode" onclick="skin_changecontrolmode();"  separator="true" />
 		<item name="nv" caption="Normal View"        onclick="skin_view_normal();"        showif="view.vlookatrange == 180" separator="true"      />
