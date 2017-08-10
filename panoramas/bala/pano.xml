@@ -3,6 +3,7 @@
 	<!-- the skin -->
 	<include url="skin/vtourskin.xml" />
 	<include url="skin/custom.xml" />
+	<include url="grid-settings.xml"/>
 	
 	<!-- set skin settings: bingmaps? gyro? thumbnail controlling? tooltips? -->
 	<!-- <skin_settings bingmaps="false"
@@ -23,7 +24,7 @@
 	               /> -->
 
 	               <!-- This is the skin_settings where hs_anim_delay is set. -->
-  <skin_settings maps="true" maps_type="" custom_map="false" menu-btn="true" map-btn="false" navxoffset="0" vr-icon-xoffset="-106" hs_delay="0" hs_anim_delay="0" bg_type="stretch" corporate_logo="true" corp-logo-xoffset="10" project_logo="true" zoom_buttons="false" speak_buttons="false" password="false" start_screen="false" maps_bing_api_key="" maps_zoombuttons="false" maps_zoom="25" share-btn="false" gyro="true" arrows_html="true" title="1" grid_button="false" littleplanetintro="false"/>
+  <skin_settings maps="true" maps_type="" custom_map="false" menu-btn="true" map-btn="false" navxoffset="0" vr-icon-xoffset="-106" hs_delay="0" hs_anim_delay="0" bg_type="stretch" corporate_logo="true" corp-logo-xoffset="10" project_logo="true" zoom_buttons="false" speak_buttons="false" password="false" start_screen="false" maps_bing_api_key="" maps_zoombuttons="false" maps_zoom="25" share-btn="false" gyro="true" arrows_html="true" title="1" grid_button="false" littleplanetintro="true"/>
 
 	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
 	
@@ -32,9 +33,14 @@
 		loadscene(get(startscene), null, MERGE);
 	</action>
 
-	<scene name="scene_bala_projects" title="BALA Projects" onstart="" lat="" lng="" heading="">
+	<scene name="scene_bala_projects" title="BALA Projects" lat="" lng="" heading="" onstart="if(skin_settings.littleplanetintro, set(view.hlookat,-15); set(view.vlookat,12.864); set(view.fov,70); if(device.mobile,set(skin_settings.hs_anim_delay,13 );  delayedcall(6,chooser();););  set(hotspot[anim-logo].visible,true); , set(view.hlookat,20); set(view.vlookat,25); set(view.fov,112.683);  set(hotspot[anim-logo].visible,false); );">
+
+		<view hlookat="7.595" vlookat="25.821" fovtype="MFOV" fov="75" maxpixelzoom=".7" fovmin="70" fovmax="140" limitview="auto" />
+
+
 		<!-- view settings -->
-		<view hlookat="60" vlookat="0" fovtype="MFOV" fov="75" fovmin="45" fovmax="90" vlookatmax="-25" vlookatmin="90" limitview="range"/>
+		<!-- <view hlookat="60" vlookat="0" fovtype="MFOV" fov="75" fovmin="45" fovmax="90" vlookatmax="-25" vlookatmin="90" limitview="range"/> -->
+
 
 		<preview url="pano.tiles/preview.jpg" />
 

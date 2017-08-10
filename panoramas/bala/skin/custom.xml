@@ -27,7 +27,7 @@
 	
 
 	<autorotate enabled="false" waittime="0" accel="1.0" speed="1.0" horizon="0.0"/>	
-	<!-- <include url="custom/webvr.xml" devices="html5" /> -->
+	<include url="custom/webvr.xml" devices="html5" />
 	<plugin name="WebVR" keep="true" devices="html5"
 	        pluginurl="%SWFPATH%/plugins/webvr.js"
 	        url=""
@@ -376,7 +376,7 @@ webvr.enterVR
 		</layer>
         <layer name="gallery-icon" keep="true" style="skin_glow" url="img/gallery-icon.png"  x="50" x.mobile="55"  y="13" align="rightbottom" scale=".2" onclick="show_gallery(get(galleryname))" galleryname="gallery1" />
 		 
-		<layer name="html-skin_btn_corp"      keep="true"  style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom"      x="get:skin_settings.corp-logo-xoffset" y="0" ox="-10" oy="-5"  scale=".24" onclick="openurl(https://www.hfflp.com/locations/austin.aspx ,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
+		<layer name="html-skin_btn_corp"      keep="true"  style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom"      x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="1" onclick="openurl(https://www.bala.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
 		
 		<layer name="above-vr-logo" url="img/above-vr.png" keep="true" preload="false" visible="" onloaded="if(skin_settings.corporate_logo,set(visible,false),set(visible,true));" enabled="true" zorder="1" alpha="1" blendmode="normal" smoothing="true" align="leftbottom" edge="" x="-4" y="1" ox="0" oy="0" width="140" height="62" crop="" ondowncrop="" onovercrop="" scale="0.666"  rotate="0" parent="" mask=""  onover="" onhover="" onout="" ondown="" onup="" aboutstate="1"  onclick="if(aboutstate == 1, open-about(), close-about()); "/>
 		

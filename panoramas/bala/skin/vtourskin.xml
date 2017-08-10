@@ -423,6 +423,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 			  );
 		  );
 
+		 <!-- This is the line that allows logos to show up -->
 		if(skin_settings.littleplanetintro AND (device.webgl OR device.flash),
 			skin_setup_littleplanetintro();
 		  );
@@ -529,7 +530,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 		zoomToSpotsExtent();
 	</action>
 
-
+	<!-- For some reason we have to set littleplanetintro to true to run this method which then generates the logos for HFF and 800 Brazos. Otherwise no logs if littleplanetintro is false. -->
 	<action name="skin_setup_littleplanetintro">
 	delayedcall(1, hsp-hide(); );
 		copy(lp_scene, xml.scene);
