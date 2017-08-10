@@ -119,7 +119,8 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	onout="tween(scale,.5,.2); "    enabled="true" onclick=" if(linkedscene,  activatepano(get(linkedscene));  skin_updatescroll(); );"  />
 	<style name="vr_style"  keep="true" depth="800" scale=".1" distorted="true"  alpha="0" width="180" height="180" 	ox="0" oy="0"  onover="tween(scale,.4,.1);" onout="tween(scale,.30,.2);"    enabled="true" onclick=" multi_off_fix(); if(linkedscene,  activatepano(get(linkedscene));  skin_updatescroll(); );"  />
 
-    <style name="popup" url="custom/vtourskin_hotspot_multi.png" alpha="0" scale="0.5"  onover="tween(rotate,135); set(hotspot[popup-img].ath,get(ath) ); set(hotspot[popup-img].atv,get(atv) ); set(hotspot[popup-img].url,get(img-url) );  tween(hotspot[popup-img].scale,.35); tween(hotspot[popup-img].alpha,1);" onout="tween(rotate,0); tween(hotspot[popup-img].scale,0); tween(hotspot[popup-img].alpha,0);"
+<!-- Change the popup-img scale to make it bigger -->
+    <style name="popup" url="custom/vtourskin_hotspot_multi.png" alpha="0" scale="0.5"  onover="tween(rotate,135); set(hotspot[popup-img].ath,get(ath) ); set(hotspot[popup-img].atv,get(atv) ); set(hotspot[popup-img].url,get(img-url) );  tween(hotspot[popup-img].scale,.65); tween(hotspot[popup-img].alpha,1);" onout="tween(rotate,0); tween(hotspot[popup-img].scale,0); tween(hotspot[popup-img].alpha,0);"
     onclick="if(device.touch, if(rotate==135,tween(rotate,0); tween(hotspot[popup-img].alpha,0); tween(hotspot[popup-img].scale,0); , popup-close();  tween(rotate,135); set(hotspot[popup-img].ath,get(ath) ); set(hotspot[popup-img].atv,get(atv) ); set(hotspot[popup-img].url,get(img-url) );  set(hotspot[popup-img].scale,0); set(hotspot[popup-img].alpha,0); tween(hotspot[popup-img].scale,.35); tween(hotspot[popup-img].alpha,1); ); );"
 	
 	onloaded="delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear,set(enabled,true);); ); "
