@@ -86,7 +86,7 @@
 		<!-- <view hlookat="60" vlookat="0" fovtype="MFOV" fov="50" fovmin="45" fovmax="90" vlookatmax="-25" vlookatmin="90" limitview="range"/> -->
 
 
-		<!-- <preview url="pano.tiles/preview.jpg" /> -->
+		<preview url="panos/schuylkill_yards.tiles/preview.jpg" />
 
 		<image>
 			<cube url="panos/schuylkill_yards.tiles/pano_%s.jpg" />
