@@ -388,6 +388,11 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	<!-- skin actions -->
 	<action name="skin_startup">
 
+		<!-- This is the line that allows logos to show up -->
+		if(skin_settings.littleplanetintro AND (device.webgl OR device.flash),
+			skin_setup_littleplanetintro();
+	  );
+	  
 		<!-- apply skin settings on startup -->
 		if(skin_settings.thumbs,
 			if(skin_settings.thumbs_opened, set(layer[skin_thumbs].state,'opened'); set(layer[skin_thumbs_container].visible,true); );
@@ -421,11 +426,6 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 					set(layer[skin_map].url, '%SWFPATH%/plugins/googlemaps.js');
 				  );
 			  );
-		  );
-
-		 <!-- This is the line that allows logos to show up -->
-		if(skin_settings.littleplanetintro AND (device.webgl OR device.flash),
-			skin_setup_littleplanetintro();
 		  );
 
 		skin_addthumbs();
