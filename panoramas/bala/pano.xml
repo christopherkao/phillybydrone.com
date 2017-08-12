@@ -3,49 +3,93 @@
 	<!-- the skin -->
 	<include url="skin/vtourskin.xml" />
 	<include url="skin/custom.xml" />
-	<include url="grid-settings.xml"/>
-	
-	<!-- set skin settings: bingmaps? gyro? thumbnail controlling? tooltips? -->
-	<!-- <skin_settings bingmaps="false"
-	               bingmaps_key=""
-	               bingmaps_zoombuttons="false"
-	               gyro="true"
-	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
-	               thumbs_opened="false"
-	               thumbs_text="false"
-	               thumbs_dragging="true"
-	               thumbs_onhoverscrolling="false"
-	               thumbs_scrollbuttons="false"
-	               thumbs_scrollindicator="false"
-	               tooltips_thumbs="false"
-	               tooltips_hotspots="false"
-	               tooltips_mapspots="false"
-	               controlbar_offset="0"
-	               /> -->
+	<include url="plugins/swipe_gallery.xml" />
+	<!-- <include url="grid-settings.xml"/> -->
 
-	               <!-- This is the skin_settings where hs_anim_delay is set. -->
-  <skin_settings maps="true" maps_type="" custom_map="false" menu-btn="true" map-btn="false" navxoffset="0" vr-icon-xoffset="-106" hs_delay="0" hs_anim_delay="0" bg_type="stretch" corporate_logo="true" corp-logo-xoffset="10" project_logo="true" zoom_buttons="false" speak_buttons="false" password="false" start_screen="false" maps_bing_api_key="" maps_zoombuttons="false" maps_zoom="25" share-btn="false" gyro="true" arrows_html="true" title="1" grid_button="false" littleplanetintro="true"/>
+	<!-- This is the skin_settings where hs_anim_delay is set. -->
+  <skin_settings maps="true"
+	               maps_type=""
+	               custom_map="false"	
+				   			 menu-btn="true"
+				         map-btn="false"
+				         navxoffset="0"
+				         vr-icon-xoffset="-106"
+				  
+				   			 hs_delay="1"
+				   			 hs_anim_delay="10"
+				   			 bg_type="stretch"
+				   			 corporate_logo="true"
+				   			 corp-logo-xoffset="10"
+				   			 project_logo="true"
+				   
+				   			 zoom_buttons="false"	
+				   			 speak_buttons="false"
+				   			 password="false"
+				   			 start_screen="false"
+				   			 maps_bing_api_key=""
+	               maps_zoombuttons="false"
+				   			 maps_zoom="25"
+				   			 share-btn="false"
+	               gyro="true"
+	               arrows_html="true"
+				   			 title="1" 
+				   			 grid_button="false"
+				    		 littleplanetintro="true"
+	               />
 
 	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
 	
 	<action name="startup">
-		if(startscene === null, copy(startscene,scene[0].name));
-		loadscene(get(startscene), null, MERGE);
+		delayedcall(1, intro-page(););
 	</action>
 
-	<scene name="scene_schuylkill_yards" title="BALA Projects" lat="" lng="" heading="" onstart="if(skin_settings.littleplanetintro, set(view.hlookat,-15); set(view.vlookat,12.864); set(view.fov,70); if(device.mobile,set(skin_settings.hs_anim_delay,13 );  delayedcall(6,chooser();););  set(hotspot[anim-logo].visible,true); , set(view.hlookat,20); set(view.vlookat,25); set(view.fov,112.683);  set(hotspot[anim-logo].visible,false); );" thumburl="schuylkill_yards.tiles/thumb.png">
+	<action name="intro-page">
 
-		<view hlookat="7.595" vlookat="25.821" fovtype="MFOV" fov="75" maxpixelzoom=".7" fovmin="70" fovmax="140" limitview="auto" />
+		if(skin_settings.start_screen,
+ 	 		if(device.html, splash(); , flashsplash(); );,
+ 			set(layer[intro-con].visible,false);
+			set(intro_done,true);
+  		if(device.html, choose(); , flash-choose();); 
+ 			hs_int(); 
+ 	); 
+
+</action>
+
+	<layer name="gallery" type="container" zorder="500" align="center" width="100%" height="100%" alpha="0" autoalpha="true" bgcolor="0x000000" bgalpha="0.8" keep="true">
+		<layer name="gallery_scrollarea" url="%SWFPATH%/plugins/scrollarea.swf" alturl="%SWFPATH%/plugins/scrollarea.js" keep="true" align="left" width="0" height="100%" zorder="1" direction="h" ondown="set(gallery_scrollarea_start_pos, get(x))">
+		</layer>
+		<layer name="arrow_left"  align="left"  x="10" keep="true" visible="false" zorder="2" scale.mobile=".35" onclick="move_image(left)" url="skin/img/gallery/arrow_left.png"  />
+		<layer name="arrow_right" align="right" x="10" keep="true" visible="false" zorder="2" scale.mobile=".35" onclick="move_image(right)" url="skin/img/gallery/arrow_right.png" />
+		<layer name="gallery_close" align="righttop" x="10" y="10" keep="true" zorder="2" scale.mobile=".35" onclick="hide_gallery()" url="skin/img/gallery/close.png" />
+	</layer>
+
+	<style name="hs_gallery"
+		url="skin/img/gallery/hs_gallery.png"
+		onclick="show_gallery(get(galleryname))"
+		onhover="showtext(get(gallery[get(galleryname)].title))"
+	/>
+
+	<gallery name="gallery1" title="Title of gallery 1">
+		<img name="img1" url="skin/img/gallery/01.jpg" title="" />
+		<img name="img2" url="skin/img/gallery/02.jpg" title="" />
+		<img name="img3" url="skin/img/gallery/03.jpg" title="" />
+		<img name="img4" url="skin/img/gallery/04.jpg" title="" />
+		<img name="img5" url="skin/img/gallery/05.jpg" title="" />
+	</gallery>
+
+	<scene name="scene_schuylkill_yards" title="BALA Projects" lat="" lng="" heading="" thumburl="panos/schuylkill_yards.tiles/thumb.png">
+
+		<!-- <view hlookat="7.595" vlookat="25.821" fovtype="MFOV" fov="75" maxpixelzoom=".7" fovmin="70" fovmax="140" limitview="auto" /> -->
 
 
 		<!-- view settings -->
-		<!-- <view hlookat="60" vlookat="0" fovtype="MFOV" fov="75" fovmin="45" fovmax="90" vlookatmax="-25" vlookatmin="90" limitview="range"/> -->
+		<!-- <view hlookat="60" vlookat="0" fovtype="MFOV" fov="50" fovmin="45" fovmax="90" vlookatmax="-25" vlookatmin="90" limitview="range"/> -->
 
 
 		<!-- <preview url="pano.tiles/preview.jpg" /> -->
 
 		<image>
-			<cube url="schuylkill_yards.tiles/pano_%s.jpg" />
+			<cube url="panos/schuylkill_yards.tiles/pano_%s.jpg" />
 		</image>
 
 		<!--  place your scene hotspots here -->
@@ -78,9 +122,9 @@
 
 	</scene>
 
-	<scene name="scene_comcast_technology_center" title="BALA Projects" thumburl="comcast_technology_center.tiles/thumb.png">
+	<scene name="scene_comcast_technology_center" title="BALA Projects" thumburl="panos/comcast_technology_center.tiles/thumb.png">
 		<image>
-			<cube url="comcast_technology_center.tiles/pano_%s.jpg" />
+			<cube url="panos/comcast_technology_center.tiles/pano_%s.jpg" />
 		</image>
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="30.000" atv="0.000" distorted="false" zoom="false" linkedscene="scene_schuylkill_yards" />

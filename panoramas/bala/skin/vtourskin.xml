@@ -364,7 +364,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	<layer name="skin_btn_next_fs" keep="true" type="container" align="righttop" x="-50" width="40" height="100%" bgcapture="true" alpha="0.25" capture="false" zorder="2" onclick="skin_nextscene_loop(+1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
 		<layer name="skin_btn_next_fs_icon" style="skin_base" crop="64|64|64|64" align="center" scale="0.5" enabled="false" />
 	</layer>
-		<layer name="logolp" url="img/logolp.png" keep="true" align="topcenter" y="0" scale="0.5" scale.mobile="0.25" alpha="0"  enabled="false" onloaded="delayedcall(1, hsp-hide(); tween(y,40); tween(alpha,1); );" />
+		<layer name="logolp" url="img/corp-logo.png" keep="true" align="topcenter" y="0" scale="2.0" scale.mobile="1.0" alpha="0"  enabled="false" onloaded="delayedcall(1, hsp-hide(); tween(y,40); tween(alpha,1); );" />
 
 
 	<!-- gyro plugin -->
@@ -530,7 +530,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 		zoomToSpotsExtent();
 	</action>
 
-	<!-- For some reason we have to set littleplanetintro to true to run this method which then generates the logos for HFF and 800 Brazos. Otherwise no logs if littleplanetintro is false. -->
+	<!-- For some reason we have to set littleplanetintro to true to run this method which then generates the logos for HFF and 800 Brazos. Otherwise no logs if littleplanetintro is false. Modified delayedcall to go faster. -->
 	<action name="skin_setup_littleplanetintro">
 	delayedcall(1, hsp-hide(); );
 		copy(lp_scene, xml.scene);
@@ -555,12 +555,12 @@ delayedcall(3,
 					copy(view.limitview, lp_limitview);
 					set(view.vlookatmin, null);
 					set(view.vlookatmax, null);
-					tween(view.hlookat|view.vlookat|view.fov|view.distortion, calc('' + 20 + '|' + 25 + '|' + 112.683 + '|' + 0.0),
+					tween(view.hlookat|view.vlookat|view.fov|view.distortion, calc('' + 60 + '|' + 25 + '|' + 85 + '|' + 0.0),
 						3.0, easeOutInQuint,
 						set(control.usercontrol, all);
 						tween(view.fovmax, get(lp_fovmax));
 						tween(layer[logolp].y,-40,.5); tween(layer[logolp].alpha,0,.5); 
-						delayedcall(2,  tween(layer[logolp].y,-40,.5); tween(layer[logolp].alpha,0,.5);   tween(layer[main-skin-con].alpha,1); tween(layer[main-skin-con].alpha,1); tween(hotspot[region].alpha,1,2);   hsp-show();   );
+						delayedcall(0,  tween(layer[logolp].y,-40,.5); tween(layer[logolp].alpha,0,.5);   tween(layer[main-skin-con].alpha,1); tween(layer[main-skin-con].alpha,1); tween(hotspot[region].alpha,1,2);   hsp-show();   );
 						set(control.usercontrol,all); set(skin_settings.hs_anim_delay,3 ); 
 
 						delayedcall(1, 
