@@ -1,0 +1,14 @@
+header {
+  text-align: center;
+  background: url("../img/500-510-broad/500-510-broad-cover-photo.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+.col-sm-6 {
+  margin-bottom: 20px;
+}
