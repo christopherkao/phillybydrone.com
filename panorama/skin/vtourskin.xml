@@ -555,7 +555,7 @@ delayedcall(3,
 					copy(view.limitview, lp_limitview);
 					set(view.vlookatmin, null);
 					set(view.vlookatmax, null);
-					tween(view.hlookat|view.vlookat|view.fov|view.distortion, calc('' + -150 + '|' + 25 + '|' + 85 + '|' + 0.0),
+					tween(view.hlookat|view.vlookat|view.fov|view.distortion, calc('' + -150 + '|' + 15 + '|' + 85 + '|' + 0.0),
 						3.0, easeOutInQuint,
 						set(control.usercontrol, all);
 						tween(view.fovmax, get(lp_fovmax));
