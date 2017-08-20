@@ -78,6 +78,8 @@ header {
   -o-background-size: cover;
   background-size: cover;
   color: white;
+  padding-top: 50px;
+  /*background: #A85253;*/
 }
 header .container {
   padding-top: 100px;
