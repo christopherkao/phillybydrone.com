@@ -1,0 +1,66 @@
+﻿<krpano version="1.19" title="Virtual Tour">
+
+<include url="%SWFPATH%/plugins/gridmenu.xml"/>
+<responsive_grid 
+	button="true"
+
+	padding_top="75"
+	padding_bottom="75" 
+	width_margin="0" 
+    
+	grid_bgcolor="0x000000"  
+	grid_bgalpha="0.7"
+    
+	display_title="true" 
+	grid_title=""   
+	grid_title_css="color:#ffffff;font-family:arial;font-size:35px;" 
+    
+	group="false"    
+	current="false"
+  
+	cat_container_height="35"
+	cat_container_border="0,0,1,0 0xffffff 1.00"
+	cat_container_title_css="color:#ffffff;font-family:arial;font-size:25px;"
+	cat_container_title_align="left"
+    
+	cat_container_border_height="1" 
+
+	display_cat_desc="true"
+    
+	cat_desc_css="color:#ffffff;font-family:arial;font-size:14px;text-align:left"  
+    
+	thumbs_crop="0|75|240|150" 
+	thumbs_width="240"
+	thumbs_height="150"
+	thumbs_padding="25"
+	thumbs_scale="100"
+	active_thumb_border="3 0xffffff 0.00"
+    
+	display_thumb_title="true"
+    
+	thumb_title_align="bottom"
+	thumb_title_x="0"
+	thumb_title_y="5"
+	thumb_title_css="color:#ffffff;font-family:arial;font-size:16px;text-align:left;"  
+	thumb_title_roundedge="5"
+	thumb_title_background="true"
+	thumb_title_backgroundcolor="0x000000"
+	thumb_title_backgroundalpha="0.8"    
+	thumb_title_border="false"
+	thumb_title_borderwidth="0" 
+	thumb_title_bordercolor="0xffffff" 
+	thumb_title_borderalpha="1" 
+	thumb_title_padding="3 10" 
+
+	display_thumb_desc="true" 
+
+	thumb_desc_css="color:#ffffff;font-family:arial;font-size:15px;text-align:center" 
+	thumb_desc_bg_color="0x000000" 
+	thumb_desc_bg_alpha="0.6" 
+	thumb_desc_padding="8 15" 
+                        
+	loadscene_flags="MERGE" 
+	loadscene_blend="BLEND(1)"     
+/>
+
+</krpano>
