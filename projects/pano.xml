@@ -16,7 +16,7 @@
 				         vr-icon-xoffset="-106"
 				  
 				   			 hs_delay="1"
-				   			 hs_anim_delay="7"
+				   			 hs_anim_delay="6"
 				   			 bg_type="stretch"
 				   			 corporate_logo="true"
 				   			 corp-logo-xoffset="10"
@@ -130,12 +130,20 @@
 
 	</scene>
 
+	<!-- COMCAST TECHNOLOGY CENTER SCENE -->
 	<scene name="scene_comcast_technology_center" title="Comcast Technology Center" thumburl="panos/comcast_technology_center.tiles/thumb.png">
 		<image>
 			<cube url="panos/comcast_technology_center.tiles/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="30.000" atv="0.000" distorted="false" zoom="false" linkedscene="scene_university_city" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="8.536" atv="5.992" distorted="false" zoom="false" linkedscene="scene_university_city" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-166.939" atv="4.516" distorted="false" zoom="false" linkedscene="scene_bridge_on_race" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-173.787" atv="2.879" distorted="false" zoom="false" linkedscene="scene_delaware_river_north" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="14.868" atv="10.571" distorted="false" zoom="false" linkedscene="scene_schuylkill_yards" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="22.278" atv="19.141" distorted="false" zoom="false" linkedscene="scene_schuylkill_riverwalk" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="-95.367" atv="6.949" distorted="false" zoom="false" linkedscene="scene_500_510_broad" />
+		<hotspot name="spot7" style="skin_hotspotstyle" ath="-57.866" atv="11.912" distorted="false" zoom="false" linkedscene="scene_1911_walnut" />
+		<hotspot name="spot8" style="skin_hotspotstyle" ath="-151.438" atv="5.008" distorted="false" zoom="false" linkedscene="scene_jewelers_row" />
 
 	</scene>
 
@@ -144,6 +152,12 @@
 		<image>
 			<cube url="panos/evo.tiles/pano_%s.jpg" />
 		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-45.506" atv="5.121" distorted="false" zoom="false" linkedscene="scene_university_city" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="3.270" atv="8.141" distorted="false" zoom="false" linkedscene="scene_schuylkill_yards" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="108.175" atv="-7.430" distorted="false" zoom="false" linkedscene="scene_comcast_technology_center" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="143.890" atv="-1.151" distorted="false" zoom="false" linkedscene="scene_1911_walnut" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="74.813" atv="9.261" distorted="false" zoom="false" linkedscene="scene_schuylkill_riverwalk" />
 	</scene>
 
 	<!-- SCHUYLKILL YARDS SCENE -->
@@ -156,6 +170,8 @@
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="127.010" atv="1.542" distorted="false" zoom="false" linkedscene="scene_3675_market" />
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="13.715" atv="2.134" distorted="false" zoom="false" linkedscene="scene_evo" />
 		<hotspot name="spot4" style="skin_hotspotstyle" ath="-62.006" atv="10.680" distorted="false" zoom="false" linkedscene="scene_schuylkill_riverwalk" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-54.699" atv="-6.112" distorted="false" zoom="false" linkedscene="scene_comcast_technology_center" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="-31.200" atv="-0.718" distorted="false" zoom="false" linkedscene="scene_1911_walnut" />
 	</scene>
 
 	<!-- 3675 MARKET SCENE -->
@@ -173,6 +189,8 @@
 		<image>
 			<cube url="panos/liberty_on_the_river.tiles/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="6.257" atv="-2.931" distorted="false" zoom="false" linkedscene="scene_comcast_technology_center" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="41.902" atv="1.006" distorted="false" zoom="false" linkedscene="scene_bridge_on_race" />
 	</scene>
 
 	<!-- 1911 WALNUT SCENE -->
@@ -180,6 +198,16 @@
 		<image>
 			<cube url="panos/1911_walnut.tiles/pano_%s.jpg" />
 		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-66.706" atv="12.059" distorted="false" zoom="false" linkedscene="scene_evo" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-68.016" atv="4.907" distorted="false" zoom="false" linkedscene="scene_university_city" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-43.545" atv="6.804" distorted="false" zoom="false" linkedscene="scene_schuylkill_yards" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="39.562" atv="-8.899" distorted="false" zoom="false" linkedscene="scene_comcast_technology_center" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="144.290" atv="7.895" distorted="false" zoom="false" linkedscene="scene_500_510_broad" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="132.998" atv="2.731" distorted="false" zoom="false" linkedscene="scene_delaware_river_south" />
+		<hotspot name="spot7" style="skin_hotspotstyle" ath="-23.420" atv="11.634" distorted="false" zoom="false" linkedscene="scene_schuylkill_riverwalk" />
+		<hotspot name="spot8" style="skin_hotspotstyle" ath="81.723" atv="0.921" distorted="false" zoom="false" linkedscene="scene_delaware_river_north" />
+		<hotspot name="spot9" style="skin_hotspotstyle" ath="102.801" atv="2.564" distorted="false" zoom="false" linkedscene="scene_jewelers_row" />
 	</scene>
 
 	<!-- 500-510 S. BROAD SCENE -->
@@ -187,6 +215,13 @@
 		<image>
 			<cube url="panos/500_510_broad.tiles/pano_%s.jpg" />
 		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-113.245" atv="-3.384" distorted="false" zoom="false" linkedscene="scene_evo" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-68.997" atv="-11.593" distorted="false" zoom="false" linkedscene="scene_comcast_technology_center" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-98.218" atv="-7.585" distorted="false" zoom="false" linkedscene="scene_1911_walnut" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-123.445" atv="-0.772" distorted="false" zoom="false" linkedscene="scene_university_city" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="58.668" atv="0.787" distorted="false" zoom="false" linkedscene="scene_delaware_river_south" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="14.397" atv="-1.178" distorted="false" zoom="false" linkedscene="scene_jewelers_row" />
 	</scene>
 
 	<!-- JEWELER'S ROW SCENE -->
@@ -194,6 +229,13 @@
 		<image>
 			<cube url="panos/jewelers_row.tiles/pano_%s.jpg" />
 		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-158.466" atv="-6.799" distorted="false" zoom="false" linkedscene="scene_comcast_technology_center" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="154.980" atv="1.141" distorted="false" zoom="false" linkedscene="scene_500_510_broad" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-176.116" atv="-3.161" distorted="false" zoom="false" linkedscene="scene_university_city" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-41.886" atv="4.765" distorted="false" zoom="false" linkedscene="scene_bridge_on_race" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-32.811" atv="2.752" distorted="false" zoom="false" linkedscene="scene_delaware_river_north" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="51.901" atv="3.185" distorted="false" zoom="false" linkedscene="scene_delaware_river_south" />
 	</scene>
 
 	<!-- BRIDGE ON RACE SCENE -->
@@ -201,6 +243,13 @@
 		<image>
 			<cube url="panos/bridge_on_race.tiles/pano_%s.jpg" />
 		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="108.563" atv="-4.291" distorted="false" zoom="false" linkedscene="scene_comcast_technology_center" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="73.333" atv="2.216" distorted="false" zoom="false" linkedscene="scene_jewelers_row" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-0.945" atv="3.596" distorted="false" zoom="false" linkedscene="scene_delaware_river_south" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-87.988" atv="5.853" distorted="false" zoom="false" linkedscene="scene_delaware_river_north" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-41.134" atv="4.480" distorted="false" zoom="false" linkedscene="scene_camden_waterfront_south" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="-58.912" atv="4.112" distorted="false" zoom="false" linkedscene="scene_camden_waterfront_north" />
 	</scene>
 
 	<!-- SLS INTERNATIONAL SCENE -->
@@ -215,6 +264,13 @@
 		<image>
 			<cube url="panos/schuylkill_riverwalk.tiles/pano_%s.jpg" />
 		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-155.707" atv="-1.180" distorted="false" zoom="false" linkedscene="scene_university_city" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="49.751" atv="-15.471" distorted="false" zoom="false" linkedscene="scene_comcast_technology_center" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="173.068" atv="-3.296" distorted="false" zoom="false" linkedscene="scene_evo" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-148.404" atv="2.824" distorted="false" zoom="false" linkedscene="scene_schuylkill_yards" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-143.076" atv="-2.232" distorted="false" zoom="false" linkedscene="scene_3675_market" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="98.864" atv="-3.634" distorted="false" zoom="false" linkedscene="scene_1911_walnut" />
 	</scene>
 
 	<!-- CAMDEN WATERFRONT NORTH SCENE -->
