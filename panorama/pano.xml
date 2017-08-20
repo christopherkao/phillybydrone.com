@@ -81,7 +81,7 @@
 	<scene name="scene_university_city" title="University City" lat="" lng="" heading="" thumburl="panos/university_city.tiles/thumb.png">
 
 		<!-- TODO: Remove this to take ou the logs. -->
-		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
+		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
 
 		<!-- <view hlookat="7.595" vlookat="25.821" fovtype="MFOV" fov="75" maxpixelzoom=".7" fovmin="70" fovmax="140" limitview="auto" /> -->
 
