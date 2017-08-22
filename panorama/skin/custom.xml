@@ -399,7 +399,7 @@ webvr.enterVR
 		<layer name="html-skin_btn_vr"        style="custom_skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="10"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR();" />	
 
 		<layer name="html-menu-desktop"  style="custom_skin_base|skin_glow"  crop="64|130|64|64" scale=".56" align="rightbottom" x="10" y="10" oy="0" ox="-2" visible="get:skin_settings.map-btn" devices="desktop|tablet"  onclick="mapio(); "  />
-		<layer name="html-menu-mobile"  style="custom_skin_base|skin_glow"  crop="64|130|64|64" scale=".56" align="rightbottom" x="10" y="10" oy="0" ox="-2" visible="get:skin_settings.menu-btn"  devices="mobile|desktop|tablet"   onclick="mapio(); "  />
+		<layer name="html-menu-mobile"  style="custom_skin_base|skin_glow"  crop="64|130|64|64" scale=".56" align="rightbottom" x="10" y="10" oy="0" ox="-2" visible="get:skin_settings.menu-btn"  devices="mobile"   onclick="mapio(); "  />
 
 		<!-- <layer name="about" url="img/about.png" keep="true" preload="false" visible="true" enabled="false" handcursor="true" capture="true" children="true" zorder="45" alpha="0" blendmode="normal" smoothing="true" align="center" edge="" x="0" y="-10" ox="0" oy="0"  crop="" ondowncrop="" onovercrop="" scale="2" scalechildren="true" rotate="0" parent="" mask="" onloaded="if(ismobile, set(scale, 0.5))" onover="" onhover="" onout="" ondown="" onclick="close-about(); set(layer[above-vr-logo].aboutstate,1);"/> -->
 
