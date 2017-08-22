@@ -71,10 +71,42 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	       tooltip=""
 	       linkedscene=""
 	       linkedscene_lookat=""
-	       onclick="skin_hotspotstyle_clicked(); tween(layer[tooltip_hs].alpha,0,.5);"
-	       onover="set(layer[tooltip_hs].html, get(scene[get(linkedscene)].title)); calc_layer_pos(get(name)); tween(layer[tooltip_hs].alpha,1,.5); subtxt(spot_id, get(name), 4, 2); trace(get(spot_id)); txtadd(anim-hs,'spot_anim_', get(scene[get(linkedscene)].index));   txtadd(back-hs,'spot_back_', get(scene[get(linkedscene)].index)); set(hotspot[get(back-hs)].ath,get(ath));  set(hotspot[get(back-hs)].atv,get(atv));  set(hotspot[get(back-hs)].visible,true);  tween(scale,2); tween(alpha,0); tween(hotspot[get(back-hs)].scale,.4); tween(hotspot[get(back-hs)].alpha,1); tween(hotspot[get(anim-hs)].scale,4); set(hotspot[get(anim-hs)].visible,false); tween(hotspot[get(anim-hs)].alpha,0);"
-	       onout="tween(layer[tooltip_hs].alpha,0,.5);  tween(scale,0.5); tween(alpha,1); tween(hotspot[get(back-hs)].scale,.1); tween(hotspot[get(back-hs)].alpha,0); tween(hotspot[get(anim-hs)].scale,1); set(hotspot[get(anim-hs)].visible,true); set(hotspot[get(anim-hs)].alpha,0); "
-	       onloaded=" delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear,set(enabled,true);); set(skin_settings.hs_anim_delay,get(skin_settings.hs_delay));); subtxt(spot_id, get(name), 4, 2); trace(get(spot_id));  txtadd(anim-hs,'spot_anim_', get(scene[get(linkedscene)].index));   set(hotspot[get(anim-hs)].ath,get(ath)); set(hotspot[get(anim-hs)].atv,get(atv));   set(hotspot[get(anim-hs)].visible,true);  if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); );"
+	       onclick="skin_hotspotstyle_clicked(); 
+	       tween(layer[tooltip_hs].alpha,0,.5);"
+	       onover="set(layer[tooltip_hs].html, get(scene[get(linkedscene)].title)); 
+	       calc_layer_pos(get(name)); 
+	       tween(layer[tooltip_hs].alpha,1,.5); 
+	       subtxt(spot_id, get(name), 4, 2); 
+	       trace(get(spot_id)); 
+	       txtadd(anim-hs,'spot_anim_', get(scene[get(linkedscene)].index));   txtadd(back-hs,'spot_back_', get(scene[get(linkedscene)].index)); 
+	       set(hotspot[get(back-hs)].ath,get(ath));  
+	       set(hotspot[get(back-hs)].atv,get(atv));  
+	       set(hotspot[get(back-hs)].visible,true);  
+	       tween(scale,2); 
+	       tween(alpha,0); 
+	       tween(hotspot[get(back-hs)].scale,.4); 
+	       tween(hotspot[get(back-hs)].alpha,1); 
+	       tween(hotspot[get(anim-hs)].scale,4); 
+	       set(hotspot[get(anim-hs)].visible,false); 
+	       tween(hotspot[get(anim-hs)].alpha,0);"
+	       onout="tween(layer[tooltip_hs].alpha,0,.5);  
+	       tween(scale,0.5); 
+	       tween(alpha,1); 
+	       tween(hotspot[get(back-hs)].scale,.1); 
+	       tween(hotspot[get(back-hs)].alpha,0); 
+	       tween(hotspot[get(anim-hs)].scale,1); 
+	       set(hotspot[get(anim-hs)].visible,true); 
+	       set(hotspot[get(anim-hs)].alpha,0); "
+	       onloaded=" delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear,set(enabled,true);); 
+	       set(skin_settings.hs_anim_delay,get(skin_settings.hs_delay));); 
+	       subtxt(spot_id, get(name), 4, 2); 
+	       trace(get(spot_id));
+	       txtadd(anim-hs,'spot_anim_', get(scene[get(linkedscene)].index));  
+	       set(hotspot[get(anim-hs)].ath,get(ath));
+	       set(hotspot[get(anim-hs)].atv,get(atv));
+	       set(hotspot[get(anim-hs)].visible,true);
+	       if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); 
+	       loadstyle(skin_tooltips); );"
 	       />
 
 

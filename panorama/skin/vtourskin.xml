@@ -576,7 +576,7 @@ tween(view.architectural, 0,4, easeOutInQuad );
 tween(view.pannini,       0.0,4, easeOutInQuad );
 tween(view.distortion,    0.0,4, easeOutInQuad,  set(skin_settings.littleplanetintro,false);
 set(skin_settings.hs_anim_delay,6);  ); 
-); trace('adsd');  
+); trace('finished littleplanetintro');  
 						);
 						
 				  );  );
@@ -701,16 +701,12 @@ set(hotspot[spot10].visible,true);
 <!-- Add more hotspot animations here. -->
 
 
+<!-- IMPORTANT: We only set this to be the spot_anim for the first panorama. Any ones linked after that will automatically set their spot animations. -->
 set(hotspot[spot_anim_1].visible,true); 
 set(hotspot[spot_anim_2].visible,true); 
 set(hotspot[spot_anim_3].visible,true); 
 set(hotspot[spot_anim_4].visible,true); 
-set(hotspot[spot_anim_5].visible,true); 
-set(hotspot[spot_anim_6].visible,true); 
-set(hotspot[spot_anim_7].visible,true); 
-set(hotspot[spot_anim_8].visible,true); 
-set(hotspot[spot_anim_9].visible,true); 
-set(hotspot[spot_anim_10].visible,true); 
+set(hotspot[spot_anim_5].visible,true);
 
 
 set(hotspot[pop01-name].visible,true); 

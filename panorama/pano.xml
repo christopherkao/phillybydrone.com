@@ -16,7 +16,7 @@
 				         vr-icon-xoffset="50"
 				  
 				   			 hs_delay="1"
-				   			 hs_anim_delay="6"
+				   			 hs_anim_delay="0"
 				   			 bg_type="stretch"
 				   			 corporate_logo="true"
 				   			 corp-logo-xoffset="10"
@@ -80,7 +80,7 @@
 	<!-- UNIVERSITY CITY SCENE -->
 	<scene name="scene_university_city" title="University City" lat="" lng="" heading="" thumburl="panos/university_city.tiles/thumb.png">
 
-		<!-- TODO: Remove this to take ou the logs. -->
+		<!-- TODO: Remove this to take out the logs. -->
 		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
 
 		<!-- <view hlookat="7.595" vlookat="25.821" fovtype="MFOV" fov="75" maxpixelzoom=".7" fovmin="70" fovmax="140" limitview="auto" /> -->
@@ -144,7 +144,7 @@
 		<hotspot name="spot6" style="skin_hotspotstyle" ath="-95.367" atv="6.949" distorted="false" zoom="false" linkedscene="scene_500_510_broad" />
 		<hotspot name="spot7" style="skin_hotspotstyle" ath="-57.866" atv="11.912" distorted="false" zoom="false" linkedscene="scene_1911_walnut" />
 		<hotspot name="spot8" style="skin_hotspotstyle" ath="-151.438" atv="5.008" distorted="false" zoom="false" linkedscene="scene_jewelers_row" />
-		<hotspot name="spot8" style="skin_hotspotstyle" ath="-159.116" atv="2.231" distorted="false" zoom="false" linkedscene="scene_camden_waterfront_south" />
+		<hotspot name="spot9" style="skin_hotspotstyle" ath="-159.116" atv="2.231" distorted="false" zoom="false" linkedscene="scene_camden_waterfront_south" />
 
 	</scene>
 
@@ -185,6 +185,20 @@
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="-17.396" atv="-1.226" distorted="false" zoom="false" linkedscene="scene_evo" />
 	</scene>
 
+	<!-- 500-510 S. BROAD SCENE -->
+	<scene name="scene_500_510_broad" title="500-510 S. Broad" thumburl="panos/500_510_broad.tiles/thumb.png">
+		<image>
+			<cube url="panos/500_510_broad.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-113.245" atv="-3.384" distorted="false" zoom="false" linkedscene="scene_evo" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-68.997" atv="-11.593" distorted="false" zoom="false" linkedscene="scene_comcast_technology_center" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-98.218" atv="-7.585" distorted="false" zoom="false" linkedscene="scene_1911_walnut" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-123.445" atv="-0.772" distorted="false" zoom="false" linkedscene="scene_university_city" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="58.668" atv="0.787" distorted="false" zoom="false" linkedscene="scene_delaware_river_south" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="14.397" atv="-1.178" distorted="false" zoom="false" linkedscene="scene_jewelers_row" />
+	</scene>
+
 	<!-- LIBERTY ON THE RIVER SCENE -->
 	<scene name="scene_liberty_on_the_river" title="Liberty on the River" thumburl="panos/liberty_on_the_river.tiles/thumb.png">
 		<image>
@@ -211,20 +225,6 @@
 		<hotspot name="spot9" style="skin_hotspotstyle" ath="102.801" atv="2.564" distorted="false" zoom="false" linkedscene="scene_jewelers_row" />
 	</scene>
 
-	<!-- 500-510 S. BROAD SCENE -->
-	<scene name="scene_500_510_broad" title="500-510 S. Broad" thumburl="panos/500_510_broad.tiles/thumb.png">
-		<image>
-			<cube url="panos/500_510_broad.tiles/pano_%s.jpg" />
-		</image>
-
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-113.245" atv="-3.384" distorted="false" zoom="false" linkedscene="scene_evo" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-68.997" atv="-11.593" distorted="false" zoom="false" linkedscene="scene_comcast_technology_center" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="-98.218" atv="-7.585" distorted="false" zoom="false" linkedscene="scene_1911_walnut" />
-		<hotspot name="spot4" style="skin_hotspotstyle" ath="-123.445" atv="-0.772" distorted="false" zoom="false" linkedscene="scene_university_city" />
-		<hotspot name="spot5" style="skin_hotspotstyle" ath="58.668" atv="0.787" distorted="false" zoom="false" linkedscene="scene_delaware_river_south" />
-		<hotspot name="spot6" style="skin_hotspotstyle" ath="14.397" atv="-1.178" distorted="false" zoom="false" linkedscene="scene_jewelers_row" />
-	</scene>
-
 	<!-- JEWELER'S ROW SCENE -->
 	<scene name="scene_jewelers_row" title="Jeweler's Row" thumburl="panos/jewelers_row.tiles/thumb.png">
 		<image>
@@ -236,7 +236,7 @@
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="-176.116" atv="-3.161" distorted="false" zoom="false" linkedscene="scene_university_city" />
 		<hotspot name="spot4" style="skin_hotspotstyle" ath="-41.886" atv="4.765" distorted="false" zoom="false" linkedscene="scene_bridge_on_race" />
 		<hotspot name="spot5" style="skin_hotspotstyle" ath="-32.811" atv="2.752" distorted="false" zoom="false" linkedscene="scene_delaware_river_north" />
-		<hotspot name="spot5" style="skin_hotspotstyle" ath="51.901" atv="3.185" distorted="false" zoom="false" linkedscene="scene_delaware_river_south" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="51.901" atv="3.185" distorted="false" zoom="false" linkedscene="scene_delaware_river_south" />
 	</scene>
 
 	<!-- BRIDGE ON RACE SCENE -->
@@ -270,8 +270,8 @@
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="49.751" atv="-15.471" distorted="false" zoom="false" linkedscene="scene_comcast_technology_center" />
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="173.068" atv="-3.296" distorted="false" zoom="false" linkedscene="scene_evo" />
 		<hotspot name="spot4" style="skin_hotspotstyle" ath="-148.404" atv="2.824" distorted="false" zoom="false" linkedscene="scene_schuylkill_yards" />
-		<hotspot name="spot4" style="skin_hotspotstyle" ath="-143.076" atv="-2.232" distorted="false" zoom="false" linkedscene="scene_3675_market" />
-		<hotspot name="spot4" style="skin_hotspotstyle" ath="98.864" atv="-3.634" distorted="false" zoom="false" linkedscene="scene_1911_walnut" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-143.076" atv="-2.232" distorted="false" zoom="false" linkedscene="scene_3675_market" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="98.864" atv="-3.634" distorted="false" zoom="false" linkedscene="scene_1911_walnut" />
 	</scene>
 
 	<!-- CAMDEN WATERFRONT NORTH SCENE -->
