@@ -91,7 +91,7 @@
 
 
 	<!-- include VR support - http://krpano.com/plugins/webvr/ -->
-	<!-- <include url="%SWFPATH%/plugins/webvr.xml" devices="html5" /> -->
+	<include url="%SWFPATH%/plugins/webvr.xml" devices="html5" />
 
 	<!-- overwrite some settings from the webvr.xml for the skin integration -->
 	<plugin name="WebVR" keep="true" devices="html5"

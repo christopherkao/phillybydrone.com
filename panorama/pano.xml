@@ -13,7 +13,7 @@
 				   			 menu-btn="true"
 				         map-btn="false"
 				         navxoffset="0"
-				         vr-icon-xoffset="-106"
+				         vr-icon-xoffset="50"
 				  
 				   			 hs_delay="1"
 				   			 hs_anim_delay="6"
