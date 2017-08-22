@@ -396,10 +396,10 @@ webvr.enterVR
 	<layer name="skin_btn_twitter2"  style="custom_skin_base|skin_glow" crop="0|256|64|64"  align="rightbottom"      x="40"   y="1"  scale="0.6"  onclick="set(shareurl, http://aboveinteractive.com/template-pr3/); set(mas, http://twitter.com/intent/tweet?status=); txtadd(fin, get(mas), get(shareurl)); openurl(https://twitter.com/intent/tweet?status= %23 Description goes here  http://aboveinteractive.com/template-pr3/); showio(); set(layer[html-skin_btn_share].active,1);" />					
 	<layer name="skin_btn_gplus2"  	style="custom_skin_base|skin_glow" crop="64|256|64|64" align="rightbottom"      x="0"    y="1"  scale="0.6"  onclick="set(shareurl, http://aboveinteractive.com/template-pr3/); set(mas, https://plus.google.com/share?url=); txtadd(fin, get(mas), get(shareurl)); openurl(get(fin)); showio(); set(layer[html-skin_btn_share].active,1);" />						
 	</layer -->
-		<layer name="html-skin_btn_vr"        style="custom_skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="10"  scale="0.56"  visible="true" devices="webgl" onclick="webvr.enterVR();" />	
+		<layer name="html-skin_btn_vr"        style="custom_skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="10"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR();" />	
 
 		<layer name="html-menu-desktop"  style="custom_skin_base|skin_glow"  crop="64|130|64|64" scale=".56" align="rightbottom" x="10" y="10" oy="0" ox="-2" visible="get:skin_settings.map-btn" devices="desktop|tablet"  onclick="mapio(); "  />
-		<layer name="html-menu-mobile"  style="custom_skin_base|skin_glow"  crop="64|130|64|64" scale=".56" align="rightbottom" x="10" y="10" oy="0" ox="-2" visible="get:skin_settings.menu-btn"  devices="mobile"   onclick="mapio(); "  />
+		<layer name="html-menu-mobile"  style="custom_skin_base|skin_glow"  crop="64|130|64|64" scale=".56" align="rightbottom" x="10" y="10" oy="0" ox="-2" visible="get:skin_settings.menu-btn"  devices="mobile|desktop|tablet"   onclick="mapio(); "  />
 
 		<!-- <layer name="about" url="img/about.png" keep="true" preload="false" visible="true" enabled="false" handcursor="true" capture="true" children="true" zorder="45" alpha="0" blendmode="normal" smoothing="true" align="center" edge="" x="0" y="-10" ox="0" oy="0"  crop="" ondowncrop="" onovercrop="" scale="2" scalechildren="true" rotate="0" parent="" mask="" onloaded="if(ismobile, set(scale, 0.5))" onover="" onhover="" onout="" ondown="" onclick="close-about(); set(layer[above-vr-logo].aboutstate,1);"/> -->
 
@@ -493,17 +493,16 @@ webvr.enterVR
 
 
   
-
 <layer name="mobile-thumbs-con" type="container" active="0" keep="true" alpha="0"  visible="false" align="lefttop" x="0" y="0" width="100%" height="100%" bgcolor="0x000000" bgalpha="0" zorder="60" >
-<layer name="mobilethumbs-con" keep="true" type="container" align="lefttop" width="600" height="95%" bgcolor="0x000000" bgalpha="0">
-<layer name="skin_mobilethumb" url="%SWFPATH%/plugins/scrollarea.swf" alturl="%SWFPATH%/plugins/scrollarea.js" align="lefttop" x="10"  width="500" height="3000" direction="v" onloaded="setcenter(0,0);">
-<layer name="mobile-header-bg" type="container" keep="true" visible="true" align="topcenter" width="100%" height="75" x="-10" y="0" bgcolor="0x202020" bgalpha="1" >
-<layer name="mobile-header" url="img/mobile-header.jpg" align="topcenter" x="0" y="0" scale=".45" />
+	<layer name="mobilethumbs-con" keep="true" type="container" align="lefttop" width="600" height="95%" bgcolor="0x000000" bgalpha="0">
+		<layer name="skin_mobilethumb" url="%SWFPATH%/plugins/scrollarea.swf" alturl="%SWFPATH%/plugins/scrollarea.js" align="lefttop" x="10"  width="500" height="3000" direction="v" onloaded="setcenter(0,0);">
+			<layer name="mobile-header-bg" type="container" keep="true" visible="true" align="topcenter" width="100%" height="75" x="-10" y="0" bgcolor="0x202020" bgalpha="1" >
+				<layer name="mobile-header" url="img/corp-logo.png" align="topcenter" x="0" y="0" scale=".45" />
 
-</layer>
+			</layer>
 
-</layer>
-</layer>
+		</layer>
+	</layer>
 </layer>
 
 <layer name="mobile-back-bg" type="container"  keep="true" alpha="1"  visible="false" align="lefttop" x="0" y="0" width="100%" height="100%" bgcolor="0x000000" bgalpha=".85" zorder="2" />
