@@ -1,0 +1,140 @@
+<krpano>
+	<!-- Plugins -->
+	<plugin name="ga"
+			url="plugins/analytics.swf"
+			alturl="plugins/analytics.js"
+			
+			preload="true"
+			
+			
+			account="UA-99027617-1"
+			prefix="/philly-by-drone-panorama"
+			>
+		<event name="customevent"
+			   global="true"
+			   target="plugin[trackevent].onclick"
+			   data="User Interface,Global event"
+			   />
+		<event name="pano1specificevent"
+			   scene="scene0"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 1 specific event"
+			   />
+		<event name="pano2specificevent"
+			   scene="scene1"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 2 specific event"
+			   />
+		<event name="pano3specificevent"
+			   scene="scene2"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 3 specific event"
+			   />
+		<event name="pano4specificevent"
+			   scene="scene3"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 4 specific event"
+			   />			   
+		<event name="pano5specificevent"
+			   scene="scene4"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 5 specific event"
+			   />
+		<event name="pano6specificevent"
+			   scene="scene5"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 6 specific event"
+			   />
+		<event name="pano7specificevent"
+			   scene="scene6"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 7 specific event"
+			   />
+		<event name="pano8specificevent"
+			   scene="scene7"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 8 specific event"
+			   />			   
+		<event name="pano9specificevent"
+			   scene="scene8"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 9 specific event"
+			   />
+		<event name="pano10specificevent"
+			   scene="scene9"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 10 specific event"
+			   />
+		<event name="pano11specificevent"
+			   scene="scene10"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 11 specific event"
+			   />
+		<event name="pano12specificevent"
+			   scene="scene11"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 12 specific event"
+			   />			   
+		<event name="pano13specificevent"
+			   scene="scene12"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 13 specific event"
+			   />
+		<event name="pano14specificevent"
+			   scene="scene13"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 14 specific event"
+			   />
+		<event name="pano15specificevent"
+			   scene="scene14"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 15 specific event"
+			   />
+		<event name="pano16specificevent"
+			   scene="scene15"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 16 specific event"
+			   />			   
+		<event name="pano17specificevent"
+			   scene="scene16"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 17 specific event"
+			   />	
+		<event name="pano18specificevent"
+			   scene="scene17"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 18 specific event"
+			   />	
+		<event name="pano19specificevent"
+			   scene="scene18"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 19 specific event"
+			   />	
+		<event name="pano20specificevent"
+			   scene="scene19"
+			   target="hotspot[trackpanospecificevent].onclick"
+			   data="User Interface,Pano 20 specific event"
+			   />	
+
+
+			   			   
+	</plugin>
+	
+	<!-- Actions -->
+	<action name="activatepano">
+		if (%1 != null,
+			if (get(action[mainloadpano].content) !== null,
+				if (%2 == xml, mainloadpano(%HTMLPATH%/%1), mainloadpano(%1)),
+					if (%2 == xml, loadpano(%HTMLPATH%/%1,null,MERGE,BLEND(1)), loadscene(%1,null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend)););
+					<!-- wait(blend); -->
+			)
+		);
+	</action>
+
+	<action name="add_scenes_to_analytics">
+		for (set(i,0), i LT scene.count, inc(i), 
+		  if (get(scene[get(i)].url), copy(data[a.url].content, scene[get(i)].url), copy(data[a.url].content, scene[get(i)].name));
+		  plugin[ga].addPano(get(scene[get(i)].name), get(scene[get(i)].name), true, get(data[a.url].content));
+		);
+	</action>
+</krpano>

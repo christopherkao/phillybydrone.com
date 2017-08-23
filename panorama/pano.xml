@@ -1,6 +1,7 @@
 ﻿<krpano version="1.16" title="Philly By Drone Projects" onstart="startup();">
 	
 	<!-- the skin -->
+	<include url="analytics.xml" />
 	<include url="skin/vtourskin.xml" />
 	<include url="skin/custom.xml" />
 	<include url="plugins/swipe_gallery.xml" />
