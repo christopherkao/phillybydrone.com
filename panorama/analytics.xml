@@ -16,7 +16,7 @@
 			   data="User Interface,Global event"
 			   />
 		<event name="pano1specificevent"
-			   scene="scene0"
+			   scene="scene_university_city"
 			   target="hotspot[trackpanospecificevent].onclick"
 			   data="User Interface,Pano 1 specific event"
 			   />
