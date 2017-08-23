@@ -396,15 +396,15 @@ webvr.enterVR
 		<layer name="desktop-thumb-con" type="container" keep="true"  visible="true" align="centerbottom" width="500" height="120" zorder="10" devices="desktop|tablet"> 
         <layer name="rnd-thumb-0" url="%SWFPATH%/panos/university_city.tiles/thumb.png" align="centerleft" edge="center" x="0" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[0].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
 
-        <layer name="rnd-thumb-1" url="%SWFPATH%/panos/schuylkill_yards.tiles/thumb.png" align="centerleft" edge="center"  x="100" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[1].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
+        <layer name="rnd-thumb-1" url="%SWFPATH%/panos/schuylkill_yards.tiles/thumb.png" align="centerleft" edge="center"  x="100" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[3].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
 
-        <layer name="rnd-thumb-2" url="%SWFPATH%/panos/1911_walnut.tiles/thumb.png" align="centerleft" edge="center"  x="200" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[2].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />
+        <layer name="rnd-thumb-2" url="%SWFPATH%/panos/1911_walnut.tiles/thumb.png" align="centerleft" edge="center"  x="200" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[7].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />
 
-        <layer name="rnd-thumb-3" url="%SWFPATH%/panos/comcast_technology_center.tiles/thumb.png" align="centerleft" edge="center"  x="300" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[3].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
+        <layer name="rnd-thumb-3" url="%SWFPATH%/panos/comcast_technology_center.tiles/thumb.png" align="centerleft" edge="center"  x="300" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[1].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
 
-        <layer name="rnd-thumb-4" url="%SWFPATH%/panos/jewelers_row.tiles/thumb.png" align="centerleft" edge="center"  x="400" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[4].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
+        <layer name="rnd-thumb-4" url="%SWFPATH%/panos/jewelers_row.tiles/thumb.png" align="centerleft" edge="center"  x="400" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[8].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
 
-        <layer name="rnd-thumb-5" url="%SWFPATH%/panos/camden_waterfront_north.tiles/thumb.png" align="centerleft" edge="center"  x="500" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[5].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
+        <layer name="rnd-thumb-5" url="%SWFPATH%/panos/camden_waterfront_north.tiles/thumb.png" align="centerleft" edge="center"  x="500" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[12].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
 	
 		</layer>
     <!-- <layer name="gallery-icon" keep="true" style="skin_glow" url="img/gallery-icon.png"  x="50" x.mobile="55"  y="13" align="rightbottom" scale=".2" onclick="show_gallery(get(galleryname))" galleryname="gallery1" /> -->
