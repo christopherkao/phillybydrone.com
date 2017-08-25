@@ -533,19 +533,19 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	<!-- For some reason we have to set littleplanetintro to true to run this method which then generates the logos for HFF and 800 Brazos. Otherwise no logs if littleplanetintro is false. Modified delayedcall to go faster. -->
 	<action name="skin_setup_littleplanetintro">
 	delayedcall(1, hsp-hide(); );
-		copy(lp_scene, xml.scene);
-		copy(lp_hlookat, view.hlookat);
-		copy(lp_vlookat, view.vlookat);
-		copy(lp_fov, view.fov);
-		copy(lp_fovmax, view.fovmax);
-		copy(lp_limitview, view.limitview);
-		set(view.fovmax, 170);
-		set(view.limitview, lookto);
-		set(view.vlookatmin, 90);
-		set(view.vlookatmax, 90);
-		lookat(calc(lp_hlookat - 0), 90, 150, 1, 0, 0);
-<!-- delayedcall(events[lp_events].onmousedown, -->
-delayedcall(3, 
+	copy(lp_scene, xml.scene);
+	copy(lp_hlookat, view.hlookat);
+	copy(lp_vlookat, view.vlookat);
+	copy(lp_fov, view.fov);
+	copy(lp_fovmax, view.fovmax);
+	copy(lp_limitview, view.limitview);
+	set(view.fovmax, 170);
+	set(view.limitview, lookto);
+	set(view.vlookatmin, 90);
+	set(view.vlookatmax, 90);
+	lookat(calc(lp_hlookat - 0), 90, 150, 1, 0, 0);
+	<!-- delayedcall(events[lp_events].onmousedown, -->
+	delayedcall(3, 
  		if(skin_settings.littleplanetintro==true,
 		tween(layer[logolp].y,-40,.5); tween(layer[logolp].alpha,0,.5); 
 		set(skin_settings.littleplanetintro,false);
