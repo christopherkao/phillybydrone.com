@@ -1,6 +1,7 @@
-﻿<krpano version="1.16" title="BALA Projects" onstart="startup();">
+﻿<krpano version="1.16" title="Philly By Drone Projects" onstart="startup();">
 	
 	<!-- the skin -->
+	<include url="analytics.xml" />
 	<include url="skin/vtourskin.xml" />
 	<include url="skin/custom.xml" />
 	<include url="plugins/swipe_gallery.xml" />
@@ -13,10 +14,10 @@
 				   			 menu-btn="true"
 				         map-btn="false"
 				         navxoffset="0"
-				         vr-icon-xoffset="-106"
+				         vr-icon-xoffset="50"
 				  
 				   			 hs_delay="1"
-				   			 hs_anim_delay="10"
+				   			 hs_anim_delay="0"
 				   			 bg_type="stretch"
 				   			 corporate_logo="true"
 				   			 corp-logo-xoffset="10"
@@ -55,7 +56,7 @@
 
 </action>
 
-	<layer name="gallery" type="container" zorder="500" align="center" width="100%" height="100%" alpha="0" autoalpha="true" bgcolor="0x000000" bgalpha="0.8" keep="true">
+	<!-- <layer name="gallery" type="container" zorder="500" align="center" width="100%" height="100%" alpha="0" autoalpha="true" bgcolor="0x000000" bgalpha="0.8" keep="true">
 		<layer name="gallery_scrollarea" url="%SWFPATH%/plugins/scrollarea.swf" alturl="%SWFPATH%/plugins/scrollarea.js" keep="true" align="left" width="0" height="100%" zorder="1" direction="h" ondown="set(gallery_scrollarea_start_pos, get(x))">
 		</layer>
 		<layer name="arrow_left"  align="left"  x="10" keep="true" visible="false" zorder="2" scale.mobile=".35" onclick="move_image(left)" url="skin/img/gallery/arrow_left.png"  />
@@ -75,60 +76,60 @@
 		<img name="img3" url="skin/img/gallery/03.jpg" title="" />
 		<img name="img4" url="skin/img/gallery/04.jpg" title="" />
 		<img name="img5" url="skin/img/gallery/05.jpg" title="" />
-	</gallery>
+	</gallery> -->
 
-	<scene name="scene_schuylkill_yards" title="BALA Projects" lat="" lng="" heading="" thumburl="panos/schuylkill_yards.tiles/thumb.png">
+	<!-- UNIVERSITY CITY SCENE -->
+	<scene name="scene_university_city" title="University City" lat="" lng="" heading="" thumburl="panos/university_city.tiles/thumb.png">
+
+		<!-- TODO: Remove this to take out the logs. -->
+		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
 
 		<!-- <view hlookat="7.595" vlookat="25.821" fovtype="MFOV" fov="75" maxpixelzoom=".7" fovmin="70" fovmax="140" limitview="auto" /> -->
 
 
 		<!-- view settings -->
-		<!-- <view hlookat="60" vlookat="0" fovtype="MFOV" fov="50" fovmin="45" fovmax="90" vlookatmax="-25" vlookatmin="90" limitview="range"/> -->
+		<view hlookat="-150" vlookat="0" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range"/>
 
 
-		<preview url="panos/schuylkill_yards.tiles/preview.jpg" />
+		<preview url="panos/university_city.tiles/preview.jpg" />
 
 		<image>
-			<cube url="panos/schuylkill_yards.tiles/pano_%s.jpg" />
+			<cube url="panos/university_city.tiles/pano_%s.jpg" />
 		</image>
 
 		<!--  place your scene hotspots here -->
 		<!-- FMC Tower -->
-		<hotspot name="pop01" ath="30.000" atv="-8.200" style="popup" img-url="skin/img/popup/fmc-tower.png"/>
-		<hotspot name="pop01-name" ath="30.000" atv="-8.200" url="skin/img/popup/fmc-tower-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop01" ath="-125.886" atv="-5.968" style="popup" img-url="skin/img/popup/fmc-tower.png" onclick="openurl('http://www.upenn.edu');" />
+		<hotspot name="pop01-name" ath="-125.886" atv="-5.968" url="skin/img/popup/fmc-tower-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- Chestnut Square -->
-		<hotspot name="pop02" ath="80.000" atv="10.200" style="popup" img-url="skin/img/popup/chestnut-square.png"/>
-		<hotspot name="pop02-name" ath="80.000" atv="10.200" url="skin/img/popup/chestnut-square-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop02" ath="-162.283" atv="26.044" style="popup" img-url="skin/img/popup/chestnut-square.png"/>
+		<hotspot name="pop02-name" ath="-162.283" atv="26.044" url="skin/img/popup/chestnut-square-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- 3737 Chestnut -->
-		<hotspot name="pop03" ath="125.000" atv="1.200" style="popup" img-url="skin/img/popup/3737-chestnut.png"/>
-		<hotspot name="pop03-name" ath="125.000" atv="1.200" url="skin/img/popup/3737-chestnut-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop03" ath="57.663" atv="-1.054" style="popup" img-url="skin/img/popup/3737-chestnut.png"/>
+		<hotspot name="pop03-name" ath="57.663" atv="-1.054" url="skin/img/popup/3737-chestnut-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- Vue 32 -->
 		<!-- <hotspot name="pop04" ath="165.000" atv="8.200" style="popup" img-url="skin/img/popup/dell.png"/>
 		<hotspot name="pop04-name" ath="165.000" atv="8.200" url="skin/img/popup/dell-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/> -->
 		<!-- Evo -->
-		<hotspot name="pop05" ath="27.000" atv="2.200" style="popup" img-url="skin/img/popup/evo.png"/>
-		<hotspot name="pop05-name" ath="27.000" atv="2.200" url="skin/img/popup/evo-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop05" ath="-137.579" atv="-0.997" style="popup" img-url="skin/img/popup/evo.png"/>
+		<hotspot name="pop05-name" ath="-137.579" atv="-0.997" url="skin/img/popup/evo-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- 1601 Vine -->
-		<hotspot name="pop06" ath="292.500" atv="0.000" style="popup" img-url="skin/img/popup/1601-vine.png"/>
-		<hotspot name="pop06-name" ath="292.500" atv="0.000" url="skin/img/popup/1601-vine-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop06" ath="-157.481" atv="-0.001" style="popup" img-url="skin/img/popup/1601-vine.png"/>
+		<hotspot name="pop06-name" ath="-157.481" atv="-0.001" url="skin/img/popup/1601-vine-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- Comcast Technology Center -->
-		<hotspot name="pop07" ath="310.000" atv="-8.000" style="popup" img-url="skin/img/popup/comcast-technology-center.png"/>
-		<hotspot name="pop07-name" ath="310.000" atv="-8.000" url="skin/img/popup/comcast-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop07" ath="-147.080" atv="-4.968" style="popup" img-url="skin/img/popup/comcast-technology-center.png"/>
+		<hotspot name="pop07-name" ath="-147.080" atv="-4.968" url="skin/img/popup/comcast-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- The Summit -->
-		<hotspot name="pop08" ath="130.000" atv="5.000" style="popup" img-url="skin/img/popup/the-summit.png"/>
-		<hotspot name="pop08-name" ath="130.000" atv="5.000" url="skin/img/popup/the-summit-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop08" ath="117.932" atv="-1.466" style="popup" img-url="skin/img/popup/the-summit.png"/>
+		<hotspot name="pop08-name" ath="117.932" atv="-1.466" url="skin/img/popup/the-summit-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="307.000" atv="-10.000" distorted="false" zoom="false" linkedscene="scene_comcast_technology_center" />
-
-	</scene>
-
-	<scene name="scene_comcast_technology_center" title="BALA Projects" thumburl="panos/comcast_technology_center.tiles/thumb.png">
-		<image>
-			<cube url="panos/comcast_technology_center.tiles/pano_%s.jpg" />
-		</image>
-
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="30.000" atv="0.000" distorted="false" zoom="false" linkedscene="scene_schuylkill_yards" />
+		<!-- <hotspot name="spot1" style="skin_hotspotstyle" ath="209.788" atv="-5.015" distorted="false" zoom="false" linkedscene="scene_comcast_technology_center" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-133.080" atv="-1.331" distorted="false" zoom="false" linkedscene="scene_evo" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="177.801" atv="-3.032" distorted="false" zoom="false" linkedscene="scene_schuylkill_yards" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="80.334" atv="-1.595" distorted="false" zoom="false" linkedscene="scene_3675_market" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-118.037" atv="0.762" distorted="false" zoom="false" linkedscene="scene_500_510_broad" /> -->
 
 	</scene>
+
 
 </krpano>

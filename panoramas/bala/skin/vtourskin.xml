@@ -91,7 +91,7 @@
 
 
 	<!-- include VR support - http://krpano.com/plugins/webvr/ -->
-	<!-- <include url="%SWFPATH%/plugins/webvr.xml" devices="html5" /> -->
+	<include url="%SWFPATH%/plugins/webvr.xml" devices="html5" />
 
 	<!-- overwrite some settings from the webvr.xml for the skin integration -->
 	<plugin name="WebVR" keep="true" devices="html5"
@@ -555,20 +555,28 @@ delayedcall(3,
 					copy(view.limitview, lp_limitview);
 					set(view.vlookatmin, null);
 					set(view.vlookatmax, null);
-					tween(view.hlookat|view.vlookat|view.fov|view.distortion, calc('' + 60 + '|' + 25 + '|' + 85 + '|' + 0.0),
+					tween(view.hlookat|view.vlookat|view.fov|view.distortion, calc('' + -150 + '|' + 15 + '|' + 85 + '|' + 0.0),
 						3.0, easeOutInQuint,
 						set(control.usercontrol, all);
 						tween(view.fovmax, get(lp_fovmax));
-						tween(layer[logolp].y,-40,.5); tween(layer[logolp].alpha,0,.5); 
-						delayedcall(0,  tween(layer[logolp].y,-40,.5); tween(layer[logolp].alpha,0,.5);   tween(layer[main-skin-con].alpha,1); tween(layer[main-skin-con].alpha,1); tween(hotspot[region].alpha,1,2);   hsp-show();   );
-						set(control.usercontrol,all); set(skin_settings.hs_anim_delay,3 ); 
+						tween(layer[logolp].y,-40,.5); 
+						tween(layer[logolp].alpha,0,.5); 
+						delayedcall(0,  tween(layer[logolp].y,-40,.5); 
+						tween(layer[logolp].alpha,0,.5);   
+						tween(layer[main-skin-con].alpha,1); 
+						tween(layer[main-skin-con].alpha,1); 
+						tween(hotspot[region].alpha,1,2);   
+						hsp-show();   
+						);
+						set(control.usercontrol,all); 
+						set(skin_settings.hs_anim_delay,3 ); 
 
 						delayedcall(1, 
 tween(view.architectural, 0,4, easeOutInQuad );
 tween(view.pannini,       0.0,4, easeOutInQuad );
 tween(view.distortion,    0.0,4, easeOutInQuad,  set(skin_settings.littleplanetintro,false);
 set(skin_settings.hs_anim_delay,6);  ); 
-); trace('adsd');  
+); trace('finished littleplanetintro');  
 						);
 						
 				  );  );
@@ -679,17 +687,26 @@ set(hotspot[pop19].visible,true);
 set(hotspot[pop20].visible,true);
 set(hotspot[pop21].visible,true); 
 set(hotspot[pop22].visible,true);
-
-set(hotspot[icon-1604-1].visible,true); 
-set(hotspot[icon-interstate-1].visible,true); 
-set(hotspot[icon-interstate-2].visible,true);
  
-set(hotspot[spot1].visible,true); 
+<!-- set(hotspot[spot1].visible,true); 
+set(hotspot[spot2].visible,true); 
+set(hotspot[spot3].visible,true); 
+set(hotspot[spot4].visible,true); 
+set(hotspot[spot5].visible,true); 
+set(hotspot[spot6].visible,true); 
+set(hotspot[spot7].visible,true); 
+set(hotspot[spot8].visible,true); 
+set(hotspot[spot9].visible,true); 
+set(hotspot[spot10].visible,true);  -->
+<!-- Add more hotspot animations here. -->
 
 
-
-
-set(hotspot[spot_anim_1].visible,true); 
+<!-- IMPORTANT: We only set this to be the spot_anim for the first panorama. Any ones linked after that will automatically set their spot animations. -->
+<!-- set(hotspot[spot_anim_1].visible,true); 
+set(hotspot[spot_anim_2].visible,true); 
+set(hotspot[spot_anim_3].visible,true); 
+set(hotspot[spot_anim_4].visible,true); 
+set(hotspot[spot_anim_5].visible,true); -->
 
 
 set(hotspot[pop01-name].visible,true); 

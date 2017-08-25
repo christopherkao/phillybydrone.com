@@ -88,7 +88,7 @@
 
 
 		<!-- view settings -->
-		<view hlookat="-150" vlookat="0" fovtype="MFOV" vlookatmax="-25" vlookatmin="90" limitview="range"/>
+		<view hlookat="-150" vlookat="0" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range"/>
 
 
 		<preview url="panos/university_city.tiles/preview.jpg" />

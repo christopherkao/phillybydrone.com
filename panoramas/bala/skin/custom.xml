@@ -71,10 +71,42 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	       tooltip=""
 	       linkedscene=""
 	       linkedscene_lookat=""
-	       onclick="skin_hotspotstyle_clicked(); tween(layer[tooltip_hs].alpha,0,.5);"
-	       onover="set(layer[tooltip_hs].html, get(scene[get(linkedscene)].title)); calc_layer_pos(get(name)); tween(layer[tooltip_hs].alpha,1,.5); subtxt(spot_id, get(name), 4, 2); trace(get(spot_id)); txtadd(anim-hs,'spot_anim_', get(scene[get(linkedscene)].index));   txtadd(back-hs,'spot_back_', get(scene[get(linkedscene)].index)); set(hotspot[get(back-hs)].ath,get(ath));  set(hotspot[get(back-hs)].atv,get(atv));  set(hotspot[get(back-hs)].visible,true);  tween(scale,2); tween(alpha,0); tween(hotspot[get(back-hs)].scale,.4); tween(hotspot[get(back-hs)].alpha,1); tween(hotspot[get(anim-hs)].scale,4); set(hotspot[get(anim-hs)].visible,false); tween(hotspot[get(anim-hs)].alpha,0);"
-	       onout="tween(layer[tooltip_hs].alpha,0,.5);  tween(scale,0.5); tween(alpha,1); tween(hotspot[get(back-hs)].scale,.1); tween(hotspot[get(back-hs)].alpha,0); tween(hotspot[get(anim-hs)].scale,1); set(hotspot[get(anim-hs)].visible,true); set(hotspot[get(anim-hs)].alpha,0); "
-	       onloaded=" delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear,set(enabled,true);); set(skin_settings.hs_anim_delay,get(skin_settings.hs_delay));); subtxt(spot_id, get(name), 4, 2); trace(get(spot_id));  txtadd(anim-hs,'spot_anim_', get(scene[get(linkedscene)].index));   set(hotspot[get(anim-hs)].ath,get(ath)); set(hotspot[get(anim-hs)].atv,get(atv));   set(hotspot[get(anim-hs)].visible,true);  if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); );"
+	       onclick="skin_hotspotstyle_clicked(); 
+	       tween(layer[tooltip_hs].alpha,0,.5);"
+	       onover="set(layer[tooltip_hs].html, get(scene[get(linkedscene)].title)); 
+	       calc_layer_pos(get(name)); 
+	       tween(layer[tooltip_hs].alpha,1,.5); 
+	       subtxt(spot_id, get(name), 4, 2); 
+	       trace(get(spot_id)); 
+	       txtadd(anim-hs,'spot_anim_', get(scene[get(linkedscene)].index));   txtadd(back-hs,'spot_back_', get(scene[get(linkedscene)].index)); 
+	       set(hotspot[get(back-hs)].ath,get(ath));  
+	       set(hotspot[get(back-hs)].atv,get(atv));  
+	       set(hotspot[get(back-hs)].visible,true);  
+	       tween(scale,2); 
+	       tween(alpha,0); 
+	       tween(hotspot[get(back-hs)].scale,.4); 
+	       tween(hotspot[get(back-hs)].alpha,1); 
+	       tween(hotspot[get(anim-hs)].scale,4); 
+	       set(hotspot[get(anim-hs)].visible,false); 
+	       tween(hotspot[get(anim-hs)].alpha,0);"
+	       onout="tween(layer[tooltip_hs].alpha,0,.5);  
+	       tween(scale,0.5); 
+	       tween(alpha,1); 
+	       tween(hotspot[get(back-hs)].scale,.1); 
+	       tween(hotspot[get(back-hs)].alpha,0); 
+	       tween(hotspot[get(anim-hs)].scale,1); 
+	       set(hotspot[get(anim-hs)].visible,true); 
+	       set(hotspot[get(anim-hs)].alpha,0); "
+	       onloaded=" delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear,set(enabled,true);); 
+	       set(skin_settings.hs_anim_delay,get(skin_settings.hs_delay));); 
+	       subtxt(spot_id, get(name), 4, 2); 
+	       trace(get(spot_id));
+	       txtadd(anim-hs,'spot_anim_', get(scene[get(linkedscene)].index));  
+	       set(hotspot[get(anim-hs)].ath,get(ath));
+	       set(hotspot[get(anim-hs)].atv,get(atv));
+	       set(hotspot[get(anim-hs)].visible,true);
+	       if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); 
+	       loadstyle(skin_tooltips); );"
 	       />
 
 
@@ -361,23 +393,24 @@ webvr.enterVR
 	<layer name="main-skin-con" type="container" keep="true" visible="false"  align="lefttop" width="100%" y="0" height="100%" autoalpha="true" alpha="0" zorder="50" >
 		<layer name="grad-con" type="container" keep="true" url="img/gradient.png" visible="true" align="leftbottom" width="100%" x="0" y="0" height="100" enabled="false" alpha=".5" zorder="-1"  ></layer>
 
-		<layer name="desktop-thumb-con" type="container" keep="true"  visible="true" align="centerbottom" width="500" height="120" zorder="10" devices="desktop|tablet"> 
-        <layer name="rnd-thumb-0" url="%SWFPATH%/panos/schuylkill_yards.tiles/thumb.png" align="centerleft" edge="center" x="0" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[0].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
+		<!-- Enable these to jump to other hotspots -->
+		<!-- <layer name="desktop-thumb-con" type="container" keep="true"  visible="true" align="centerbottom" width="500" height="120" zorder="10" devices="desktop|tablet"> 
+        <layer name="rnd-thumb-0" url="%SWFPATH%/panos/university_city.tiles/thumb.png" align="centerleft" edge="center" x="0" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[0].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
 
-        <layer name="rnd-thumb-1" url="%SWFPATH%/panos/comcast_technology_center.tiles/thumb.png" align="centerleft" edge="center"  x="100" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[1].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
+        <layer name="rnd-thumb-1" url="%SWFPATH%/panos/schuylkill_yards.tiles/thumb.png" align="centerleft" edge="center"  x="100" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[3].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
 
-        <!-- <layer name="rnd-thumb-2" url="%SWFPATH%/panos/random.tiles/thumb.png" align="centerleft" edge="center"  x="200" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[2].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" /> -->
+        <layer name="rnd-thumb-2" url="%SWFPATH%/panos/1911_walnut.tiles/thumb.png" align="centerleft" edge="center"  x="200" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[7].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />
 
-<!--         <layer name="rnd-thumb-3" url="%SWFPATH%/panos/Trendkite.tiles/thumb.png" align="centerleft" edge="center"  x="300" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[3].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
+        <layer name="rnd-thumb-3" url="%SWFPATH%/panos/comcast_technology_center.tiles/thumb.png" align="centerleft" edge="center"  x="300" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[1].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
 
-        <layer name="rnd-thumb-4" url="%SWFPATH%/panos/Key.tiles/thumb.png" align="centerleft" edge="center"  x="400" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[4].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
+        <layer name="rnd-thumb-4" url="%SWFPATH%/panos/jewelers_row.tiles/thumb.png" align="centerleft" edge="center"  x="400" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[8].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
 
-        <layer name="rnd-thumb-5" url="%SWFPATH%/panos/Condo.tiles/thumb.png" align="centerleft" edge="center"  x="500" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[5].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" /> -->	
+        <layer name="rnd-thumb-5" url="%SWFPATH%/panos/camden_waterfront_north.tiles/thumb.png" align="centerleft" edge="center"  x="500" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[12].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
 	
-		</layer>
-    <layer name="gallery-icon" keep="true" style="skin_glow" url="img/gallery-icon.png"  x="50" x.mobile="55"  y="13" align="rightbottom" scale=".2" onclick="show_gallery(get(galleryname))" galleryname="gallery1" />
+		</layer> -->
+    <!-- <layer name="gallery-icon" keep="true" style="skin_glow" url="img/gallery-icon.png"  x="50" x.mobile="55"  y="13" align="rightbottom" scale=".2" onclick="show_gallery(get(galleryname))" galleryname="gallery1" /> -->
 		 
-		<layer name="html-skin_btn_corp"      keep="true"  style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom"      x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="1" onclick="openurl(http://www.bala.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
+		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="1.0" onclick="openurl(http://www.bala.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
 		
 		<!-- <layer name="above-vr-logo" url="img/above-vr.png" keep="true" preload="false" visible="true" onloaded="if(skin_settings.corporate_logo,set(visible,false),set(visible,true));" enabled="true" zorder="1" alpha="1" blendmode="normal" smoothing="true" align="leftbottom" edge="" x="-4" y="1" ox="0" oy="0" width="140" height="62" crop="" ondowncrop="" onovercrop="" scale="0.666"  rotate="0" parent="" mask=""  onover="" onhover="" onout="" ondown="" onup="" aboutstate="1"  onclick="if(aboutstate == 1, open-about(), close-about()); "/> -->
 
@@ -396,7 +429,7 @@ webvr.enterVR
 	<layer name="skin_btn_twitter2"  style="custom_skin_base|skin_glow" crop="0|256|64|64"  align="rightbottom"      x="40"   y="1"  scale="0.6"  onclick="set(shareurl, http://aboveinteractive.com/template-pr3/); set(mas, http://twitter.com/intent/tweet?status=); txtadd(fin, get(mas), get(shareurl)); openurl(https://twitter.com/intent/tweet?status= %23 Description goes here  http://aboveinteractive.com/template-pr3/); showio(); set(layer[html-skin_btn_share].active,1);" />					
 	<layer name="skin_btn_gplus2"  	style="custom_skin_base|skin_glow" crop="64|256|64|64" align="rightbottom"      x="0"    y="1"  scale="0.6"  onclick="set(shareurl, http://aboveinteractive.com/template-pr3/); set(mas, https://plus.google.com/share?url=); txtadd(fin, get(mas), get(shareurl)); openurl(get(fin)); showio(); set(layer[html-skin_btn_share].active,1);" />						
 	</layer -->
-		<layer name="html-skin_btn_vr"        style="custom_skin_base|skin_glow" crop="0|0|80|64"    align="leftbottom"     x="get:skin_settings.vr-icon-xoffset"   y="10"  scale="0.56"  visible="true" devices="webgl" onclick="webvr.enterVR();" />	
+		<layer name="html-skin_btn_vr"        style="custom_skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="10"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR();" />	
 
 		<layer name="html-menu-desktop"  style="custom_skin_base|skin_glow"  crop="64|130|64|64" scale=".56" align="rightbottom" x="10" y="10" oy="0" ox="-2" visible="get:skin_settings.map-btn" devices="desktop|tablet"  onclick="mapio(); "  />
 		<layer name="html-menu-mobile"  style="custom_skin_base|skin_glow"  crop="64|130|64|64" scale=".56" align="rightbottom" x="10" y="10" oy="0" ox="-2" visible="get:skin_settings.menu-btn"  devices="mobile"   onclick="mapio(); "  />
@@ -493,17 +526,16 @@ webvr.enterVR
 
 
   
-
 <layer name="mobile-thumbs-con" type="container" active="0" keep="true" alpha="0"  visible="false" align="lefttop" x="0" y="0" width="100%" height="100%" bgcolor="0x000000" bgalpha="0" zorder="60" >
-<layer name="mobilethumbs-con" keep="true" type="container" align="lefttop" width="600" height="95%" bgcolor="0x000000" bgalpha="0">
-<layer name="skin_mobilethumb" url="%SWFPATH%/plugins/scrollarea.swf" alturl="%SWFPATH%/plugins/scrollarea.js" align="lefttop" x="10"  width="500" height="3000" direction="v" onloaded="setcenter(0,0);">
-<layer name="mobile-header-bg" type="container" keep="true" visible="true" align="topcenter" width="100%" height="75" x="-10" y="0" bgcolor="0x202020" bgalpha="1" >
-<layer name="mobile-header" url="img/mobile-header.jpg" align="topcenter" x="0" y="0" scale=".45" />
+	<layer name="mobilethumbs-con" keep="true" type="container" align="lefttop" width="600" height="95%" bgcolor="0x000000" bgalpha="0">
+		<layer name="skin_mobilethumb" url="%SWFPATH%/plugins/scrollarea.swf" alturl="%SWFPATH%/plugins/scrollarea.js" align="lefttop" x="10"  width="500" height="3000" direction="v" onloaded="setcenter(0,0);">
+			<layer name="mobile-header-bg" type="container" keep="true" visible="true" align="topcenter" width="100%" height="75" x="-10" y="0" bgcolor="0x202020" bgalpha="1" >
+				<layer name="mobile-header" url="img/corp-logo.png" align="topcenter" x="0" y="0" scale="1.0" />
 
-</layer>
+			</layer>
 
-</layer>
-</layer>
+		</layer>
+	</layer>
 </layer>
 
 <layer name="mobile-back-bg" type="container"  keep="true" alpha="1"  visible="false" align="lefttop" x="0" y="0" width="100%" height="100%" bgcolor="0x000000" bgalpha=".85" zorder="2" />
