@@ -61,6 +61,7 @@
 
 
 	<!-- mouse / touch / keyboard(button) control settings - http://krpano.com/docu/xml/#control -->
+	<!-- I set mousefovchange to 0.0 so that it doesn't zoom in -->
 	<control mouse="drag"
 	         touch="drag"
 	         zoomtocursor="false"
@@ -73,7 +74,7 @@
 	         keybaccelerate="0.09"
 	         keybfriction="0.94"
 	         keybfovchange="0.25"
-	         mousefovchange="1.0"
+	         mousefovchange="0.0"
 	         fovspeed="3.0"
 	         fovfriction="0.9"
 	         bouncinglimits="true"
