@@ -99,7 +99,7 @@
 
 		<!--  place your scene hotspots here -->
 		<!-- FMC Tower -->
-		<hotspot name="pop01" ath="-125.886" atv="-5.968" style="popup" img-url="skin/img/popup/fmc-tower.png" onclick="openurl('http://www.upenn.edu');" />
+		<hotspot name="pop01" ath="-125.886" atv="-5.968" style="popup" img-url="skin/img/popup/fmc-tower.png" onclick="openurl('http://bala.com/projects/fmc-tower');" />
 		<hotspot name="pop01-name" ath="-125.886" atv="-5.968" url="skin/img/popup/fmc-tower-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="1200" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- Chestnut Square -->
 		<hotspot name="pop02" ath="-162.283" atv="26.044" style="popup" img-url="skin/img/popup/chestnut-square.png"/>
