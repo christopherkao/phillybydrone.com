@@ -82,7 +82,7 @@
 	<scene name="scene_university_city" title="University City" lat="" lng="" heading="" thumburl="panos/university_city.tiles/thumb.png">
 
 		<!-- TODO: Remove this to take out the logs. -->
-		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
+		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
 
 		<!-- <view hlookat="7.595" vlookat="25.821" fovtype="MFOV" fov="75" maxpixelzoom=".7" fovmin="70" fovmax="140" limitview="auto" /> -->
 
@@ -96,6 +96,8 @@
 		<image>
 			<cube url="panos/university_city.tiles/pano_%s.jpg" />
 		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-133" atv="-8" distorted="false" zoom="false" linkedscene="scene_old_city" />
 
 		<!--  place your scene hotspots here -->
 		<!-- FMC Tower -->
@@ -128,6 +130,56 @@
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="177.801" atv="-3.032" distorted="false" zoom="false" linkedscene="scene_schuylkill_yards" />
 		<hotspot name="spot4" style="skin_hotspotstyle" ath="80.334" atv="-1.595" distorted="false" zoom="false" linkedscene="scene_3675_market" />
 		<hotspot name="spot5" style="skin_hotspotstyle" ath="-118.037" atv="0.762" distorted="false" zoom="false" linkedscene="scene_500_510_broad" /> -->
+
+	</scene>
+
+	<scene name="scene_old_city" title="Old City" lat="" lng="" heading="" thumburl="panos/old_city.tiles/thumb.png">
+
+		<!-- TODO: Remove this to take out the logs. -->
+		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
+
+		<!-- <view hlookat="7.595" vlookat="25.821" fovtype="MFOV" fov="75" maxpixelzoom=".7" fovmin="70" fovmax="140" limitview="auto" /> -->
+
+
+		<!-- view settings -->
+		<view hlookat="138.502" vlookat="3.132" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" mousefovchange="0.0" />
+
+
+		<preview url="panos/old_city.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/old_city.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="133.47" atv="-6.65" distorted="false" zoom="false" linkedscene="scene_university_city" />
+
+		<!-- 1190 LUDLOW -->
+		<hotspot name="pop01" ath="152.670" atv="10.526" style="popup" img-url="skin/img/popup/fmc-tower.png" />
+
+		<!-- 1213 WALNUT -->
+		<hotspot name="pop02" ath="120.748" atv="4.345" style="popup" img-url="skin/img/popup/fmc-tower.png" />
+
+		<!-- SYMPHONY HOUSE -->
+		<hotspot name="pop03" ath="99.838" atv="2.670" style="popup" img-url="skin/img/popup/fmc-tower.png" />
+
+		<!-- FMC TOWER -->
+		<hotspot name="pop04" ath="131.792" atv="-1.882" style="popup" img-url="skin/img/popup/fmc-tower.png" />
+
+		<!-- COMCAST TECHNOLOGY CENTER -->
+		<hotspot name="pop05" ath="148.717" atv="-6.570" style="popup" img-url="skin/img/popup/fmc-tower.png" />
+
+		<!-- PSFS -->
+		<hotspot name="pop06" ath="146.876" atv="-2.981" style="popup" img-url="skin/img/popup/fmc-tower.png" />
+
+		<!-- BRIDGE ON RACE -->
+		<hotspot name="pop07" ath="-79.362" atv="4.441" style="popup" img-url="skin/img/popup/fmc-tower.png" />
+
+		<!-- 1601 VINE -->
+		<hotspot name="pop08" ath="171.797" atv="0.158" style="popup" img-url="skin/img/popup/fmc-tower.png" />
+
+		<!-- ELEMENT HOTEL -->
+		<hotspot name="pop09" ath="136.323" atv="-3.894" style="popup" img-url="skin/img/popup/fmc-tower.png" />
+
 
 	</scene>
 

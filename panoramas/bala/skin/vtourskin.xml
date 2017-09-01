@@ -689,8 +689,8 @@ set(hotspot[pop20].visible,true);
 set(hotspot[pop21].visible,true); 
 set(hotspot[pop22].visible,true);
  
-<!-- set(hotspot[spot1].visible,true); 
-set(hotspot[spot2].visible,true); 
+set(hotspot[spot1].visible,true); 
+<!-- set(hotspot[spot2].visible,true); 
 set(hotspot[spot3].visible,true); 
 set(hotspot[spot4].visible,true); 
 set(hotspot[spot5].visible,true); 
@@ -703,8 +703,8 @@ set(hotspot[spot10].visible,true);  -->
 
 
 <!-- IMPORTANT: We only set this to be the spot_anim for the first panorama. Any ones linked after that will automatically set their spot animations. -->
-<!-- set(hotspot[spot_anim_1].visible,true); 
-set(hotspot[spot_anim_2].visible,true); 
+set(hotspot[spot_anim_1].visible,true); 
+<!-- set(hotspot[spot_anim_2].visible,true); 
 set(hotspot[spot_anim_3].visible,true); 
 set(hotspot[spot_anim_4].visible,true); 
 set(hotspot[spot_anim_5].visible,true); -->
