@@ -74,7 +74,7 @@
 	         keybaccelerate="0.09"
 	         keybfriction="0.94"
 	         keybfovchange="0.25"
-	         mousefovchange="0.0"
+	         mousefovchange="1.0"
 	         fovspeed="3.0"
 	         fovfriction="0.9"
 	         bouncinglimits="true"

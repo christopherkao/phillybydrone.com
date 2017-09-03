@@ -157,7 +157,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
   	set(hotspot[popup-img].ath,get(ath) ); 
   	set(hotspot[popup-img].atv,get(atv) ); 
   	set(hotspot[popup-img].url,get(img-url) );  
-  	tween(hotspot[popup-img].scale,.65); 
+  	tween(hotspot[popup-img].scale,.5); 
   	tween(hotspot[popup-img].alpha,1);" 
   	onout="tween(rotate,0); 
   	tween(hotspot[popup-img].scale,0); 
