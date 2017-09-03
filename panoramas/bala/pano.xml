@@ -250,6 +250,12 @@
 		<!-- 800 Walnut -->
 		<hotspot name="pop22" ath="44.608" atv="22.668" style="popup" img-url="skin/img/popup/chestnut-square.png" />
 
+		<!-- Comcast Center -->
+		<hotspot name="pop23" ath="151.980" atv="-5.630" style="popup" img-url="skin/img/popup/chestnut-square.png" />
+
+		<!-- 10 Rittenhouse -->
+		<hotspot name="pop24" ath="130.094" atv="-0.143" style="popup" img-url="skin/img/popup/chestnut-square.png" />
+
 
 	</scene>
 
