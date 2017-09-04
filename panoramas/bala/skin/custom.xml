@@ -152,7 +152,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	<style name="vr_style"  keep="true" depth="off" scale=".1" distorted="true"  alpha="0" width="180" height="180" 	ox="0" oy="0"  onover="tween(scale,.4,.1);" onout="tween(scale,.30,.2);"    enabled="true" onclick=" multi_off_fix(); if(linkedscene,  activatepano(get(linkedscene));  skin_updatescroll(); );"  />
 
 <!-- Change the popup-img scale to make it bigger -->
-  <style name="popup" url="custom/vtourskin_hotspot_multi.png" alpha="0" scale="0.5"  
+  <style name="popup" url="custom/vtourskin_hotspot_multi.png" alpha="0" scale="0.5" depth="false"
   	onover="tween(rotate,135); 
   	set(hotspot[popup-img].ath,get(ath) ); 
   	set(hotspot[popup-img].atv,get(atv) ); 
