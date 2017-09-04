@@ -144,12 +144,12 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	
  
  
- 	<style name="webvr_menu_style" depth="100" scale="0.5" distorted="true" ath="0" atv="45" alpha="0.5" />
-	<style name="webvr_thumb_style" keep="true" depth="100" scale=".45" distorted="false" zorder="1000"  alpha="1" width="180" height="180" 	ox="0" oy="0"  onover="tween(scale,.75);" onout="tween(scale,.45);"     onclick="if(linkedscene,  activatepano(get(linkedscene));  skin_updatescroll(); );"  />
-	<style name="multi_thumb_style" zorder="50" keep="true" depth="100" scale=".1" distorted="false"  alpha="0" width="180" height="180" 	ox="0" oy="0" 
+ 	<style name="webvr_menu_style" depth="800" scale="0.5" distorted="true" ath="0" atv="45" alpha="0.5" />
+	<style name="webvr_thumb_style" keep="true" depth="800" scale=".45" distorted="false" zorder="1000"  alpha="1" width="180" height="180" 	ox="0" oy="0"  onover="tween(scale,.75);" onout="tween(scale,.45);"     onclick="if(linkedscene,  activatepano(get(linkedscene));  skin_updatescroll(); );"  />
+	<style name="multi_thumb_style" zorder="50" keep="true" depth="800" scale=".1" distorted="false"  alpha="0" width="180" height="180" 	ox="0" oy="0" 
 	onover="tween(scale,.6,.1);	 " 
 	onout="tween(scale,.5,.2); "    enabled="true" onclick=" if(linkedscene,  activatepano(get(linkedscene));  skin_updatescroll(); );"  />
-	<style name="vr_style"  keep="true" depth="100" scale=".1" distorted="true"  alpha="0" width="180" height="180" 	ox="0" oy="0"  onover="tween(scale,.4,.1);" onout="tween(scale,.30,.2);"    enabled="true" onclick=" multi_off_fix(); if(linkedscene,  activatepano(get(linkedscene));  skin_updatescroll(); );"  />
+	<style name="vr_style"  keep="true" depth="800" scale=".1" distorted="true"  alpha="0" width="180" height="180" 	ox="0" oy="0"  onover="tween(scale,.4,.1);" onout="tween(scale,.30,.2);"    enabled="true" onclick=" multi_off_fix(); if(linkedscene,  activatepano(get(linkedscene));  skin_updatescroll(); );"  />
 
 <!-- Change the popup-img scale to make it bigger -->
   <style name="popup" url="custom/vtourskin_hotspot_multi.png" alpha="0" scale="0.5"  
@@ -181,7 +181,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
  <style name="normal" alpha="0" onloaded="delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear););"	/>	
  
  <!-- Changed depth from 1000 to 100 -->
- <style name="popup-text" edge="centerbottom" scale="0" 	keep="true"		 oy="-20" visible="true" distorted="false" alpha="1"	         enabled="true" zorder="100"	        depth="100"	         polyline="false"	         scaleflying="false"	        tx="0"	         ty="0"	         tz="0"	        onclickx="if(webvr.isenabled !== true, tween(flying,0); tween(alpha,0); tween(oy,0 ); tween(scale,0 ); set(enabled,false);  ); set(first-view, get(view.fov) ); add(sec-view, -10,  get(first-view)); tween(view.fov,get(sec-view)); tween(hotspot[window-tint-hs].alpha,0 );  "	/>	
+ <style name="popup-text" edge="centerbottom" scale="0" 	keep="true"		 oy="-20" visible="true" distorted="false" alpha="1"	         enabled="true" zorder="100"	        depth="off"	         polyline="false"	         scaleflying="false"	        tx="0"	         ty="0"	         tz="0"	        onclickx="if(webvr.isenabled !== true, tween(flying,0); tween(alpha,0); tween(oy,0 ); tween(scale,0 ); set(enabled,false);  ); set(first-view, get(view.fov) ); add(sec-view, -10,  get(first-view)); tween(view.fov,get(sec-view)); tween(hotspot[window-tint-hs].alpha,0 );  "	/>	
 
   <hotspot name="popup-img" ath="0" atv="0" style="popup-text" url="" enabled="false" />
 	
