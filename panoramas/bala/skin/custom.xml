@@ -159,7 +159,6 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
   	set(hotspot[popup-img].url,get(img-url) );  
   	if(webvr.isenabled == true, tween(hotspot[popup-img].scale, .2));
   	if(webvr.isenabled !== true, tween(hotspot[popup-img].scale, .5));
-  	trace(hotspot[popup-img].scale);
   	tween(hotspot[popup-img].alpha,1);" 
   	onout="tween(rotate,0); 
   	tween(hotspot[popup-img].scale,0); 
