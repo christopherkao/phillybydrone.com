@@ -180,7 +180,8 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	
  <style name="normal" alpha="0" onloaded="delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear););"	/>	
  
- <style name="popup-text" edge="centerbottom" scale="0" 	keep="true"		 oy="-20" visible="true" distorted="false" alpha="1"	         enabled="true" zorder="100"	        depth="1000"	         polyline="false"	         scaleflying="false"	        tx="0"	         ty="0"	         tz="0"	        onclickx="if(webvr.isenabled !== true, tween(flying,0); tween(alpha,0); tween(oy,0 ); tween(scale,0 ); set(enabled,false);  ); set(first-view, get(view.fov) ); add(sec-view, -10,  get(first-view)); tween(view.fov,get(sec-view)); tween(hotspot[window-tint-hs].alpha,0 );  "	/>	
+ <!-- Changed depth from 1000 to 100 -->
+ <style name="popup-text" edge="centerbottom" scale="0" 	keep="true"		 oy="-20" visible="true" distorted="false" alpha="1"	         enabled="true" zorder="100"	        depth="100"	         polyline="false"	         scaleflying="false"	        tx="0"	         ty="0"	         tz="0"	        onclickx="if(webvr.isenabled !== true, tween(flying,0); tween(alpha,0); tween(oy,0 ); tween(scale,0 ); set(enabled,false);  ); set(first-view, get(view.fov) ); add(sec-view, -10,  get(first-view)); tween(view.fov,get(sec-view)); tween(hotspot[window-tint-hs].alpha,0 );  "	/>	
 
   <hotspot name="popup-img" ath="0" atv="0" style="popup-text" url="" enabled="false" />
 	
