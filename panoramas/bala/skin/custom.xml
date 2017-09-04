@@ -43,12 +43,20 @@
 			
 <action name="webvr_setup_custom">
 if(webvr.isenabled,
-
+	trace('got here');
+	<!-- set all hotspots scale to half their size -->
+	for(set(i,0),i LT hotspot.count,inc(i),
+		set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale / 2));
+	)
 ,
-vr_menu_hide(); 	
-set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[menuvr].alpha, 0);
-
-
+	vr_menu_hide(); 	
+	set(hotspot[menuvr].state, 1); 
+	set(hotspot[menuvr].visible, false); 
+	set(hotspot[menuvr].alpha, 0);
+	<!-- set all hotspots scale to their original size -->
+	for(set(i,0),i LT hotspot.count,inc(i),
+		set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale * 2));
+	)
 );
 </action>
 			
@@ -179,6 +187,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 
 	/>	
 	
+	<!-- Try set scaleflying to false to have text be smaller in VR -->
  <style name="normal" alpha="0" onloaded="delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear););"	/>	
  
  <!-- Changed depth from 1000 to 100 -->
