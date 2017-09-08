@@ -5,7 +5,7 @@
 	
 	<!-- set skin settings: bingmaps? gyro? thumbnail controlling? tooltips? -->
 	<skin_settings mousetype="drag2d"
-								 mousefovchange="0" 
+								 mousefovchange="1.0" 
 								 bingmaps="false"
 	               bingmaps_key=""
 	               bingmaps_zoombuttons="false"
