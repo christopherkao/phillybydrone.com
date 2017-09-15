@@ -424,9 +424,9 @@ webvr.enterVR
 
 		<!-- Enable these to jump to other hotspots -->
 		<layer name="desktop-thumb-con" type="container" keep="true"  visible="true" align="centerbottom" width="500" height="120" zorder="10" devices="desktop|tablet"> 
-        <layer name="rnd-thumb-0" url="%SWFPATH%/panos/university_city.tiles/thumb.png" align="centerleft" edge="center" x="0" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[0].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
+        <layer name="rnd-thumb-0" url="%SWFPATH%/panos/university_city.tiles/thumb.png" align="centerleft" edge="center" x="200" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[0].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />	
 
-        <layer name="rnd-thumb-1" url="%SWFPATH%/panos/old_city.tiles/thumb.png" align="centerleft" edge="center"  x="100" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[1].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />
+        <layer name="rnd-thumb-1" url="%SWFPATH%/panos/old_city.tiles/thumb.png" align="centerleft" edge="center"  x="300" y="0" width="80" height="80" onover="tween(scale,1.3,.25);" onout="tween(scale,1);" onclick="loadscene(get(scene[1].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend));" />
 	
 		</layer>
     <!-- <layer name="gallery-icon" keep="true" style="skin_glow" url="img/gallery-icon.png"  x="50" x.mobile="55"  y="13" align="rightbottom" scale=".2" onclick="show_gallery(get(galleryname))" galleryname="gallery1" /> -->
@@ -450,7 +450,11 @@ webvr.enterVR
 	<layer name="skin_btn_twitter2"  style="custom_skin_base|skin_glow" crop="0|256|64|64"  align="rightbottom"      x="40"   y="1"  scale="0.6"  onclick="set(shareurl, http://aboveinteractive.com/template-pr3/); set(mas, http://twitter.com/intent/tweet?status=); txtadd(fin, get(mas), get(shareurl)); openurl(https://twitter.com/intent/tweet?status= %23 Description goes here  http://aboveinteractive.com/template-pr3/); showio(); set(layer[html-skin_btn_share].active,1);" />					
 	<layer name="skin_btn_gplus2"  	style="custom_skin_base|skin_glow" crop="64|256|64|64" align="rightbottom"      x="0"    y="1"  scale="0.6"  onclick="set(shareurl, http://aboveinteractive.com/template-pr3/); set(mas, https://plus.google.com/share?url=); txtadd(fin, get(mas), get(shareurl)); openurl(get(fin)); showio(); set(layer[html-skin_btn_share].active,1);" />						
 	</layer -->
-		<layer name="html-skin_btn_vr"        style="custom_skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="10"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR();" />	
+		<layer name="html-skin_btn_vr"        style="custom_skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="30"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR();" />	
+
+		<layer name="philly_by_drone_logo"        style="custom_skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="0"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="openurl(http://www.phillybydrone.com,_blank);" />	
+
+		<!-- <layer name="above-vr-logo" url="img/above-vr.png" keep="true" preload="false" visible="true" onloaded="if(skin_settings.corporate_logo,set(visible,false),set(visible,true));" enabled="true" zorder="1" alpha="1" blendmode="normal" smoothing="true" align="leftbottom" edge="" x="-4" y="1" ox="0" oy="0" width="140" height="62" crop="" ondowncrop="" onovercrop="" scale="0.666"  rotate="0" parent="" mask=""  onover="" onhover="" onout="" ondown="" onup="" aboutstate="1"  onclick="if(aboutstate == 1, open-about(), close-about()); "/> -->
 
 		<layer name="html-menu-desktop"  style="custom_skin_base|skin_glow"  crop="64|130|64|64" scale=".56" align="rightbottom" x="10" y="10" oy="0" ox="-2" visible="get:skin_settings.map-btn" devices="desktop|tablet"  onclick="mapio(); "  />
 		<layer name="html-menu-mobile"  style="custom_skin_base|skin_glow"  crop="64|130|64|64" scale=".56" align="rightbottom" x="10" y="10" oy="0" ox="-2" visible="get:skin_settings.menu-btn"  devices="mobile"   onclick="mapio(); "  />
@@ -459,16 +463,18 @@ webvr.enterVR
 
 
 
-		<layer	name="prev_button_s" keep="true"  style="skin_glow"	url="img/arrows.png"  align="left"  scale="0.5" scale.mobile="0.3" visible="get:skin_settings.arrows_html" autoalpha="false" alpha="1"
+		<!-- <layer	name="prev_button_s" keep="true"  style="skin_glow"	url="img/arrows.png"  align="left"  scale="0.5" scale.mobile="0.3" visible="get:skin_settings.arrows_html" autoalpha="false" alpha="1"
 				crop="0|120|85|120"  onover2="showscenename(-1);" onout2="delayedcall(0,tween(layer[skin_np_title].alpha,0););" click2="delayedcall(0,tween(layer[skin_np_title].alpha,0););"
 
-				onup2=" skin_nextscene_loop(-1); " />
+				onup2=" skin_nextscene_loop(-1); " /> -->
+
+				<!-- Left and right buttons now navigate to the left and right -->
+		<layer	name="prev_button_s" keep="true"  style="skin_glow"	url="img/arrows.png"  align="left"  scale="0.5" scale.mobile="0.3" visible="get:skin_settings.arrows_html" autoalpha="false" alpha="1"
+				crop="0|120|85|120" ondown2="set(hlookat_moveforce,-1);" onup2=" set(hlookat_moveforce,0); " />
 				
 
 		<layer	name="next_button_s"  keep="true"  style="skin_glow" 	url="img/arrows.png"   align="right"  scale="0.5" scale.mobile="0.3" visible="get:skin_settings.arrows_html" autoalpha="false" alpha="1" 
-				crop="0|0|85|120"   onover2="showscenename(+1);" onout2="delayedcall(0,tween(layer[skin_np_title].alpha,0););"
-
-				onup2=" skin_nextscene_loop(+1);  " />
+				crop="0|0|85|120"  ondown2="set(hlookat_moveforce,1);" onup2=" set(hlookat_moveforce,0); " />
 
 		
 		<layer name="flash-skin-con" type="container" keep="true" visible="true" align="lefttop" width="100%" y="0" height="100%" autoalpha="true" alpha="0" >
@@ -492,7 +498,7 @@ webvr.enterVR
 						<layer name="html-skin_btn_share"     style="custom_skin_base|skin_glow" crop="0|320|64|64"   align="rightbottom"       x="-45"    y="-2"  scale="0.58" active="1" onclick="showio();" visible="get:skin_settings.share-btn"  />				
 						<layer name="html-control-bar" type="container" align="rightbottom" x="0" y="0"  keep="true" width="100%" height="100" autoalpha="true" alpha="1"   onloaded="if(layer[html-skin_btn_share].visible, set(x,0); , set(x,-45) );" >
 						
-							<layer name="html-skin_btn_fs2"        style="custom_skin_base|skin_glow" crop="0|576|64|64"   align="rightbottom"       x="0" x.mobile="90" x.tablet="0"  y="1"  scale="0.5125" onclick="switch(fullscreen);" onover2="set(layer[skin_tp_fs].visible,true);" onout2="set(layer[skin_tp_fs].visible,false);" devices="fullscreensupport" />											
+							<layer name="html-skin_btn_fs2"        style="custom_skin_base|skin_glow" crop="0|576|64|64"   align="rightbottom"       x="0" x.mobile="90" x.tablet="0"  y="20"  scale="0.5125" onclick="switch(fullscreen);" onover2="set(layer[skin_tp_fs].visible,true);" onout2="set(layer[skin_tp_fs].visible,false);" devices="fullscreensupport" />											
 							<layer name="html-skin_btn_zout" visible="get:skin_settings.zoom_buttons"   onloaded="if(device.mobile,set(visible,false););"     style="custom_skin_base|skin_glow" crop="64|518|64|64"  align="rightbottom"      x="44" y="0"  scale="0.5" onover2="set(layer[skin_tp_zout].visible,true);" onout2="set(layer[skin_tp_zout].visible,false);" ondown2="set(fov_moveforce,+1);" onup2="set(fov_moveforce,0);"  />				
 							<!-- layer name="skin_btn_gyrox"   onloaded=""     style="skin_base|skin_glow" crop="0|384|64|64"  align="rightbottom"      x="44"  y="0"  scale="0.5" onclick="switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap_custom(false));" visible="true" devices="html5" / -->				
 							<layer name="html-skin_btn_zin"  visible="get:skin_settings.zoom_buttons"  onloaded="if(device.mobile,set(visible,false););"   style="custom_skin_base|skin_glow" crop="0|518|64|64"  align="rightbottom"      x="87" y="0"  scale="0.5" onover2="set(layer[skin_tp_zin].visible,true);" onout2="set(layer[skin_tp_zin].visible,false);" ondown2="set(fov_moveforce,-1);" onup2="set(fov_moveforce,0);"   />				
