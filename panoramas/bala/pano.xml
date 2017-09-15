@@ -119,7 +119,7 @@
 		<hotspot name="pop05-name" ath="-137.579" atv="-2.896" url="skin/img/popup/evo-name.png" style="normal" edge="centerleft" ox="-10" oy="-30" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- 1601 Vine -->
 		<hotspot name="pop06" ath="-157.481" atv="-0.001" style="popup" img-url="skin/img/popup/1601-vine.png"/>
-		<hotspot name="pop06-name" ath="-157.481" atv="-0.001" url="skin/img/popup/1601-vine-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop06-name" ath="-157.481" atv="-0.001" url="skin/img/popup/1601-vine-name.png" style="normal" edge="centerleft" ox="-90" oy="-10" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- Comcast Center -->
 		<hotspot name="pop07" ath="-145.400" atv="-5.816" style="popup" img-url="skin/img/popup/comcast-technology-center.png"/>
 		<hotspot name="pop07-name" ath="-145.400" atv="-5.816" url="skin/img/popup/comcast-center-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
@@ -178,7 +178,7 @@
 
 
 		<!-- view settings -->
-		<view hlookat="138.502" vlookat="3.132" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" />
+		<view hlookat="138.502" vlookat="3.132" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range"  fovmin="40" fovmax="90" />
 
 
 		<preview url="panos/old_city.tiles/preview.jpg" />
@@ -191,7 +191,7 @@
 
 		<!-- 1190 LUDLOW -->
 		<hotspot name="pop01" ath="145.397" atv="8.193" style="popup" img-url="skin/img/popup/chestnut-square.png" />
-		<hotspot name="pop01-name" ath="145.397" atv="8.193" url="skin/img/popup/1190-ludlow-name.png" style="normal" edge="centerleft" ox="-160" oy="-30" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop01-name" ath="145.397" atv="8.193" url="skin/img/popup/1190-ludlow-name.png" style="normal" edge="centerleft" ox="-85" oy="45" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- 1213 WALNUT -->
 		<hotspot name="pop02" ath="120.748" atv="4.345" style="popup" img-url="skin/img/popup/chestnut-square.png" />
