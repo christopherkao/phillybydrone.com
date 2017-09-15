@@ -43,7 +43,6 @@
 			
 <action name="webvr_setup_custom">
 if(webvr.isenabled,
-	trace('got here');
 	<!-- set all hotspots scale to half their size -->
 	for(set(i,0),i LT hotspot.count,inc(i),
 		set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale / 2));
@@ -85,7 +84,6 @@ if(webvr.isenabled,
 	       calc_layer_pos(get(name)); 
 	       tween(layer[tooltip_hs].alpha,1,.5); 
 	       subtxt(spot_id, get(name), 4, 2); 
-	       trace(get(spot_id)); 
 	       txtadd(anim-hs,'spot_anim_', get(scene[get(linkedscene)].index));   txtadd(back-hs,'spot_back_', get(scene[get(linkedscene)].index)); 
 	       set(hotspot[get(back-hs)].ath,get(ath));  
 	       set(hotspot[get(back-hs)].atv,get(atv));  
@@ -108,7 +106,6 @@ if(webvr.isenabled,
 	       onloaded=" delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear,set(enabled,true);); 
 	       set(skin_settings.hs_anim_delay,get(skin_settings.hs_delay));); 
 	       subtxt(spot_id, get(name), 4, 2); 
-	       trace(get(spot_id));
 	       txtadd(anim-hs,'spot_anim_', get(scene[get(linkedscene)].index));  
 	       set(hotspot[get(anim-hs)].ath,get(ath));
 	       set(hotspot[get(anim-hs)].atv,get(atv));
@@ -161,6 +158,7 @@ if(webvr.isenabled,
 
 <!-- TODO: Change the popup-img scale to make it bigger -->
 <!-- Change the tween rotate from 180 back to 135 to get diagonal -->
+<!-- Set the edge to centertop so that popup images display downwards -->
   <style name="popup" url="custom/vtourskin_hotspot_multi.png" alpha="0" scale="0.5" depth="false"
   	onover="tween(rotate,180); 
   	set(hotspot[popup-img].ath,get(ath) ); 
