@@ -129,7 +129,7 @@
 
 		<!-- The Radian -->
 		<hotspot name="pop09" ath="44.148" atv="0.964" style="popup" img-url="skin/img/popup/chestnut-square.png"/>
-		<hotspot name="pop09-name" ath="44.148" atv="0.964" url="skin/img/popup/the-radian-name.png" style="normal" edge="centerleft" ox="-35" oy="-20" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop09-name" ath="44.148" atv="0.964" url="skin/img/popup/the-radian-name.png" style="normal" edge="centerleft" ox="-85" oy="-10" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- The Study -->
 		<hotspot name="pop10" ath="160.635" atv="20.559" style="popup" img-url="skin/img/popup/chestnut-square.png"/>
@@ -144,8 +144,8 @@
 		<hotspot name="pop12-name" ath="-150.145" atv="4.142" url="skin/img/popup/30-street-post-office-name.png" style="normal" edge="centerleft" ox="10" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- 1911 Walnut -->
-		<hotspot name="pop13" ath="-131.958" atv="-5.396" style="popup" img-url="skin/img/popup/chestnut-square.png"/>
-		<hotspot name="pop13-name" ath="-131.782" atv="-2.221" url="skin/img/popup/1911-walnut-name.png" style="normal" edge="centerleft" ox="-40" oy="-30" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop13" ath="-123.448" atv="-2.416" style="popup" img-url="skin/img/popup/chestnut-square.png"/>
+		<hotspot name="pop13-name" ath="-123.448" atv="-2.416" url="skin/img/popup/1911-walnut-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- 1919 Market -->
 		<hotspot name="pop14" ath="-142.580" atv="0.524" style="popup" img-url="skin/img/popup/chestnut-square.png"/>
