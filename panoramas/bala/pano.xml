@@ -210,7 +210,7 @@
 		<hotspot name="pop05-name" ath="148.717" atv="-6.570" url="skin/img/popup/comcast-technology-center-name.png" style="normal" edge="centerleft" ox="-120" oy="-40" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- PSFS Loews Hotel -->
-		<hotspot name="pop06" ath="147.433" atv="1.553" style="popup" img-url="skin/img/popup/chestnut-square.png" />
+		<hotspot name="pop06" ath="147.433" atv="1.553" style="popup" img-url="skin/img/popup/loews-hotel.png" />
 		<hotspot name="pop06-name" ath="147.433" atv="1.553" url="skin/img/popup/loews-hotel-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- BRIDGE ON RACE -->
