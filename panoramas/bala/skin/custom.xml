@@ -178,6 +178,7 @@ if(webvr.isenabled,
     set(hotspot[popup-img].ath,get(ath) ); 
     set(hotspot[popup-img].atv,calc(atv + 3.5)); 
     set(hotspot[popup-img].url,get(img-url) );  
+    set(hotspot[popup-img].edge, 'centertop');
     set(hotspot[popup-img].scale,0); 
     set(hotspot[popup-img].alpha,0); 
     tween(hotspot[popup-img].scale,.35); 
