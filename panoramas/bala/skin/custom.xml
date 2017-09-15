@@ -370,7 +370,6 @@ loadscene(get(scene[0].name),null,get(skin_settings.loadscene_flags),get(skin_se
 </action>
 
 
-
 <action name="chooserx">
 delayedcall( 2, tween(hotspot[anim-logo].alpha,1,3,easeInSine ); );
 delayedcall( 3, 
