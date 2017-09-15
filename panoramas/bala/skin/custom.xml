@@ -377,7 +377,7 @@ delayedcall( 3,
 delayedcall( 1, 
 tween(view.architectural, 0,4, easeOutInQuad );
 tween(view.pannini,       0.0,4, easeOutInQuad );
-tween(view.distortion,    0.0,4, easeOutInQuad,  set(skin_settings.littleplanetintro,false); set(skin_settings.hs_anim_delay,6);  ); 
+tween(view.distortion,    0.0,4, easeOutInQuad,  set(skin_settings.littleplanetintro,false); set(skin_settings.hs_anim_delay,1);  ); 
 );
 );
 
