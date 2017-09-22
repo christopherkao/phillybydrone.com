@@ -82,7 +82,7 @@
 	<scene name="scene_university_city" title="West View" lat="" lng="" heading="" thumburl="panos/university_city.tiles/thumb.png">
 
 		<!-- TODO: Remove this to take out the logs. -->
-		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
+		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
 
 		<!-- <view hlookat="7.595" vlookat="25.821" fovtype="MFOV" fov="75" maxpixelzoom=".7" fovmin="70" fovmax="140" limitview="auto" /> -->
 
@@ -98,16 +98,16 @@
 			<cube url="panos/university_city.tiles/pano_%s.jpg" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-133" atv="-8" distorted="false" zoom="false" linkedscene="scene_old_city" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-133" atv="-9" distorted="false" zoom="false" linkedscene="scene_old_city" />
 
 		<!-- Depth was originally 1200. Set to off -->
 		<!--  place your scene hotspots here -->
 		<!-- FMC Tower -->
-		<hotspot name="pop01" ath="-125.886" atv="-5.968" style="popup" img-url="skin/img/popup/fmc.png" />
-		<hotspot name="pop01-name" ath="-125.886" atv="-5.968" url="skin/img/popup/fmc-name.png" style="normal" edge="centerleft" ox="25" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop01" ath="-126.163" atv="-10.822" style="popup" img-url="skin/img/popup/fmc.png" />
+		<hotspot name="pop01-name" ath="-126.163" atv="-10.822" url="skin/img/popup/fmc-name.png" style="normal" edge="centerleft" ox="25" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- Chestnut Square -->
 		<hotspot name="pop02" ath="-149.269" atv="14.011" style="popup" img-url="skin/img/popup/chestnut-square.png"/>
-		<hotspot name="pop02-name" ath="-149.269" atv="14.011" url="skin/img/popup/chestnut-square-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop02-name" ath="-149.269" atv="14.011" url="skin/img/popup/chestnut-square-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- 3737 Chestnut -->
 		<hotspot name="pop03" ath="57.979" atv="-0.304" style="popup" img-url="skin/img/popup/3737-chestnut.png"/>
 		<hotspot name="pop03-name" ath="57.979" atv="-0.304" url="skin/img/popup/3737-chestnut-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
@@ -116,13 +116,13 @@
 		<hotspot name="pop04-name" ath="150.338" atv="-0.285" url="skin/img/popup/vue-32-name.png" style="normal" edge="centerleft" ox="-30" oy="-25" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- Evo -->
 		<hotspot name="pop05" ath="-137.579" atv="-2.896" style="popup" img-url="skin/img/popup/evo.png"/>
-		<hotspot name="pop05-name" ath="-137.579" atv="-2.896" url="skin/img/popup/evo-name.png" style="normal" edge="centerleft" ox="-10" oy="-30" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop05-name" ath="-137.579" atv="-2.896" url="skin/img/popup/evo-name.png" style="normal" edge="centerleft" ox="-35" oy="-30" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- 1601 Vine -->
 		<hotspot name="pop06" ath="-157.481" atv="-0.001" style="popup" img-url="skin/img/popup/1601-vine.png"/>
 		<hotspot name="pop06-name" ath="-157.481" atv="-0.001" url="skin/img/popup/1601-vine-name.png" style="normal" edge="centerleft" ox="-90" oy="-10" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- Comcast Center -->
-		<hotspot name="pop07" ath="-145.400" atv="-5.816" style="popup" img-url="skin/img/popup/comcast-center.png"/>
-		<hotspot name="pop07-name" ath="-145.400" atv="-5.816" url="skin/img/popup/comcast-center-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop07" ath="-145.400" atv="-6.016" style="popup" img-url="skin/img/popup/comcast-center.png"/>
+		<hotspot name="pop07-name" ath="-145.400" atv="-6.016" url="skin/img/popup/comcast-center-name.png" style="normal" edge="centerleft" ox="-30" oy="-30" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 		<!-- The Summit -->
 		<hotspot name="pop08" ath="122.159" atv="-3.111" style="popup" img-url="skin/img/popup/the-summit.png"/>
 		<hotspot name="pop08-name" ath="122.159" atv="-3.111" url="skin/img/popup/the-summit-name.png" style="normal" edge="centerleft" ox="30" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/>
@@ -138,7 +138,7 @@
 
 		<!-- 30th Street Post Office -->
 		<hotspot name="pop12" ath="-150.145" atv="4.142" style="popup" img-url="skin/img/popup/30th-street-post-office.png"/>
-		<hotspot name="pop12-name" ath="-150.145" atv="4.142" url="skin/img/popup/30-street-post-office-name.png" style="normal" edge="centerleft" ox="10" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop12-name" ath="-150.145" atv="4.142" url="skin/img/popup/30-street-post-office-name.png" style="normal" edge="centerleft" ox="-100" oy="20" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- 1911 Walnut -->
 		<hotspot name="pop13" ath="-123.448" atv="-2.416" style="popup" img-url="skin/img/popup/1911-walnut.png"/>
@@ -146,11 +146,11 @@
 
 		<!-- 1919 Market -->
 		<hotspot name="pop14" ath="-142.580" atv="0.524" style="popup" img-url="skin/img/popup/1919-market.png"/>
-		<hotspot name="pop14-name" ath="-142.5802" atv="0.524" url="skin/img/popup/1919-market-name.png" style="normal" edge="centerleft" ox="10" oy="-5" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop14-name" ath="-142.5802" atv="0.524" url="skin/img/popup/1919-market-name.png" style="normal" edge="centerleft" ox="-20" oy="-30" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Aramark Headquarters -->
 		<hotspot name="pop15" ath="-140.860" atv="2.912" style="popup" img-url="skin/img/popup/aramark.png"/>
-		<hotspot name="pop15-name" ath="-140.860" atv="2.912" url="skin/img/popup/aramark-name.png" style="normal" edge="centerleft" ox="10" oy="-5" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop15-name" ath="-140.860" atv="2.912" url="skin/img/popup/aramark-name.png" style="normal" edge="centerleft" ox="10" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Comcast Technology Center -->
 		<hotspot name="pop17" ath="-147.080" atv="-4.968" style="popup" img-url="skin/img/popup/comcast-technology-center.png"/>
@@ -186,9 +186,9 @@
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="132.448" atv="-9.909" distorted="false" zoom="false" linkedscene="scene_university_city" />
 
-		<!-- 1190 LUDLOW -->
-		<hotspot name="pop01" ath="145.397" atv="8.193" style="popup" img-url="skin/img/popup/1190-ludlow.png" />
-		<hotspot name="pop01-name" ath="145.397" atv="8.193" url="skin/img/popup/1190-ludlow-name.png" style="normal" edge="centerleft" ox="-85" oy="45" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/>
+		<!-- 1199 LUDLOW -->
+		<hotspot name="pop01" ath="145.397" atv="8.193" style="popup" img-url="skin/img/popup/1199-ludlow.png" />
+		<hotspot name="pop01-name" ath="145.397" atv="8.193" url="skin/img/popup/1199-ludlow-name.png" style="normal" edge="centerleft" ox="-85" oy="45" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- 1213 WALNUT -->
 		<hotspot name="pop02" ath="120.748" atv="4.345" style="popup" img-url="skin/img/popup/1213-walnut.png" />
@@ -199,8 +199,8 @@
 		<hotspot name="pop03-name" ath="99.816" atv="1.379" url="skin/img/popup/symphony-house-name.png" style="normal" edge="centerleft" ox="20" oy="-10" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- FMC TOWER -->
-		<hotspot name="pop04" ath="131.792" atv="-1.882" style="popup" img-url="skin/img/popup/fmc.png" />
-		<hotspot name="pop04-name" ath="131.792" atv="-1.882" url="skin/img/popup/fmc-name.png" style="normal" edge="centerleft" ox="-40" oy="-30" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop04" ath="131.792" atv="-2.182" style="popup" img-url="skin/img/popup/fmc.png" />
+		<hotspot name="pop04-name" ath="131.792" atv="-2.182" url="skin/img/popup/fmc-name.png" style="normal" edge="centerleft" ox="-40" oy="-30" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- COMCAST TECHNOLOGY CENTER -->
 		<hotspot name="pop05" ath="148.717" atv="-6.570" style="popup" img-url="skin/img/popup/comcast-technology-center.png" />
@@ -220,7 +220,7 @@
 
 		<!-- W/ELEMENT HOTEL -->
 		<hotspot name="pop09" ath="134.656" atv="-2.531" style="popup" img-url="skin/img/popup/w-element-hotel.png" />
-		<hotspot name="pop09-name" ath="134.656" atv="-2.531" url="skin/img/popup/w-element-hotel-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop09-name" ath="134.656" atv="-2.531" url="skin/img/popup/w-element-hotel-name.png" style="normal" edge="centerleft" ox="20" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- View at Montgomery -->
 		<hotspot name="pop15" ath="-141.578" atv="0.369" style="popup" img-url="skin/img/popup/the-view.png" />
@@ -228,7 +228,7 @@
 
 		<!-- View II at Montgomery -->
 		<hotspot name="pop16" ath="-143.922" atv="0.254" style="popup" img-url="skin/img/popup/the-view-ii.png" />
-		<hotspot name="pop16-name" ath="-143.922" atv="0.254" url="skin/img/popup/the-view-ii-name.png" style="normal" edge="centerleft" ox="-120" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop16-name" ath="-143.922" atv="0.254" url="skin/img/popup/the-view-ii-name.png" style="normal" edge="centerleft" ox="-100" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- St. James -->
 		<hotspot name="pop21" ath="33.398" atv="-6.782" style="popup" img-url="skin/img/popup/the-st-james.png" />
