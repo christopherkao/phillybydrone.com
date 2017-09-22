@@ -1,11 +1,8 @@
 ﻿<krpano version="1.19" title="BALA Projects" onstart="startup();" showerrors="false">
 	
 	<!-- the skin -->
-	<include url="analytics.xml" />
 	<include url="skin/vtourskin.xml" />
 	<include url="skin/custom.xml" />
-	<include url="plugins/swipe_gallery.xml" />
-	<!-- <include url="grid-settings.xml"/> -->
 
 	<!-- This is the skin_settings where hs_anim_delay is set. -->
   <skin_settings maps="true"
@@ -56,38 +53,12 @@
 
 </action>
 
-	<!-- <layer name="gallery" type="container" zorder="500" align="center" width="100%" height="100%" alpha="0" autoalpha="true" bgcolor="0x000000" bgalpha="0.8" keep="true">
-		<layer name="gallery_scrollarea" url="%SWFPATH%/plugins/scrollarea.swf" alturl="%SWFPATH%/plugins/scrollarea.js" keep="true" align="left" width="0" height="100%" zorder="1" direction="h" ondown="set(gallery_scrollarea_start_pos, get(x))">
-		</layer>
-		<layer name="arrow_left"  align="left"  x="10" keep="true" visible="false" zorder="2" scale.mobile=".35" onclick="move_image(left)" url="skin/img/gallery/arrow_left.png"  />
-		<layer name="arrow_right" align="right" x="10" keep="true" visible="false" zorder="2" scale.mobile=".35" onclick="move_image(right)" url="skin/img/gallery/arrow_right.png" />
-		<layer name="gallery_close" align="righttop" x="10" y="10" keep="true" zorder="2" scale.mobile=".35" onclick="hide_gallery()" url="skin/img/gallery/close.png" />
-	</layer>
-
-	<style name="hs_gallery"
-		url="skin/img/gallery/hs_gallery.png"
-		onclick="show_gallery(get(galleryname))"
-		onhover="showtext(get(gallery[get(galleryname)].title))"
-	/>
-
-	<gallery name="gallery1" title="Title of gallery 1">
-		<img name="img1" url="skin/img/gallery/01.jpg" title="" />
-		<img name="img2" url="skin/img/gallery/02.jpg" title="" />
-		<img name="img3" url="skin/img/gallery/03.jpg" title="" />
-		<img name="img4" url="skin/img/gallery/04.jpg" title="" />
-		<img name="img5" url="skin/img/gallery/05.jpg" title="" />
-	</gallery> -->
-
 	<!-- UNIVERSITY CITY SCENE -->
 	<scene name="scene_university_city" title="West View" lat="" lng="" heading="" thumburl="panos/university_city.tiles/thumb.png">
 
 		<!-- TODO: Remove this to take out the logs. -->
 		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
 
-		<!-- <view hlookat="7.595" vlookat="25.821" fovtype="MFOV" fov="75" maxpixelzoom=".7" fovmin="70" fovmax="140" limitview="auto" /> -->
-
-
-		<!-- To zoom, enable mousefovchange="0.0" -->
 		<!-- view settings -->
 		<view hlookat="-150" vlookat="0" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="90" />
 
@@ -99,9 +70,7 @@
 		</image>
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-133" atv="-9" distorted="false" zoom="false" linkedscene="scene_old_city" />
-
-		<!-- Depth was originally 1200. Set to off -->
-		<!--  place your scene hotspots here -->
+		
 		<!-- FMC Tower -->
 		<hotspot name="pop01" ath="-126.163" atv="-10.822" style="popup" img-url="skin/img/popup/fmc.png" />
 		<hotspot name="pop01-name" ath="-126.163" atv="-10.822" url="skin/img/popup/fmc-name.png" style="normal" edge="centerleft" ox="25" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/>
@@ -170,9 +139,6 @@
 
 		<!-- TODO: Remove this to take out the logs. -->
 		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
-
-		<!-- <view hlookat="7.595" vlookat="25.821" fovtype="MFOV" fov="75" maxpixelzoom=".7" fovmin="70" fovmax="140" limitview="auto" /> -->
-
 
 		<!-- view settings -->
 		<view hlookat="138.502" vlookat="3.132" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range"  fovmin="40" fovmax="90" />
@@ -246,8 +212,6 @@
 		<hotspot name="pop24" ath="130.734" atv="-0.505" style="popup" img-url="skin/img/popup/10-rittenhouse.png" />
 		<hotspot name="pop24-name" ath="130.734" atv="-0.505" url="skin/img/popup/10-rittenhouse-name.png" style="normal" edge="centerleft" ox="-120" oy="-20" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 
-
 	</scene>
-
 
 </krpano>

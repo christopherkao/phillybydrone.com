@@ -141,7 +141,7 @@ if(webvr.isenabled,
 		   
 	<style name="custom_skin_base" url="custom/vtourskin.png" />
 
-	<style name="map_radar" url="img/hotspot-map.png" scale=".35"	onclick="if(devices.flash, loadscene(get(linkedscene),null,MERGE,ZOOMBLEND(1));  , activatepano(get(linkedscene)); ); skin_updatescroll(); );"	/>
+	<!-- <style name="map_radar" url="img/hotspot-map.png" scale=".35"	onclick="if(devices.flash, loadscene(get(linkedscene),null,MERGE,ZOOMBLEND(1));  , activatepano(get(linkedscene)); ); skin_updatescroll(); );"	/> -->
 
 	<style name="map_radar_active" url="custom/vtourskin_radar.png" scale="1.5"   crop="0|0|100|100"  framewidth="100" frameheight="100" frame="0" lastframe="70" onloaded="set(ranimated, 1); radar_animate();"/>
 
@@ -433,8 +433,6 @@ webvr.enterVR
     <!-- <layer name="gallery-icon" keep="true" style="skin_glow" url="img/gallery-icon.png"  x="50" x.mobile="55"  y="13" align="rightbottom" scale=".2" onclick="show_gallery(get(galleryname))" galleryname="gallery1" /> -->
 		 
 		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="0.4" onclick="openurl(http://www.bala.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
-		
-		<!-- <layer name="above-vr-logo" url="img/above-vr.png" keep="true" preload="false" visible="true" onloaded="if(skin_settings.corporate_logo,set(visible,false),set(visible,true));" enabled="true" zorder="1" alpha="1" blendmode="normal" smoothing="true" align="leftbottom" edge="" x="-4" y="1" ox="0" oy="0" width="140" height="62" crop="" ondowncrop="" onovercrop="" scale="0.666"  rotate="0" parent="" mask=""  onover="" onhover="" onout="" ondown="" onup="" aboutstate="1"  onclick="if(aboutstate == 1, open-about(), close-about()); "/> -->
 
 		<!-- This is what is successfully keeping the page black at first. -->
 		<!-- <layer name="window-tint" url="img/blk-px.png" autoalpha="true" align="center" width="150%" height="150%" preload="true" keep="true" scale="2" alpha="0.0" zorder="10" visible="" enabled="true" handcursor="false" onclick="close-about();"/> -->
@@ -443,24 +441,12 @@ webvr.enterVR
 		
 		<layer name="skin_np_title" visible="true"  url="%SWFPATH%/plugins/textfield.swf" keep="true" align="center" edge="" width="95%" height="32" autoheight="true"  zorder="4" enabled="false" alpha="1" background="false" border="false" roundedge="0" 	       shadow="0.0" shadowrange="4.0" shadowangle="45" shadowcolor="0x000000" shadowalpha="1" textshadow="1" textshadowrange="6.0" textshadowangle="90" textshadowcolor="0x000000" textshadowalpha="1.0"	       css="text-align:center; color:#ffffff; font-family:Arial; font-weight:normal; font-size:20px;" 		   	/>
 		
-		<!-- <layer name="main-logo" url="img/project-logo.png" keep="true" visible="get:skin_settings.project_logo" align="lefttop" origin="center" x="10" y="10" scale=".25" scale.mobile=".15" enabled="false" />
- -->
-	<!-- layer name="html-share-bar" type="container" align="rightbottom" onloaded="if(device.mobile, if(layer[html-menu-mobile].visible,set(x,get(skin_settings.navxoffset));,set(x,0);); , if(layer[html-menu-desktop].visible,set(x,get(skin_settings.navxoffset));,set(x,0);););"  y="5" ox="-50" oy="0" edge="rightbottom" keep="true" width="100%" height="100" autoalpha="true" alpha="0" >			
-	<layer name="skin_btn_email2"    style="custom_skin_base|skin_glow" crop="0|192|64|64"  align="rightbottom"      x="130"  y="0"  scale="0.6"   onclick="openurl(mailto:?subject=Subject goes here  &amp;body= Description goes here.  http://aboveinteractive.com/template-pr3/); showio(); set(layer[html-skin_btn_share].active,1);"/>					
-	<layer name="skin_btn_fb2" 		style="custom_skin_base|skin_glow" crop="64|192|64|64" align="rightbottom"      x="85"   y="0"  scale="0.6"   onclick="set(shareurl, http://aboveinteractive.com/template-pr3/); set(mas, http://facebook.com/share.php?u=); txtadd(fin, get(mas), get(shareurl)); openurl(get(fin)); showio(); set(layer[html-skin_btn_share].active,1);" />					
-	<layer name="skin_btn_twitter2"  style="custom_skin_base|skin_glow" crop="0|256|64|64"  align="rightbottom"      x="40"   y="1"  scale="0.6"  onclick="set(shareurl, http://aboveinteractive.com/template-pr3/); set(mas, http://twitter.com/intent/tweet?status=); txtadd(fin, get(mas), get(shareurl)); openurl(https://twitter.com/intent/tweet?status= %23 Description goes here  http://aboveinteractive.com/template-pr3/); showio(); set(layer[html-skin_btn_share].active,1);" />					
-	<layer name="skin_btn_gplus2"  	style="custom_skin_base|skin_glow" crop="64|256|64|64" align="rightbottom"      x="0"    y="1"  scale="0.6"  onclick="set(shareurl, http://aboveinteractive.com/template-pr3/); set(mas, https://plus.google.com/share?url=); txtadd(fin, get(mas), get(shareurl)); openurl(get(fin)); showio(); set(layer[html-skin_btn_share].active,1);" />						
-	</layer -->
 		<layer name="html-skin_btn_vr"        style="custom_skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="30"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR();" />	
 
 		<layer name="philly_by_drone_logo"        style="custom_skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="0"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="openurl(http://www.phillybydrone.com,_blank);" />	
 
-		<!-- <layer name="above-vr-logo" url="img/above-vr.png" keep="true" preload="false" visible="true" onloaded="if(skin_settings.corporate_logo,set(visible,false),set(visible,true));" enabled="true" zorder="1" alpha="1" blendmode="normal" smoothing="true" align="leftbottom" edge="" x="-4" y="1" ox="0" oy="0" width="140" height="62" crop="" ondowncrop="" onovercrop="" scale="0.666"  rotate="0" parent="" mask=""  onover="" onhover="" onout="" ondown="" onup="" aboutstate="1"  onclick="if(aboutstate == 1, open-about(), close-about()); "/> -->
-
 		<!-- <layer name="html-menu-desktop"  style="custom_skin_base|skin_glow"  crop="64|130|64|64" scale=".56" align="rightbottom" x="10" y="10" oy="0" ox="-2" visible="get:skin_settings.map-btn" devices="desktop|tablet"  onclick="mapio(); "  />
 		<layer name="html-menu-mobile"  style="custom_skin_base|skin_glow"  crop="64|130|64|64" scale=".56" align="rightbottom" x="10" y="10" oy="0" ox="-2" visible="get:skin_settings.menu-btn"  devices="mobile"   onclick="mapio(); "  /> -->
-
-		<!-- <layer name="about" url="img/about.png" keep="true" preload="false" visible="true" enabled="false" handcursor="true" capture="true" children="true" zorder="45" alpha="0" blendmode="normal" smoothing="true" align="center" edge="" x="0" y="-10" ox="0" oy="0"  crop="" ondowncrop="" onovercrop="" scale="2" scalechildren="true" rotate="0" parent="" mask="" onloaded="if(ismobile, set(scale, 0.5))" onover="" onhover="" onout="" ondown="" onclick="close-about(); set(layer[above-vr-logo].aboutstate,1);"/> -->
 
 
 
@@ -512,47 +498,16 @@ webvr.enterVR
 	</layer>  		   
 
 <layer name="map-con" type="container" active="0" keep="true" visible="get:skin_settings.maps"  align="lefttop" x="0" y="0" width="100%" height="100%"  bgalpha="0" >
-
-<layer name="auto-map" type="container" keep="true" visible="true" align="topleft" width="120%" height="120%"  zorder="-1"  maskchildren="true" >
-<layer name="skin_map" state="closed" url="" visible="false" align="bottomleft" width="100%" height="100%" x="0" y="0" zorder="1" lat="0" lng="0" zoom="10" bgalpha="0" maptype="satellite" onmapready="skin_addmapspots();">
-<maptypecontrol visible="false" align="righttop" x="5" y="5" buttonalign="v" scale.mobile="1.5" />
-<radar visible="false" headingoffset="0" />
-<spotstyle name="DEFAULT" url="vtourskin_mapspot.png" activeurl="vtourskin_mapspotactive.png" edge="bottom" x="-5" y="-8" scale="0.5" />
-<layer name="skin_map_zoom_in"  style="skin_base" visible="false" crop="9|512|46|64"  align="right" x="0" y="-40" zorder="2" ondown="layer[skin_map].zoomin();  skin_buttonglow(get(name));" onup="skin_buttonglow(null);" />
-<layer name="skin_map_zoom_out" style="skin_base" visible="false" crop="73|512|46|64" align="right" x="0" y="+40" zorder="2" ondown="layer[skin_map].zoomout(); skin_buttonglow(get(name));" onup="skin_buttonglow(null);" />
-</layer>
-</layer> 
-					
-					
-<layer name="map-custom" type="container" active="0" keep="true"  visible="get:skin_settings.custom_map" align="lefttop" x="0" y="0" width="100%" height="100%" bgcolor="0x000000" bgalpha="0" >
-
-<layer name="map-bg" type="container" keep="true" visible="true" align="center" x="0" y="0" width="100%" height="100%" bgcolor="0x000000" bgalpha="0" zorder="1" />	
-<layer name="map-scale" type="container" keep="true" visible="true" align="center" x="0" y="0" width="100%" height="100%" scalechildren="true" zorder="2">		
-<layer name="map" url="img/map.png" keep="true" visible="true" align="center" x="0" y="0" width="1383" height="1600" scale="1" handcursor="false" scalechildren="true" maskchildren="true"  	>
-
-<!-- Tug Boat -->
-<!--
-<layer name="tuna-boat" url="img/tug-boat.png" scale=".45" x="340" y="10" keep="true" visible="true" align="rightbottom"  onclick="loadscene(scene_Tuna_Boat_Passageway); mapio();" />
--->
-
-
-
-<layer name="rd0"  style="map_radar"  align="lefttop" edge="center" x="1010" y="1410"  zorder="4" linkedscene="scene_frontroom" />	
-<layer name="rd1"  style="map_radar"  align="lefttop" edge="center" x="375" y="1275"   zorder="4"  linkedscene="scene_mad_scientist" />						
-<layer name="rd2"  style="map_radar"  align="lefttop" edge="center" x="500" y="975"   zorder="4"  linkedscene="scene_bathroom" />						
-			
-<layer name="rd3"  style="map_radar" align="lefttop" edge="center"  x="910" y="667"  zorder="4"    linkedscene="scene_great_room" />								
-
-						
-<layer name="rdactive"  style="map_radar_active" align="lefttop" edge="center"  x="823" y="203" zorder="4" enabled="false"   />							
-</layer> 	
-</layer>
-</layer>
-
-
+	<layer name="auto-map" type="container" keep="true" visible="true" align="topleft" width="120%" height="120%"  zorder="-1"  maskchildren="true" >
+		<layer name="skin_map" state="closed" url="" visible="false" align="bottomleft" width="100%" height="100%" x="0" y="0" zorder="1" lat="0" lng="0" zoom="10" bgalpha="0" maptype="satellite" onmapready="skin_addmapspots();">
+			<maptypecontrol visible="false" align="righttop" x="5" y="5" buttonalign="v" scale.mobile="1.5" />
+			<radar visible="false" headingoffset="0" />
+			<spotstyle name="DEFAULT" url="vtourskin_mapspot.png" activeurl="vtourskin_mapspotactive.png" edge="bottom" x="-5" y="-8" scale="0.5" />
+			<layer name="skin_map_zoom_in"  style="skin_base" visible="false" crop="9|512|46|64"  align="right" x="0" y="-40" zorder="2" ondown="layer[skin_map].zoomin();  skin_buttonglow(get(name));" onup="skin_buttonglow(null);" />
+			<layer name="skin_map_zoom_out" style="skin_base" visible="false" crop="73|512|46|64" align="right" x="0" y="+40" zorder="2" ondown="layer[skin_map].zoomout(); skin_buttonglow(get(name));" onup="skin_buttonglow(null);" />
+		</layer>
+	</layer> 
 </layer>		
-
-
   
 <layer name="mobile-thumbs-con" type="container" active="0" keep="true" alpha="0"  visible="false" align="lefttop" x="0" y="0" width="100%" height="100%" bgcolor="0x000000" bgalpha="0" zorder="60" >
 	<layer name="mobilethumbs-con" keep="true" type="container" align="lefttop" width="600" height="95%" bgcolor="0x000000" bgalpha="0">
@@ -613,23 +568,6 @@ webvr.enterVR
 
 		if(skin_settings.webvr AND device.html5 AND device.webgl,
 			copy(plugin[WebVR].url, plugin[WebVR].pluginurl);
-		  );
-
-		if(skin_settings.maps == true,
-			set(layer[skin_btn_map].visible, true);
-
-			if(device.flash,
-				copy(layer[skin_map].key, skin_settings.maps_bing_api_key);
-				set(layer[skin_map].url, '%SWFPATH%/plugins/bingmaps.swf');
-			  ,
-				if(skin_settings.maps_type == 'bing',
-					copy(layer[skin_map].key, skin_settings.maps_bing_api_key);
-					set(layer[skin_map].url, '%SWFPATH%/plugins/bingmaps.js');
-				  ,
-				 	copy(layer[skin_map].key, skin_settings.maps_google_api_key);
-					set(layer[skin_map].url, '%SWFPATH%/plugins/googlemaps.js');
-				  );
-			  );
 		  );
 
 		if(skin_settings.littleplanetintro AND (device.webgl OR device.flash),
@@ -1398,7 +1336,6 @@ set(active,1);
 	copy(layer[tooltip_hs].x,x);		copy(layer[tooltip_hs].y,y); );		
 	<!--set(layer[test_tooltip_info_hotspots].y,get(y));-->
 	</action>
- 	<action name="radar_animate">		inc(frame,1,get(lastframe),0);		mul(ypos,frame,frameheight);		txtadd(crop,'0|',get(ypos),'|',get(framewidth),'|',get(frameheight));		delayedcall(0.03, if(ranimated == 1, radar_animate(); ); );	</action>
 
 
 <action name="hs-anim">
