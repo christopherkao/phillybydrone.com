@@ -171,7 +171,7 @@ if(webvr.isenabled,
   	onout="tween(rotate,0); 
   	tween(hotspot[popup-img].scale,0); 
   	tween(hotspot[popup-img].alpha,0);"
-    onclick="if(device.touch, if(rotate==135,tween(rotate,0); 
+    onclick="if(device.touch, if(rotate==180,tween(rotate,0); 
     tween(hotspot[popup-img].alpha,0); 
     tween(hotspot[popup-img].scale,0); , popup-close();  
     tween(rotate,180); 
