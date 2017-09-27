@@ -278,21 +278,6 @@ if(webvr.isenabled,
 		
 	<layer name="splash-con" type="container" keep="true" visible="true" x="0" y="0" align="center" width="600" height="500" maskchildren="false" scalechildren="true"	
 			scale="1"			bgcolor="0Xffffff" 	bgalpha="0" 			zorder="100"  alpha="0"  devices="webgl" >
-		
-	<!-- <layer name="splash-logo"			url="img/start-page-logo.png"			keep="true" preload="false"			visible="true" enabled="false" handcursor="true" 
-			alpha="0" 		align="topcenter" origin="center" edge="center"			x="0" y="135" ox="0" oy="0"	scale="2" 	zorder="2"		/>	 -->
-
-	<!-- <layer name="intro-explore" url="img/explore.png"	keep="true" preload="false"	visible="true" enabled="false" handcursor="true" capture="true"  scale=".25"
-			alpha="0" 	align="centertop" edge=""	x="0" y="400" ox="0" oy="0"	width="122" height="29"	zorder="15"		/>	 -->
-
-	<!-- <layer name="intro-btn-nr"	url="img/intro-btn.png"	keep="true" preload="false"	visible="false" enabled="true" handcursor="true" capture="true" 
-			alpha="0"	smoothing="true" align="centertop" edge=""	x="-150" y="475" ox="0" oy="0"	width="192" height="192" crop="0|0|192|192" ondowncrop="192|0|192|192" onovercrop="192|0|192|192"
-			scale=".5" 	onclick="choose(); set(enabled,false); hsstop();"		/>	 -->
-
-
-	<!-- <layer name="intro-btn-vr"	url="img/intro-btn.png"	keep="true" preload="false"	visible="false" enabled="true" handcursor="true" capture="true" 
-			smoothing="true"	align="centertop" edge=""	x="150" y="475" ox="0" oy="0"	width="192" height="192" crop="0|192|192|192" ondowncrop="192|192|192|192" onovercrop="192|192|192|192"
-			scale=".5" 			zorder="15"		alpha="0"		onclick="choosevr();  "		/>	 -->			
 	
 	</layer>
 
