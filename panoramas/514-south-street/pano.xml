@@ -37,7 +37,7 @@
 
 	<scene name="scene_514_south_street" title="514 South Street" onstart="" lat="" lng="" heading="">
 		<!-- view settings -->
-		<view hlookat="0" vlookat="20" fovtype="MFOV" fov="120" fovmax="90" vlookatmax="-90" vlookatmin="90" limitview="range"/>
+		<view hlookat="0" vlookat="20" fovtype="MFOV" fov="120" fovmax="90" fovmin="10" vlookatmax="-90" vlookatmin="90" limitview="range"/>
 
 		<preview url="pano.tiles/preview.jpg" />
 
