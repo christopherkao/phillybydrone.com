@@ -65,9 +65,25 @@
 
 		<preview url="panos/university_city.tiles/preview.jpg" />
 
-		<image>
-			<cube url="panos/university_city.tiles/pano_%s.jpg" />
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="8192" tiledimageheight="8192">
+				<cube url="panos/university_city.tiles/%s/l4/%v/l4_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="4096" tiledimageheight="4096">
+				<cube url="panos/university_city.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="2048" tiledimageheight="2048">
+				<cube url="panos/university_city.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/university_city.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
 		</image>
+
+		<!-- <image>
+			<cube url="panos/university_city.tiles/pano_%s.jpg" />
+		</image> -->
+
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-133" atv="-9" distorted="false" zoom="false" linkedscene="scene_old_city" />
 		
@@ -146,8 +162,23 @@
 
 		<preview url="panos/old_city.tiles/preview.jpg" />
 
-		<image>
+		<!-- <image>
 			<cube url="panos/old_city.tiles/pano_%s.jpg" />
+		</image> -->
+
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="8192" tiledimageheight="8192">
+				<cube url="panos/old_city.tiles/%s/l4/%v/l4_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="4096" tiledimageheight="4096">
+				<cube url="panos/old_city.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="2048" tiledimageheight="2048">
+				<cube url="panos/old_city.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/old_city.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
 		</image>
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="132.448" atv="-9.909" distorted="false" zoom="false" linkedscene="scene_university_city" />
