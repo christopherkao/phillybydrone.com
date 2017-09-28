@@ -426,7 +426,8 @@ webvr.enterVR
 		
 		<layer name="skin_np_title" visible="true"  url="%SWFPATH%/plugins/textfield.swf" keep="true" align="center" edge="" width="95%" height="32" autoheight="true"  zorder="4" enabled="false" alpha="1" background="false" border="false" roundedge="0" 	       shadow="0.0" shadowrange="4.0" shadowangle="45" shadowcolor="0x000000" shadowalpha="1" textshadow="1" textshadowrange="6.0" textshadowangle="90" textshadowcolor="0x000000" textshadowalpha="1.0"	       css="text-align:center; color:#ffffff; font-family:Arial; font-weight:normal; font-size:20px;" 		   	/>
 		
-		<layer name="html-skin_btn_vr"        style="custom_skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="30"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR();" />	
+		<!-- TODO: Re-enable VR button in the future -->
+		<!-- <layer name="html-skin_btn_vr"        style="custom_skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="30"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR();" />	 -->
 
 		<layer name="philly_by_drone_logo"        style="custom_skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="0"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="openurl(http://www.phillybydrone.com,_blank);" />	
 
@@ -470,6 +471,7 @@ webvr.enterVR
 						<layer name="html-skin_btn_share"     style="custom_skin_base|skin_glow" crop="0|320|64|64"   align="rightbottom"       x="-45"    y="-2"  scale="0.58" active="1" onclick="showio();" visible="get:skin_settings.share-btn"  />				
 						<layer name="html-control-bar" type="container" align="rightbottom" x="0" y="0"  keep="true" width="100%" height="100" autoalpha="true" alpha="1"   onloaded="if(layer[html-skin_btn_share].visible, set(x,0); , set(x,-45) );" >
 						
+							<!-- TODO: Put full screen in bottom right -->
 							<layer name="html-skin_btn_fs2"        style="custom_skin_base|skin_glow" crop="0|576|64|64"   align="rightbottom"       x="0" x.mobile="0" x.tablet="0"  y="20"  scale="0.5125" onclick="switch(fullscreen);" onover2="set(layer[skin_tp_fs].visible,true);" onout2="set(layer[skin_tp_fs].visible,false);" devices="fullscreensupport" />											
 							<layer name="html-skin_btn_zout" visible="get:skin_settings.zoom_buttons"   onloaded="if(device.mobile,set(visible,false););"     style="custom_skin_base|skin_glow" crop="64|518|64|64"  align="rightbottom"      x="44" y="0"  scale="0.5" onover2="set(layer[skin_tp_zout].visible,true);" onout2="set(layer[skin_tp_zout].visible,false);" ondown2="set(fov_moveforce,+1);" onup2="set(fov_moveforce,0);"  />				
 							<!-- layer name="skin_btn_gyrox"   onloaded=""     style="skin_base|skin_glow" crop="0|384|64|64"  align="rightbottom"      x="44"  y="0"  scale="0.5" onclick="switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap_custom(false));" visible="true" devices="html5" / -->				
