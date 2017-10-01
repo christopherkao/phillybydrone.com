@@ -162,7 +162,7 @@
 
 	<!-- Additional layout changes for Android Flashplayer Mobiles - different fullscreen button layout, zooming buttons, smaller loading text size -->
 
-	<krpano devices="mobile+android+flash">
+	<!-- <krpano devices="mobile+android+flash">
 		<layer name="skin_scroll_window">
 			<layer name="skin_scroll_layer">
 				<layer name="skin_title" width="100%" css="text-align:left; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:20px;" />
@@ -180,7 +180,7 @@
 			<layer name="skin_androidzoom_in"  style="skin_base" effect="glow(0,0.5);" crop="9|512|46|64" align="center" x="0" y="-40" zorder="2" ondown="if(layer[skin_map].state == 'closed',set(fov_moveforce,-1));skin_buttonglow(get(name));" onup="if(layer[skin_map].state == 'closed',set(fov_moveforce,0),layer[skin_map].zoomin());skin_buttonglow(null);" />
 			<layer name="skin_androidzoom_out" style="skin_base" effect="glow(0,0.5);" crop="73|512|46|64" align="center" x="0" y="+40" zorder="2" ondown="if(layer[skin_map].state == 'closed',set(fov_moveforce,+1));skin_buttonglow(get(name));" onup="if(layer[skin_map].state == 'closed',set(fov_moveforce,0),layer[skin_map].zoomout());skin_buttonglow(null);" />
 		</layer>
-	</krpano>
+	</krpano> -->
 
 
 
