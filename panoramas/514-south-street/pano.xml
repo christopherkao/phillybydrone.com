@@ -22,8 +22,6 @@
 	               tooltips_mapspots="false"
 	               controlbar_offset="20"
 	               />
-
-	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
 	
 	<action name="startup">
 		if(startscene === null, copy(startscene,scene[0].name));
@@ -38,6 +36,8 @@
 	<scene name="scene_514_south_street" title="514 South Street" onstart="" lat="" lng="" heading="">
 		<!-- view settings -->
 		<view hlookat="0" vlookat="20" fovtype="MFOV" fov="120" fovmax="90" fovmin="10" vlookatmax="-90" vlookatmin="90" limitview="range"/>
+
+		<!-- <layer name="philly_by_drone_logo" url="skin/philly-by-drone-logo.png"    align="rightbottom"     x="5"   y="70"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="openurl(http://www.phillybydrone.com,_blank);" />	 -->
 
 		<preview url="pano.tiles/preview.jpg" />
 
