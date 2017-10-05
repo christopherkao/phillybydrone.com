@@ -80,10 +80,6 @@
 			</level>
 		</image>
 
-		<!-- <image>
-			<cube url="panos/university_city.tiles/pano_%s.jpg" />
-		</image> -->
-
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-133" atv="-9" distorted="false" zoom="false" linkedscene="scene_old_city" />
 		
@@ -161,10 +157,6 @@
 
 
 		<preview url="panos/old_city.tiles/preview.jpg" />
-
-		<!-- <image>
-			<cube url="panos/old_city.tiles/pano_%s.jpg" />
-		</image> -->
 
 		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
 			<level tiledimagewidth="8192" tiledimageheight="8192">
