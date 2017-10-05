@@ -45,7 +45,7 @@
 if(webvr.isenabled,
 	<!-- set all hotspots scale to half their size. I added this. -->
 	for(set(i,0),i LT hotspot.count,inc(i),
-		set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale / 2));
+		set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale / 2.5));
 	);
 	<!-- Might need to do this for all scenes -->
 ,
@@ -55,7 +55,7 @@ if(webvr.isenabled,
 	set(hotspot[menuvr].alpha, 0);
 	<!-- set all hotspots scale to their original size -->
 	for(set(i,0),i LT hotspot.count,inc(i),
-		set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale * 2));
+		set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale * 2.5));
 		<!-- This code block gets called when exiting the panorama -->
 	);
 );
@@ -572,9 +572,16 @@ webvr.enterVR
 
 	<action name="new_scene_update">
 
-set(hotspot[popup-img].enabled, false);
-set(hotspot[popup-img].alpha, 0);
-		
+		set(hotspot[popup-img].enabled, false);
+		set(hotspot[popup-img].alpha, 0);
+	
+		<!-- Want to scale all hotspots smaller if in VR mode -->
+		if(webvr.isenabled,
+			for(set(i,0),i LT hotspot.count,inc(i),
+				set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale / 2.5));
+			)
+		);
+
 		if(skin_settings.title,
 			copy(layer[html-skin_title].html, scene[get(xml.scene)].title );
 		);
@@ -584,36 +591,16 @@ set(hotspot[popup-img].alpha, 0);
 		set(hotspot[menuvr].state,1);	
 				
 		tween(layer[skin_np_title].alpha,0);
-
-
-
 		set(layer[tooltip_hs].alpha,0);
 		 
 		if(device.mobile,	
-		set(layer[mobile-thumbs-con].active,1);
-		mapio();
-		,
-
-		
-		
-		
+			set(layer[mobile-thumbs-con].active,1);
+			mapio();
+		, 
 		if(layer[map-con].active == 1,
-		
-		mapio();
-
-		
+			mapio();
 		);
-
-		trace('got to new_scene_update');
-		<!-- Want to scale all hotspots smaller if in VR mode -->
-		if(webvr.isenabled,
-			trace('got to resizing hotspots');
-			trace(get(hotspot.count));
-			for(set(i,0),i LT hotspot.count,inc(i),
-				set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale / 2));
-				trace(hotspot[get(i)].name);
-			)
-		);
+		
 		
 		set(layer[main-logo].visible,get(skin_settings.project_logo)); 
 		set(autorotate.enabled,false);
