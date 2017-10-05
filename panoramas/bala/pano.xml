@@ -59,7 +59,7 @@
 		<!-- TODO: Remove this to take out the logs. -->
 		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
 		<!-- TODO: Comment out showlog -->
-		<events onclick="showlog();" />
+		<events onclick="showlog(); trace('version 1');" />
 		<!-- view settings -->
 		<view hlookat="-150" vlookat="0" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="90" />
 
