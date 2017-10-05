@@ -605,6 +605,7 @@ set(hotspot[popup-img].alpha, 0);
 		<!-- Want to scale all hotspots smaller if in VR mode -->
 		if(webvr.isenabled,
 			<!-- set all hotspots scale to half their size -->
+			trace('got to resizing hotspots')
 			for(set(i,0),i LT hotspot.count,inc(i),
 				set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale / 2));
 			)
