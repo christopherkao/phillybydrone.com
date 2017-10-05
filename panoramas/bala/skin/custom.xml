@@ -604,6 +604,7 @@ set(hotspot[popup-img].alpha, 0);
 		
 		);
 
+		trace('got to new_scene_update');
 		<!-- Want to scale all hotspots smaller if in VR mode -->
 		if(webvr.isenabled,
 			trace('got to resizing hotspots');
