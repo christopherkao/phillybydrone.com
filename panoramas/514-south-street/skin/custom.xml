@@ -419,7 +419,7 @@ webvr.enterVR
 		</layer> -->
     <!-- <layer name="gallery-icon" keep="true" style="skin_glow" url="img/gallery-icon.png"  x="50" x.mobile="55"  y="13" align="rightbottom" scale=".2" onclick="show_gallery(get(galleryname))" galleryname="gallery1" /> -->
 		 
-		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/philly-by-drone-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="0.4" onclick="openurl(http://www.phillybydrone.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
+		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/philly-by-drone-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="0.3" onclick="openurl(http://www.phillybydrone.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
 
 		<!-- This is what is successfully keeping the page black at first. -->
 		<!-- <layer name="window-tint" url="img/blk-px.png" autoalpha="true" align="center" width="150%" height="150%" preload="true" keep="true" scale="2" alpha="0.0" zorder="10" visible="" enabled="true" handcursor="false" onclick="close-about();"/> -->
