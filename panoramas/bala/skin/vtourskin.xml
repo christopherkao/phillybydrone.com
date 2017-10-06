@@ -404,6 +404,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 			  );
 		  );
 
+		 <!-- Need a setting for Facebook in app browser -->
 		if(skin_settings.gyro AND !device.desktop AND device.html5,
 			copy(plugin[skin_gyro].url, plugin[skin_gyro].html5_url);
 		  );
