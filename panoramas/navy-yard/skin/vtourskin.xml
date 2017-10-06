@@ -61,6 +61,7 @@
 
 
 	<!-- mouse / touch / keyboard(button) control settings - http://krpano.com/docu/xml/#control -->
+	<!-- I set mousefovchange to 0.0 so that it doesn't zoom in -->
 	<control mouse="drag"
 	         touch="drag"
 	         zoomtocursor="false"
@@ -364,7 +365,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	<layer name="skin_btn_next_fs" keep="true" type="container" align="righttop" x="-50" width="40" height="100%" bgcapture="true" alpha="0.25" capture="false" zorder="2" onclick="skin_nextscene_loop(+1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
 		<layer name="skin_btn_next_fs_icon" style="skin_base" crop="64|64|64|64" align="center" scale="0.5" enabled="false" />
 	</layer>
-		<layer name="logolp" url="img/corp-logo.png" keep="true" align="topcenter" y="0" scale="0.8" scale.mobile="0.4" alpha="0"  enabled="false" onloaded="delayedcall(1, hsp-hide(); tween(y,40); tween(alpha,1); );" />
+		<layer name="logolp" url="img/corp-logo.png" keep="true" align="topcenter" y="0" scale="2.0" scale.mobile="1.0" alpha="0"  enabled="false" onloaded="delayedcall(1, hsp-hide(); tween(y,40); tween(alpha,1); );" />
 
 
 	<!-- gyro plugin -->
@@ -403,6 +404,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 			  );
 		  );
 
+		 <!-- Need a setting for Facebook in app browser -->
 		if(skin_settings.gyro AND !device.desktop AND device.html5,
 			copy(plugin[skin_gyro].url, plugin[skin_gyro].html5_url);
 		  );
@@ -531,21 +533,22 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	</action>
 
 	<!-- For some reason we have to set littleplanetintro to true to run this method which then generates the logos for HFF and 800 Brazos. Otherwise no logs if littleplanetintro is false. Modified delayedcall to go faster. -->
+	<!-- TODO: All I had to change is hs_anim_delay to 0. Before was 3 and 6!!! -->
 	<action name="skin_setup_littleplanetintro">
 	delayedcall(1, hsp-hide(); );
-		copy(lp_scene, xml.scene);
-		copy(lp_hlookat, view.hlookat);
-		copy(lp_vlookat, view.vlookat);
-		copy(lp_fov, view.fov);
-		copy(lp_fovmax, view.fovmax);
-		copy(lp_limitview, view.limitview);
-		set(view.fovmax, 170);
-		set(view.limitview, lookto);
-		set(view.vlookatmin, 90);
-		set(view.vlookatmax, 90);
-		lookat(calc(lp_hlookat - 0), 90, 150, 1, 0, 0);
-<!-- delayedcall(events[lp_events].onmousedown, -->
-delayedcall(3, 
+	copy(lp_scene, xml.scene);
+	copy(lp_hlookat, view.hlookat);
+	copy(lp_vlookat, view.vlookat);
+	copy(lp_fov, view.fov);
+	copy(lp_fovmax, view.fovmax);
+	copy(lp_limitview, view.limitview);
+	set(view.fovmax, 170);
+	set(view.limitview, lookto);
+	set(view.vlookatmin, 90);
+	set(view.vlookatmax, 90);
+	lookat(calc(lp_hlookat - 0), 90, 150, 1, 0, 0);
+	<!-- delayedcall(events[lp_events].onmousedown, -->
+	delayedcall(3, 
  		if(skin_settings.littleplanetintro==true,
 		tween(layer[logolp].y,-40,.5); tween(layer[logolp].alpha,0,.5); 
 		set(skin_settings.littleplanetintro,false);
@@ -555,7 +558,7 @@ delayedcall(3,
 					copy(view.limitview, lp_limitview);
 					set(view.vlookatmin, null);
 					set(view.vlookatmax, null);
-					tween(view.hlookat|view.vlookat|view.fov|view.distortion, calc('' + -150 + '|' + 15 + '|' + 85 + '|' + 0.0),
+					tween(view.hlookat|view.vlookat|view.fov|view.distortion, calc('' + 0 + '|' + 15 + '|' + 85 + '|' + 0.0),
 						3.0, easeOutInQuint,
 						set(control.usercontrol, all);
 						tween(view.fovmax, get(lp_fovmax));
@@ -569,14 +572,13 @@ delayedcall(3,
 						hsp-show();   
 						);
 						set(control.usercontrol,all); 
-						set(skin_settings.hs_anim_delay,3 ); 
-
+						set(skin_settings.hs_anim_delay,1 ); 
 						delayedcall(1, 
-tween(view.architectural, 0,4, easeOutInQuad );
-tween(view.pannini,       0.0,4, easeOutInQuad );
-tween(view.distortion,    0.0,4, easeOutInQuad,  set(skin_settings.littleplanetintro,false);
-set(skin_settings.hs_anim_delay,6);  ); 
-); trace('finished littleplanetintro');  
+							tween(view.architectural, 0,4, easeOutInQuad );
+							tween(view.pannini,       0.0,4, easeOutInQuad );
+							tween(view.distortion,    0.0,4, easeOutInQuad,  set(skin_settings.littleplanetintro,false);
+							set(skin_settings.hs_anim_delay,1);  ); 
+							); trace('finished littleplanetintro');  
 						);
 						
 				  );  );
@@ -689,7 +691,7 @@ set(hotspot[pop21].visible,true);
 set(hotspot[pop22].visible,true);
  
 set(hotspot[spot1].visible,true); 
-set(hotspot[spot2].visible,true); 
+<!-- set(hotspot[spot2].visible,true); 
 set(hotspot[spot3].visible,true); 
 set(hotspot[spot4].visible,true); 
 set(hotspot[spot5].visible,true); 
@@ -697,16 +699,16 @@ set(hotspot[spot6].visible,true);
 set(hotspot[spot7].visible,true); 
 set(hotspot[spot8].visible,true); 
 set(hotspot[spot9].visible,true); 
-set(hotspot[spot10].visible,true); 
+set(hotspot[spot10].visible,true);  -->
 <!-- Add more hotspot animations here. -->
 
 
 <!-- IMPORTANT: We only set this to be the spot_anim for the first panorama. Any ones linked after that will automatically set their spot animations. -->
 set(hotspot[spot_anim_1].visible,true); 
-set(hotspot[spot_anim_2].visible,true); 
+<!-- set(hotspot[spot_anim_2].visible,true); 
 set(hotspot[spot_anim_3].visible,true); 
 set(hotspot[spot_anim_4].visible,true); 
-set(hotspot[spot_anim_5].visible,true);
+set(hotspot[spot_anim_5].visible,true); -->
 
 
 set(hotspot[pop01-name].visible,true); 
@@ -1035,7 +1037,6 @@ tween(hotspot[pop20-name].alpha,1);
 			set(hotspot[webvr_prev_scene].visible, false);
 			set(hotspot[webvr_next_scene].visible, false);
 		  );
-
 		txtadd(layer[skin_thumbborder].parent, 'skin_thumb_', get(scene[%1].index));
 		layer[skin_thumbs].scrolltocenter(get(scene[%1].thumbx), get(scene[%1].thumby));
 		loadscene(get(scene[%1].name), null, get(skin_settings.loadscene_flags), %2);
@@ -1338,13 +1339,6 @@ tween(hotspot[pop20-name].alpha,1);
 	<contextmenu>
 		<item name="ab" caption="Created by PhillyByDrone.com" onclick="openurl(http://www.phillybydrone.com);"/>
 		<item name="fs" caption="FULLSCREEN" />
-		<!-- <item name="cc" caption="Change Controlmode" onclick="skin_changecontrolmode();"  separator="true" />
-		<item name="nv" caption="Normal View"        onclick="skin_view_normal();"        showif="view.vlookatrange == 180" separator="true"      />
-		<item name="fv" caption="Fisheye View"       onclick="skin_view_fisheye();"       showif="view.vlookatrange == 180" devices="flash|webgl" />
-		<item name="sv" caption="Stereographic View" onclick="skin_view_stereographic();" showif="view.vlookatrange == 180" devices="flash|webgl" />
-		<item name="av" caption="Architectural View" onclick="skin_view_architectural();" showif="view.vlookatrange == 180"                       />
-		<item name="pv" caption="Pannini View"       onclick="skin_view_pannini();"       showif="view.vlookatrange == 180" devices="flash|webgl" />
-		<item name="lp" caption="Little Planet View" onclick="skin_view_littleplanet();"  showif="view.vlookatrange == 180" devices="flash|webgl" /> -->
 		
 webvr.enterVR();		
 	</contextmenu>
