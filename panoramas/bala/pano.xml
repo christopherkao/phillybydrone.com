@@ -12,6 +12,7 @@
 				         map-btn="false"
 				         navxoffset="0"
 				         vr-icon-xoffset="50"
+				         gyro-icon-xoffset="100"
 				  
 				   			 hs_delay="1"
 				   			 hs_anim_delay="0"
@@ -48,7 +49,6 @@
  			set(layer[intro-con].visible,false);
 			set(intro_done,true);
   		if(device.html, choose(); , flash-choose();); 
- 			hs_int(); 
  	); 
 
 </action>
