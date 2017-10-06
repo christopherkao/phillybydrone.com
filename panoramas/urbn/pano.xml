@@ -11,8 +11,8 @@
 				   			 menu-btn="true"
 				         map-btn="false"
 				         navxoffset="0"
-				         vr-icon-xoffset="145"
-				         gyro-icon-xoffset="181"
+				         vr-icon-xoffset="50"
+				         gyro-icon-xoffset="100"
 				  
 				   			 hs_delay="1"
 				   			 hs_anim_delay="0"
@@ -21,7 +21,7 @@
 				   			 corp-logo-xoffset="10"
 				   			 project_logo="true"
 				   
-				   			 zoom_buttons="true"	
+				   			 zoom_buttons="false"	
 				   			 speak_buttons="false"
 				   			 password="false"
 				   			 start_screen="false"

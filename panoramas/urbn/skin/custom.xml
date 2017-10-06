@@ -431,11 +431,11 @@ webvr.enterVR
 		<!-- <layer name="html-skin_btn_vr"        style="skin_base|skin_glow" crop="0|0|80|64"    align="leftbottom"     x="get:skin_settings.vr-icon-xoffset"   y="10"  scale="0.56"  visible="true" devices="webgl" onclick="webvr.enterVR();" />	 -->
 		
 		<!-- TODO: Re-enable VR button in the future -->
-		<layer name="html-skin_btn_vr"        style="custom_skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="10"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR();" />	
+		<layer name="html-skin_btn_vr"        style="custom_skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="30"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR();" />	
 
-		<layer name="skin_btn_gyrox" style="custom_skin_base|skin_glow" crop="0|384|64|64"  align="rightbottom"      x="get:skin_settings.gyro-icon-xoffset"  y="-2"  scale="0.56" onclick="switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap_custom(false));" visible="true" devices="html5" />
+		<layer name="skin_btn_gyrox" style="custom_skin_base|skin_glow" crop="0|384|64|64"  align="rightbottom"      x="get:skin_settings.gyro-icon-xoffset"  y="30"  scale="0.56" onclick="switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap_custom(false));" visible="true" devices="html5" />
 
-		<layer name="philly_by_drone_logo"        style="custom_skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="0"   y="50"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="openurl(http://www.phillybydrone.com,_blank);" />	
+		<layer name="philly_by_drone_logo"        style="custom_skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="5"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="openurl(http://www.phillybydrone.com,_blank);" />	
 
 
 
@@ -482,11 +482,11 @@ webvr.enterVR
 						<layer name="html-control-bar" type="container" align="rightbottom" x="0" y="0"  keep="true" width="100%" height="100" autoalpha="true" alpha="1"   onloaded="if(layer[html-skin_btn_share].visible, set(x,0); , set(x,-45) );" >
 						
 							<!-- TODO: Put full screen in bottom right -->
-							<layer name="html-skin_btn_fs2"        style="custom_skin_base|skin_glow" crop="0|576|64|64"   align="rightbottom"       x="0" x.mobile="0" x.tablet="0"  y="-2"  scale="0.5125" onclick="switch(fullscreen);" onover2="set(layer[skin_tp_fs].visible,true);" onout2="set(layer[skin_tp_fs].visible,false);" devices="fullscreensupport" />											
-							<layer name="html-skin_btn_zout" visible="get:skin_settings.zoom_buttons"   onloaded="if(device.mobile,set(visible,false););"     style="custom_skin_base|skin_glow" crop="64|518|64|64"  align="rightbottom"      x="44" y="-2"  scale="0.5" onover2="set(layer[skin_tp_zout].visible,true);" onout2="set(layer[skin_tp_zout].visible,false);" ondown2="set(fov_moveforce,+1);" onup2="set(fov_moveforce,0);"  />		
+							<layer name="html-skin_btn_fs2"        style="custom_skin_base|skin_glow" crop="0|576|64|64"   align="rightbottom"       x="0" x.mobile="0" x.tablet="0"  y="20"  scale="0.5125" onclick="switch(fullscreen);" onover2="set(layer[skin_tp_fs].visible,true);" onout2="set(layer[skin_tp_fs].visible,false);" devices="fullscreensupport" />											
+							<!-- <layer name="html-skin_btn_zout" visible="get:skin_settings.zoom_buttons"   onloaded="if(device.mobile,set(visible,false););"     style="custom_skin_base|skin_glow" crop="64|518|64|64"  align="rightbottom"      x="44" y="-2"  scale="0.5" onover2="set(layer[skin_tp_zout].visible,true);" onout2="set(layer[skin_tp_zout].visible,false);" ondown2="set(fov_moveforce,+1);" onup2="set(fov_moveforce,0);"  />		 -->
 
 							<!-- <layer name="skin_btn_gyrox"   onloaded="trace('loaded gyro');"     style="custom_skin_base|skin_glow" crop="0|384|64|64"  align="rightbottom"      x="100"  y="20"  scale="0.5" onclick="switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap_custom(false));" visible="true" devices="html5" /> -->			
-							<layer name="html-skin_btn_zin"  visible="get:skin_settings.zoom_buttons"  onloaded="if(device.mobile,set(visible,false););"   style="custom_skin_base|skin_glow" crop="0|518|64|64"  align="rightbottom"      x="87" y="-2"  scale="0.5" onover2="set(layer[skin_tp_zin].visible,true);" onout2="set(layer[skin_tp_zin].visible,false);" ondown2="set(fov_moveforce,-1);" onup2="set(fov_moveforce,0);"   />				
+							<!-- <layer name="html-skin_btn_zin"  visible="get:skin_settings.zoom_buttons"  onloaded="if(device.mobile,set(visible,false););"   style="custom_skin_base|skin_glow" crop="0|518|64|64"  align="rightbottom"      x="87" y="-2"  scale="0.5" onover2="set(layer[skin_tp_zin].visible,true);" onout2="set(layer[skin_tp_zin].visible,false);" ondown2="set(fov_moveforce,-1);" onup2="set(fov_moveforce,0);"   />				 -->
 							<!-- <layer name="html-skin_btn_sound"       visible="get:skin_settings.speak_buttons" style="custom_skin_base|skin_glow" crop="64|640|64|64"   align="rightbottom"       x="-40"   y="0"  scale="0.5" 				onover2="set(layer[skin_tp_sound].visible,true);" onout2="set(layer[skin_tp_sound].visible,false);" onclick="if(layer[soundinterface].mute == true, set(layer[soundinterface].mute, false);  set(hotspot[ videotv2].volume,1); set(hotspot[videof].volume,1);, set(layer[soundinterface].mute, true); set(hotspot[ videotv2].volume,0);  set(hotspot[videof].volume,0);); switch(crop, 0|640|64|64, 64|640|64|64 );  " onloaded="if(visible, set(layer[html-control-bar].ox,-37););"/>				 -->
 						</layer>
 			</layer>	
