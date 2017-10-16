@@ -691,15 +691,7 @@ set(hotspot[pop21].visible,true);
 set(hotspot[pop22].visible,true);
  
 set(hotspot[spot1].visible,true); 
-<!-- set(hotspot[spot2].visible,true); 
-set(hotspot[spot3].visible,true); 
-set(hotspot[spot4].visible,true); 
-set(hotspot[spot5].visible,true); 
-set(hotspot[spot6].visible,true); 
-set(hotspot[spot7].visible,true); 
-set(hotspot[spot8].visible,true); 
-set(hotspot[spot9].visible,true); 
-set(hotspot[spot10].visible,true);  -->
+<!-- set(hotspot[spot2].visible,true); -->
 <!-- Add more hotspot animations here. -->
 
 

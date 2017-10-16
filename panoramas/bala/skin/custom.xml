@@ -954,9 +954,7 @@ if(device.flash,
 		set(layer[html-share-bar].visible,false);
 		
 		set(layer[flash-skin_btn_zout].x,-4);
-		set(layer[flash-skin_btn_zin].x,39);
-
- set(layer[above-vr-logo].onclick, open-about-small();)		
+		set(layer[flash-skin_btn_zin].x,39);	
 		,
 		
 		set(layer[flash-skin_btn_zout].x,44);
@@ -965,8 +963,7 @@ if(device.flash,
 		set(layer[html-share-bar].visible,true);
 		set(layer[flash-skin-con].alpha,0);
 		set(layer[html-skin-con].alpha,1);	
-		tween(layer[main-logo].scale,.25);		
- set(layer[above-vr-logo].onclick, open-about();)				
+		tween(layer[main-logo].scale,.25);			
 	tween(layer[prev_button_s].alpha,0); 
 	tween(layer[next_button_s].alpha,0); 
 
@@ -1001,7 +998,6 @@ if(device.mobile,
 
 
 );		
- set(layer[above-vr-logo].onclick, open-about-small(););	
 		
 
 	if(scene[get(xml.scene)].index LT 1,
@@ -1033,8 +1029,7 @@ if(device.mobile,
 
 		set(layer[flash-skin-con].alpha,0);
 		set(layer[html-skin-con].alpha,1);	
-		tween(layer[main-logo].scale,.25);		
- set(layer[above-vr-logo].onclick, open-about(););				
+		tween(layer[main-logo].scale,.25);				
 
 
 

@@ -57,7 +57,7 @@
 	<scene name="scene_university_city" title="West View" lat="" lng="" heading="" thumburl="panos/university_city.tiles/thumb.png">
 
 		<!-- TODO: Remove this to take out the logs. -->
-		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
+		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
 		<!-- TODO: Comment out showlog -->
 		<!-- view settings -->
 		<view hlookat="-150" vlookat="0" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="90" />
