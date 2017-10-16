@@ -57,7 +57,7 @@
 	<scene name="scene_university_city" title="West View" lat="" lng="" heading="" thumburl="panos/university_city.tiles/thumb.png">
 
 		<!-- TODO: Remove this to take out the logs. -->
-		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
+		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
 		<!-- TODO: Comment out showlog -->
 		<!-- view settings -->
 		<view hlookat="-150" vlookat="0" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="90" />
@@ -133,13 +133,17 @@
 		<hotspot name="pop15" ath="-140.860" atv="2.912" style="popup" img-url="skin/img/popup/aramark.png"/>
 		<hotspot name="pop15-name" ath="-140.860" atv="2.912" url="skin/img/popup/aramark-name.png" style="normal" edge="centerleft" ox="10" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 
+		<!-- University of Sciences -->
+		<hotspot name="pop16" ath="-16.029" atv="1.375" style="popup" img-url="skin/img/popup/university-of-the-sciences.png"/>
+		<hotspot name="pop16-name" ath="-18.029" atv="0.186" url="skin/img/popup/university-of-the-sciences-name.png" style="normal" edge="leftbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
+
 		<!-- Comcast Technology Center -->
 		<hotspot name="pop17" ath="-147.080" atv="-4.968" style="popup" img-url="skin/img/popup/comcast-technology-center.png"/>
 		<hotspot name="pop17-name" ath="-148.449" atv="-5.249" url="skin/img/popup/comcast-technology-center-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Center for Healthcare Technology -->
 		<hotspot name="pop18" ath="-24.045" atv="1.408" style="popup" img-url="skin/img/popup/center-for-healthcare-technology.png"/>
-		<hotspot name="pop18-name" ath="-24.045" atv="0.186" url="skin/img/popup/center-for-healthcare-technology-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop18-name" ath="-20" atv="0.186" url="skin/img/popup/center-for-healthcare-technology-name.png" style="normal" edge="rightbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Domus -->
 		<hotspot name="pop19" ath="81.037" atv="13.692" style="popup" img-url="skin/img/popup/drexel-domus.png"/>
