@@ -60,15 +60,14 @@
 		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
 		<!-- TODO: Comment out showlog -->
 		<!-- view settings -->
-		<view hlookat="-150" vlookat="0" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="90" />
+		<view hlookat="-145" vlookat="10" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="90" fov="85" />
+		<!-- Set a tighter fov if device is mobile -->
+		<view fov="70" devices="mobile" />
 
 
 		<preview url="panos/university_city.tiles/preview.jpg" />
 
 		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
-			<level tiledimagewidth="8192" tiledimageheight="8192">
-				<cube url="panos/university_city.tiles/%s/l4/%v/l4_%s_%v_%h.jpg" />
-			</level>
 			<level tiledimagewidth="4096" tiledimageheight="4096">
 				<cube url="panos/university_city.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
 			</level>
@@ -157,15 +156,12 @@
 		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
 
 		<!-- view settings -->
-		<view hlookat="138.502" vlookat="3.132" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range"  fovmin="40" fovmax="90" />
+		<view hlookat="138" vlookat="10" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range"  fovmin="40" fovmax="90" />
 
 
 		<preview url="panos/old_city.tiles/preview.jpg" />
 
 		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
-			<level tiledimagewidth="8192" tiledimageheight="8192">
-				<cube url="panos/old_city.tiles/%s/l4/%v/l4_%s_%v_%h.jpg" />
-			</level>
 			<level tiledimagewidth="4096" tiledimageheight="4096">
 				<cube url="panos/old_city.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
 			</level>

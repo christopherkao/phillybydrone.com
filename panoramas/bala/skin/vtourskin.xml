@@ -558,7 +558,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 					copy(view.limitview, lp_limitview);
 					set(view.vlookatmin, null);
 					set(view.vlookatmax, null);
-					tween(view.hlookat|view.vlookat|view.fov|view.distortion, calc('' + -150 + '|' + 15 + '|' + 85 + '|' + 0.0),
+					tween(view.hlookat|view.vlookat|view.fov|view.distortion, calc('' + lp_hlookat + '|' + lp_vlookat + '|' + lp_fov + '|' + 0.0),
 						3.0, easeOutInQuint,
 						set(control.usercontrol, all);
 						tween(view.fovmax, get(lp_fovmax));
@@ -578,7 +578,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 							tween(view.pannini,       0.0,4, easeOutInQuad );
 							tween(view.distortion,    0.0,4, easeOutInQuad,  set(skin_settings.littleplanetintro,false);
 							set(skin_settings.hs_anim_delay,1);  ); 
-							); trace('finished littleplanetintro');  
+							);
 						);
 						
 				  );  );
