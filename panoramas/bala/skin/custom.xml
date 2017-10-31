@@ -47,6 +47,8 @@ if(webvr.isenabled,
 	for(set(i,0),i LT hotspot.count,inc(i),
 		set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale / 2.5));
 	);
+	<!-- This is a hacky way of ensuring that the menuvr doesn't get smaller -->
+	set(hotspot[menuvr].scale, calc(hotspot[menuvr].scale * 2.5));
 	<!-- Might need to do this for all scenes -->
 ,
 	vr_menu_hide(); 	
@@ -58,6 +60,7 @@ if(webvr.isenabled,
 		set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale * 2.5));
 		<!-- This code block gets called when exiting the panorama -->
 	);
+	set(hotspot[menuvr].scale, calc(hotspot[menuvr].scale / 2.5));
 );
 </action>
 			
