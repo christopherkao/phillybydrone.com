@@ -3,6 +3,21 @@
 (function($) {
     "use strict"; // Start of use strict
 
+    var videoPaths = [
+        'vid/bridge-on-race.mp4',
+        'vid/1213-walnut.mp4',
+        'vid/1911-walnut.mp4'
+    ]
+
+    // Randomize the video that appears
+    $('#bg-video').vide({
+        mp4: videoPaths[Math.floor(Math.random()*videoPaths.length)]
+    }, {
+        loop: true,
+        muted: true,
+        position: '50% 50%'
+    });
+
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('.page-scroll a').bind('click', function(event) {
         var $anchor = $(this);
