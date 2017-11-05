@@ -634,3 +634,24 @@ header {
 #download a {
   color: white;
 }
+
+#text-overlay {
+  z-index: 1;
+  text-align: center;
+  position: relative;
+  top: 200px;
+}
+
+#text-overlay a {
+  color: white;
+  text-decoration: underline
+}
+
+#text-overlay a:hover {
+  color: #A85253;
+}
+
+.center {
+  text-align: center;
+  list-style-position: inside;
+}
