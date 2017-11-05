@@ -639,7 +639,8 @@ header {
   z-index: 1;
   text-align: center;
   position: relative;
-  top: 200px;
+  top: 150px;
+  color: white;
 }
 
 #text-overlay a {
