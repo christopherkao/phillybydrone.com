@@ -1,0 +1,155 @@
+﻿<krpano version="1.19" title="LF Driscoll Projects" onstart="startup();" showerrors="false">
+	
+	<!-- the skin -->
+	<include url="skin/vtourskin.xml" />
+	<include url="skin/custom.xml" />
+
+	<!-- This is the skin_settings where hs_anim_delay is set. -->
+  <skin_settings maps="true"
+	               maps_type=""
+	               custom_map="false"	
+				   			 menu-btn="true"
+				         map-btn="false"
+				         navxoffset="0"
+				         vr-icon-xoffset="50"
+				         gyro-icon-xoffset="100"
+				  
+				   			 hs_delay="1"
+				   			 hs_anim_delay="0"
+				   			 bg_type="stretch"
+				   			 corporate_logo="true"
+				   			 corp-logo-xoffset="10"
+				   			 project_logo="true"
+				   
+				   			 zoom_buttons="false"	
+				   			 speak_buttons="false"
+				   			 password="false"
+				   			 start_screen="false"
+				   			 maps_bing_api_key=""
+	               maps_zoombuttons="false"
+				   			 maps_zoom="25"
+				   			 share-btn="false"
+	               gyro="true"
+	               arrows_html="true"
+				   			 title="1" 
+				   			 grid_button="false"
+				    		 littleplanetintro="true"
+	               />
+
+	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
+	
+	<action name="startup">
+		delayedcall(1, intro-page(););
+	</action>
+
+	<action name="intro-page">
+
+		if(skin_settings.start_screen,
+ 	 		if(device.html, splash(); , flashsplash(); );,
+ 			set(layer[intro-con].visible,false);
+			set(intro_done,true);
+  		if(device.html, choose(); , flash-choose();); 
+ 	); 
+
+</action>
+
+	<!-- UNIVERSITY CITY SCENE -->
+	<scene name="scene_university_city" title="West View" lat="" lng="" heading="" thumburl="panos/university_city.tiles/thumb.png">
+
+		<!-- TODO: Remove this to take out the logs. -->
+		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
+		<!-- TODO: Comment out showlog -->
+		<!-- view settings -->
+		<view hlookat="-145" vlookat="10" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="90" fov="85" />
+		<!-- Set a tighter fov if device is mobile -->
+		<view fov="70" devices="mobile" />
+
+
+		<preview url="panos/center_city.tiles/preview.jpg" />
+
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="4096" tiledimageheight="4096">
+				<cube url="panos/center_city.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="2048" tiledimageheight="2048">
+				<cube url="panos/center_city.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/center_city.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+
+		<!-- <hotspot name="spot1" style="skin_hotspotstyle" ath="-133" atv="-9" distorted="false" zoom="false" linkedscene="scene_old_city" /> -->
+		
+		<!-- Comcast Center -->
+		<hotspot name="pop07" ath="171.763" atv="-9.314" style="popup" img-url="skin/img/popup/comcast-center.png"/>
+		<!-- <hotspot name="pop07-name" ath="-145.400" atv="-6.416" url="skin/img/popup/comcast-center-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Comcast Technology Center -->
+		<hotspot name="pop17" ath="176.950" atv="-11.362" style="popup" img-url="skin/img/popup/comcast-technology-center.png"/>
+		<!-- <hotspot name="pop17-name" ath="-148.449" atv="-5.249" url="skin/img/popup/comcast-technology-center-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- One Liberty Place -->
+		<hotspot name="pop01" ath="-173.593" atv="-5.898" style="popup" img-url="skin/img/popup/fmc.png" />
+		<!-- <hotspot name="pop01-name" ath="-124.163" atv="-10.822" url="skin/img/popup/fmc-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Loews Philadelphia Hotel -->
+		<hotspot name="pop13" ath="-166.816" atv="-8.506" style="popup" img-url="skin/img/popup/1911-walnut.png"/>
+		<!-- <hotspot name="pop13-name" ath="-122.349" atv="-2.416" url="skin/img/popup/1911-walnut-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Symphony House -->
+		<hotspot name="pop16" ath="-148.972" atv="-4.528" style="popup" img-url="skin/img/popup/symphony-house.png" />
+		<!-- <hotspot name="pop20-name" ath="-117.80" atv="1.088" url="skin/img/popup/symphony-house-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Rittenhouse Towers -->
+		<hotspot name="pop09" ath="-137.790" atv="2.994" style="popup" img-url="skin/img/popup/the-radian.png"/>
+		<!-- <hotspot name="pop09-name" ath="43.57" atv="0.964" url="skin/img/popup/the-radian-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- CHOP Roberts Center for Pediatric Research -->
+		<hotspot name="pop05" ath="-85.626" atv="3.629" style="popup" img-url="skin/img/popup/evo.png"/>
+		<!-- <hotspot name="pop05-name" ath="-137.579" atv="-3.59" url="skin/img/popup/evo-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Penn Medicine Perelman Center for Advanced Medicine -->
+		<hotspot name="pop10" ath="-64.644" atv="3.354" style="popup" img-url="skin/img/popup/the-study.png"/>
+		<!-- <hotspot name="pop10-name" ath="171.544" atv="20.186" url="skin/img/popup/the-study-name.png" style="normal" edge="centerleft" ox="10" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".5" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Philadelphia Museum of Art -->
+		<hotspot name="pop02" ath="46.273" atv="3.019" style="popup" img-url="skin/img/popup/chestnut-square.png"/>
+		<!-- <hotspot name="pop02-name" ath="-147.769" atv="14.011" url="skin/img/popup/chestnut-square-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Philadelphia Museum of Art, Raymond G. Perelman Building -->
+		<hotspot name="pop03" ath="56.800" atv="2.585" style="popup" img-url="skin/img/popup/3737-chestnut.png"/>
+		<!-- <hotspot name="pop03-name" ath="59.079" atv="-0.304" url="skin/img/popup/3737-chestnut-name.png" style="normal" edge="centerleft" ox="00" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/> -->
+		
+		<!-- Temple University Mitchell and Hilarie Morgan Hall Complex -->
+		<hotspot name="pop11" ath="100.001" atv="-1.418" style="popup" img-url="skin/img/popup/10-rittenhouse.png"/>
+		<!-- <hotspot name="pop11-name" ath="-131.388" atv="-0.822" url="skin/img/popup/10-rittenhouse-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Barnes Foundation -->
+		<hotspot name="pop08" ath="111.496" atv="8.077" style="popup" img-url="skin/img/popup/the-summit.png"/>
+		<!-- <hotspot name="pop08-name" ath="123.759" atv="-3.111" url="skin/img/popup/the-summit-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- The Church of Jesus Christ of Latter-Day Saints -->
+		<hotspot name="pop04" ath="139.022" atv="5.772" style="popup" img-url="skin/img/popup/vue-32.png"/>
+		<!-- <hotspot name="pop04-name" ath="150.338" atv="-0.685" url="skin/img/popup/vue-32-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- The Alexander at 1601 Vine -->
+		<hotspot name="pop06" ath="142.439" atv="0.848" style="popup" img-url="skin/img/popup/1601-vine.png"/>
+		<!-- <hotspot name="pop06-name" ath="-158.55" atv="-0.621" url="skin/img/popup/1601-vine-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Kimmel Center for the Performing Arts -->
+		<hotspot name="pop12" ath="-151.451" atv="-8.347" style="popup" img-url="skin/img/popup/30th-street-post-office.png"/>
+		<!-- <hotspot name="pop12-name" ath="-147.174" atv="5.547" url="skin/img/popup/30-street-post-office-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- DoubleTree by Hilton -->
+		<hotspot name="pop14" ath="-170.867" atv="-11.346" style="popup" img-url="skin/img/popup/1919-market.png"/>
+		<!-- <hotspot name="pop14-name" ath="-142.5802" atv="0.364" url="skin/img/popup/1919-market-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- The Residences at the Ritz-Carlton -->
+		<hotspot name="pop15" ath="-169.799" atv="-7.586" style="popup" img-url="skin/img/popup/aramark.png"/>
+		<!-- <hotspot name="pop15-name" ath="-140.860" atv="2.912" url="skin/img/popup/aramark-name.png" style="normal" edge="centerleft" ox="10" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+	</scene>
+
+</krpano>
