@@ -68,7 +68,10 @@
 		<preview url="panos/center_city.tiles/preview.jpg" />
 
 		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
-			<level tiledimagewidth="4096" tiledimageheight="4096">
+			<level tiledimagewidth="8320" tiledimageheight="8320">
+				<cube url="panos/center_city.tiles/%s/l4/%v/l4_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="4160" tiledimageheight="4160">
 				<cube url="panos/center_city.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="2048" tiledimageheight="2048">
