@@ -603,8 +603,8 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	<!-- tween(layer[logolp].y,-40,.5); 
 	tween(layer[logolp].alpha,0,.5); 
 	delayedcall(0,  tween(layer[logolp].y,-40,.5);  -->
-	delayedcall(1,  
-		tween(layer[main-skin-con].alpha,1); 
+	tween(layer[main-skin-con].alpha,1); 
+	delayedcall(0.5,  
 		tween(hotspot[region].alpha,1,2);   
 		hsp-show();   
 	);

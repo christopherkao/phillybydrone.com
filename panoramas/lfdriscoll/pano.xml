@@ -39,7 +39,8 @@
 	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
 	
 	<action name="startup">
-		delayedcall(1, intro-page(););
+		intro-page();
+		<!-- delayedcall(0, intro-page();); -->
 	</action>
 
 	<action name="intro-page">
@@ -48,8 +49,9 @@
  	 		if(device.html, splash(); , flashsplash(); );,
  			set(layer[intro-con].visible,false);
 			set(intro_done,true);
-  		if(device.html, choose(); , flash-choose();); 
- 	); 
+  		if(device.html, choose(); , flash-choose();
+  		); 
+ 		); 
 
 </action>
 
