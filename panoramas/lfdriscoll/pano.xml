@@ -33,7 +33,7 @@
 	               arrows_html="true"
 				   			 title="1" 
 				   			 grid_button="false"
-				    		 littleplanetintro="true"
+				    		 littleplanetintro="false"
 	               />
 
 	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
@@ -53,8 +53,8 @@
 
 </action>
 
-	<!-- UNIVERSITY CITY SCENE -->
-	<scene name="scene_university_city" title="West View" lat="" lng="" heading="" thumburl="panos/university_city.tiles/thumb.png">
+	<!-- CENTER CITY SCENE -->
+	<scene name="scene_center_city" title="" lat="" lng="" heading="">
 
 		<!-- TODO: Remove this to take out the logs. -->
 		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
