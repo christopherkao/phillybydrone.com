@@ -40,7 +40,6 @@
 	
 	<action name="startup">
 		intro-page();
-		<!-- delayedcall(0, intro-page();); -->
 	</action>
 
 	<action name="intro-page">

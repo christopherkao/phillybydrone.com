@@ -587,66 +587,13 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	</action>
 
 	<action name="skin_setup_without_littleplanetintro">
-	<!-- delayedcall(1, hsp-hide(); );
-	copy(lp_scene, xml.scene);
-	copy(lp_hlookat, view.hlookat);
-	copy(lp_vlookat, view.vlookat);
-	copy(lp_fov, view.fov);
-	copy(lp_fovmax, view.fovmax);
-	copy(lp_limitview, view.limitview);
-	set(view.fovmax, 170);
-	set(view.limitview, lookto);
-	set(view.vlookatmin, 90);
-	set(view.vlookatmax, 90);
-	lookat(calc(lp_hlookat - 0), 90, 150, 1, 0, 0); -->
-	<!-- delayedcall(events[lp_events].onmousedown, -->
-	<!-- tween(layer[logolp].y,-40,.5); 
-	tween(layer[logolp].alpha,0,.5); 
-	delayedcall(0,  tween(layer[logolp].y,-40,.5);  -->
-	tween(layer[main-skin-con].alpha,1); 
-	delayedcall(0.5,  
-		tween(hotspot[region].alpha,1,2);   
-		hsp-show();   
-	);
-	set(control.usercontrol,all); 
-	set(skin_settings.hs_anim_delay,1 ); 
-	<!-- delayedcall(3, 
- 		if(skin_settings.littleplanetintro==true,
-			tween(layer[logolp].y,-40,.5); tween(layer[logolp].alpha,0,.5); 
-			set(skin_settings.littleplanetintro,false);
-			delayedcall(0.5,
-				if(lp_scene === xml.scene,
-					set(control.usercontrol, off);
-					copy(view.limitview, lp_limitview);
-					set(view.vlookatmin, null);
-					set(view.vlookatmax, null);
-					tween(view.hlookat|view.vlookat|view.fov|view.distortion, calc('' + lp_hlookat + '|' + lp_vlookat + '|' + lp_fov + '|' + 0.0),
-						3.0, easeOutInQuint,
-						set(control.usercontrol, all);
-						tween(view.fovmax, get(lp_fovmax));
-						tween(layer[logolp].y,-40,.5); 
-						tween(layer[logolp].alpha,0,.5); 
-						delayedcall(0,  
-							tween(layer[logolp].y,-40,.5); 
-							tween(layer[logolp].alpha,0,.5);   
-							tween(layer[main-skin-con].alpha,1); 
-							tween(layer[main-skin-con].alpha,1); 
-							tween(hotspot[region].alpha,1,2);   
-							hsp-show();   
-						);
-						set(control.usercontrol,all); 
-						set(skin_settings.hs_anim_delay,1 ); 
-						delayedcall(1, 
-							tween(view.architectural, 0,4, easeOutInQuad );
-							tween(view.pannini,       0.0,4, easeOutInQuad );
-							tween(view.distortion,    0.0,4, easeOutInQuad,  set(skin_settings.littleplanetintro,false);
-							set(skin_settings.hs_anim_delay,1);  ); 
-							);
-						);
-						
-				  );  );
-			  );
-		  ); -->
+		tween(layer[main-skin-con].alpha,1); 
+		delayedcall(0.5,  
+			tween(hotspot[region].alpha,1,2);   
+			hsp-show();   
+		);
+		set(control.usercontrol,all); 
+		set(skin_settings.hs_anim_delay,1 ); 
 	</action>
 	
 <action name="hsp-hide">
