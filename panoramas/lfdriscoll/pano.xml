@@ -87,12 +87,12 @@
 		<!-- <hotspot name="spot1" style="skin_hotspotstyle" ath="-133" atv="-9" distorted="false" zoom="false" linkedscene="scene_old_city" /> -->
 		
 		<!-- Comcast Center -->
-		<hotspot name="pop01" ath="172.263" atv="-11.114" style="popup" img-url="skin/img/popup/comcast-center.jpg"/>
+		<hotspot name="pop01" ath="172.263" atv="-11.114" style="popup" img-url="skin/img/popup/comcast-center.jpg" onclick="openurl('https://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
 		<hotspot name="pop01-name" ath="171.013" atv="-11.132" url="skin/img/popup/comcast-center-name.png" style="normal" edge="rightcenter" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Comcast Technology Center -->
-		<hotspot name="pop02" ath="176.950" atv="-14.362" style="popup" img-url="skin/img/popup/comcast-technology-center.jpg"/>
-		<hotspot name="pop02-name" ath="178.501" atv="-14.542" url="skin/img/popup/comcast-technology-center-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop02" ath="176.950" atv="-14.362" style="popup" img-url="skin/img/popup/comcast-technology-center.jpg" onclick="openurl('https://structuretone.com/lf-driscoll/safety/comcast-itc/', _blank);" />
+		<hotspot name="pop02-name" ath="178.501" atv="-14.542" url="skin/img/popup/comcast-technology-center-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false" />
 
 		<!-- One Liberty Place -->
 		<hotspot name="pop03" ath="-173.593" atv="-8.488" style="popup" img-url="skin/img/popup/one-liberty-place.jpg" />
