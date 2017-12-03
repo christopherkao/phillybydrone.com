@@ -87,27 +87,19 @@
 		<!-- <hotspot name="spot1" style="skin_hotspotstyle" ath="-133" atv="-9" distorted="false" zoom="false" linkedscene="scene_old_city" /> -->
 		
 		<!-- Comcast Center -->
-		<hotspot name="pop01" ath="171.763" atv="-9.314" style="popup" img-url="skin/img/popup/comcast-center.jpg"/>
-		<!-- <hotspot name="pop07-name" ath="-145.400" atv="-6.416" url="skin/img/popup/comcast-center-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/> -->
+		<hotspot name="pop01" ath="172.263" atv="-11.114" style="popup" img-url="skin/img/popup/comcast-center.jpg"/>
+		<hotspot name="pop01-name" ath="171.013" atv="-11.132" url="skin/img/popup/comcast-center-name.png" style="normal" edge="rightcenter" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Comcast Technology Center -->
-		<hotspot name="pop02" ath="176.950" atv="-11.362" style="popup" img-url="skin/img/popup/comcast-technology-center.jpg"/>
-		<!-- <hotspot name="pop17-name" ath="-148.449" atv="-5.249" url="skin/img/popup/comcast-technology-center-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/> -->
+		<hotspot name="pop02" ath="176.950" atv="-14.362" style="popup" img-url="skin/img/popup/comcast-technology-center.jpg"/>
+		<hotspot name="pop02-name" ath="178.501" atv="-14.542" url="skin/img/popup/comcast-technology-center-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- One Liberty Place -->
-		<hotspot name="pop03" ath="-173.593" atv="-5.898" style="popup" img-url="skin/img/popup/one-liberty-place.jpg" />
-		<!-- <hotspot name="pop01-name" ath="-124.163" atv="-10.822" url="skin/img/popup/fmc-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/> -->
-
-		<!-- Loews Philadelphia Hotel -->
-		<!-- <hotspot name="pop13" ath="-166.816" atv="-8.506" style="popup" img-url="skin/img/popup/1911-walnut.png"/> -->
-		<!-- <hotspot name="pop13-name" ath="-122.349" atv="-2.416" url="skin/img/popup/1911-walnut-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/> -->
-
-		<!-- Symphony House -->
-		<!-- <hotspot name="pop16" ath="-148.972" atv="-4.528" style="popup" img-url="skin/img/popup/symphony-house.png" /> -->
-		<!-- <hotspot name="pop20-name" ath="-117.80" atv="1.088" url="skin/img/popup/symphony-house-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/> -->
+		<hotspot name="pop03" ath="-173.593" atv="-8.488" style="popup" img-url="skin/img/popup/one-liberty-place.jpg" />
+		<hotspot name="pop03-name" ath="-171.689" atv="-8.453" url="skin/img/popup/one-liberty-place-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Rittenhouse Towers -->
-		<hotspot name="pop04" ath="-137.790" atv="2.994" style="popup" img-url="skin/img/popup/rittenhouse-towers.jpg"/>
+		<hotspot name="pop04" ath="-140.584" atv="2.635" style="popup" img-url="skin/img/popup/rittenhouse-towers.jpg"/>
 		<!-- <hotspot name="pop09-name" ath="43.57" atv="0.964" url="skin/img/popup/the-radian-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/> -->
 
 		<!-- CHOP Roberts Center for Pediatric Research -->
@@ -132,7 +124,7 @@
 
 		<!-- Barnes Foundation -->
 		<hotspot name="pop10" ath="111.496" atv="8.077" style="popup" img-url="skin/img/popup/barnes-foundation.jpg"/>
-		<!-- <hotspot name="pop08-name" ath="123.759" atv="-3.111" url="skin/img/popup/the-summit-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".4" tx="0" ty="0" tz="0" enabled="false"/> -->
+		<hotspot name="pop10-name" ath="113.27" atv="8.077" url="skin/img/popup/barnes-foundation-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- The Church of Jesus Christ of Latter-Day Saints -->
 		<hotspot name="pop11" ath="139.022" atv="5.772" style="popup" img-url="skin/img/popup/lds-temple.jpg"/>
@@ -144,6 +136,13 @@
 		<!-- The Alexander at 1601 Vine -->
 		<hotspot name="pop13" ath="142.439" atv="0.848" style="popup" img-url="skin/img/popup/the-alexander-1601-vine.jpg"/>
 		<!-- <hotspot name="pop06-name" ath="-158.55" atv="-0.621" url="skin/img/popup/1601-vine-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Huntsman Hall -->
+		<hotspot name="pop14" ath="-40.189" atv="3.963" style="popup" img-url="skin/img/popup/huntsman-hall.jpg"/>
+		<hotspot name="pop14-name" ath="-38.177" atv="3.919" url="skin/img/popup/huntsman-hall-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".2" tx="0" ty="0" tz="0" enabled="false"/>
+
+		<!-- Citizens Bank Park -->
+		<hotspot name="pop15" ath="-122.364" atv="1.675" style="popup" img-url="skin/img/popup/citizens-bank-park.jpg"/>
 
 		<!-- Kimmel Center for the Performing Arts -->
 		<!-- <hotspot name="pop12" ath="-151.451" atv="-8.347" style="popup" img-url="skin/img/popup/30th-street-post-office.png"/> -->
