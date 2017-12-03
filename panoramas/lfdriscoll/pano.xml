@@ -131,7 +131,7 @@
 		<!-- <hotspot name="pop04-name" ath="150.338" atv="-0.685" url="skin/img/popup/vue-32-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".3" tx="0" ty="0" tz="0" enabled="false"/> -->
 
 		<!-- LDS Meeting house -->
-		<hotspot name="pop12" ath="141.850" atv="4.240" style="popup" img-url="skin/img/popup/lds-temple.jpg"/>
+		<hotspot name="pop12" ath="141.850" atv="4.240" style="popup" img-url="skin/img/popup/lds-meeting-house.jpg"/>
 
 		<!-- The Alexander at 1601 Vine -->
 		<hotspot name="pop13" ath="142.439" atv="0.848" style="popup" img-url="skin/img/popup/the-alexander-1601-vine.jpg"/>
