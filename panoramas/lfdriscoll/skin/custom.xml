@@ -1043,11 +1043,6 @@ if(device.mobile,
 
 
 	);
-		
-	<!-- if(scene.count == 1,
-	tween(layer[prev_button_s].alpha,0); 
-	tween(layer[next_button_s].alpha,0); 	
-	);	 -->
 	
 	</action>
 	

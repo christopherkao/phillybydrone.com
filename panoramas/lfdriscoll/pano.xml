@@ -58,8 +58,8 @@
 	<scene name="scene_center_city" title="" lat="" lng="" heading="">
 
 		<!-- TODO: Remove this to take out the logs. -->
-		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
-		<!-- TODO: Comment out showlog -->
+		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
+		
 		<!-- view settings -->
 		<view hlookat="-165" vlookat="3" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="90" fov="85" />
 		<!-- Set a tighter fov if device is mobile -->
@@ -87,63 +87,63 @@
 		<!-- <hotspot name="spot1" style="skin_hotspotstyle" ath="-133" atv="-9" distorted="false" zoom="false" linkedscene="scene_old_city" /> -->
 		
 		<!-- Comcast Center -->
-		<hotspot name="pop01" ath="172.263" atv="-12.407" style="popup" img-url="skin/img/popup/comcast-center.jpg" onclick="openurl('https://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
+		<hotspot name="pop01" ath="172.263" atv="-12.407" style="popup" img-url="skin/img/popup/comcast-center.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
 		<hotspot name="pop01-name" ath="170.513" atv="-12.407" url="skin/img/popup/comcast-center-name.png" style="normal" edge="rightcenter" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Comcast Technology Center -->
-		<hotspot name="pop02" ath="176.24" atv="-17.248" style="popup" img-url="skin/img/popup/comcast-technology-center.jpg" onclick="openurl('https://structuretone.com/lf-driscoll/safety/comcast-itc/', _blank);" />
+		<hotspot name="pop02" ath="176.24" atv="-17.248" style="popup" img-url="skin/img/popup/comcast-technology-center.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-itc/', _blank);" />
 		<hotspot name="pop02-name" ath="178.201" atv="-17.248" url="skin/img/popup/comcast-technology-center-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false" />
 
 		<!-- One Liberty Place -->
-		<hotspot name="pop03" ath="-173.593" atv="-9.74" style="popup" img-url="skin/img/popup/one-liberty-place.jpg" />
+		<hotspot name="pop03" ath="-173.593" atv="-9.74" style="popup" img-url="skin/img/popup/one-liberty-place.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
 		<hotspot name="pop03-name" ath="-171.289" atv="-9.74" url="skin/img/popup/one-liberty-place-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Rittenhouse Towers -->
-		<hotspot name="pop04" ath="-140.584" atv="2.635" style="popup" img-url="skin/img/popup/rittenhouse-towers.jpg"/>
+		<hotspot name="pop04" ath="-140.584" atv="2.635" style="popup" img-url="skin/img/popup/rittenhouse-towers.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
 		<hotspot name="pop04-name" ath="-138.671" atv="2.635" url="skin/img/popup/rittenhouse-towers-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- CHOP Roberts Center for Pediatric Research -->
-		<hotspot name="pop05" ath="-85.27" atv="2.44" style="popup" img-url="skin/img/popup/chop-roberts.jpg"/>
+		<hotspot name="pop05" ath="-85.27" atv="2.44" style="popup" img-url="skin/img/popup/chop-roberts.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
 		<hotspot name="pop05-name" ath="-87.27" atv="2.94" url="skin/img/popup/chop-roberts-center-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Penn Medicine Perelman Center for Advanced Medicine -->
-		<hotspot name="pop06" ath="-64.644" atv="3.354" style="popup" img-url="skin/img/popup/penn-medicine-pcam.jpg"/>
+		<hotspot name="pop06" ath="-64.644" atv="3.354" style="popup" img-url="skin/img/popup/penn-medicine-pcam.jpg" onclick="openurl('http://structuretone.com/projects/lf-driscoll-healthcare-projects/raymond-ruth-perelman-center/', _blank);"/>
 		<hotspot name="pop06-name" ath="-63.644" atv="3.354" url="skin/img/popup/perelman-center-name.png" style="normal" edge="centerleft" ox="10" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Philadelphia Museum of Art -->
-		<hotspot name="pop07" ath="44.85" atv="2.58" style="popup" img-url="skin/img/popup/philadelphia-museum-of-art.jpg"/>
+		<hotspot name="pop07" ath="44.85" atv="2.58" style="popup" img-url="skin/img/popup/philadelphia-museum-of-art.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
 		<hotspot name="pop07-name" ath="42.6" atv="2.58" url="skin/img/popup/philadelphia-museum-of-art-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Philadelphia Museum of Art, Raymond G. Perelman Building -->
-		<hotspot name="pop08" ath="55.34" atv="1.71" style="popup" img-url="skin/img/popup/pma-perelman.jpg"/>
+		<hotspot name="pop08" ath="55.34" atv="1.71" style="popup" img-url="skin/img/popup/pma-perelman.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
 		<hotspot name="pop08-name" ath="57.94" atv="1.71" url="skin/img/popup/philadelphia-museum-of-art-perelman-building-name.png" style="normal" edge="centerleft" ox="00" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 		
 		<!-- Temple University Mitchell and Hilarie Morgan Hall Complex -->
-		<hotspot name="pop09" ath="99.186" atv="-2.99" style="popup" img-url="skin/img/popup/temple-morgan-hall.jpg"/>
+		<hotspot name="pop09" ath="99.186" atv="-2.99" style="popup" img-url="skin/img/popup/temple-morgan-hall.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
 		<hotspot name="pop09-name" ath="99.186" atv="-5.29" url="skin/img/popup/morgan-hall-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Barnes Foundation -->
-		<hotspot name="pop10" ath="111.496" atv="8.077" style="popup" img-url="skin/img/popup/barnes-foundation.jpg"/>
+		<hotspot name="pop10" ath="111.496" atv="8.077" style="popup" img-url="skin/img/popup/barnes-foundation.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/barnes-foundation/', _blank);"/>
 		<hotspot name="pop10-name" ath="113.27" atv="8.077" url="skin/img/popup/barnes-foundation-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- The Church of Jesus Christ of Latter-Day Saints -->
-		<hotspot name="pop11" ath="137.60" atv="2.99" style="popup" img-url="skin/img/popup/lds-temple.jpg"/>
+		<hotspot name="pop11" ath="137.60" atv="2.99" style="popup" img-url="skin/img/popup/lds-temple.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
 		<hotspot name="pop11-name" ath="137.90" atv="1.79" url="skin/img/popup/latter-day-saints-temple-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- LDS Meeting house -->
-		<hotspot name="pop12" ath="141.950" atv="3.68" style="popup" img-url="skin/img/popup/lds-meeting-house.jpg"/>
+		<hotspot name="pop12" ath="141.950" atv="3.68" style="popup" img-url="skin/img/popup/lds-meeting-house.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
 		<hotspot name="pop12-name" ath="144.550" atv="3.68" url="skin/img/popup/latter-day-saints-meeting-house-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- The Alexander at 1601 Vine -->
-		<hotspot name="pop13" ath="142.06" atv="-1.837" style="popup" img-url="skin/img/popup/the-alexander-1601-vine.jpg"/>
+		<hotspot name="pop13" ath="142.06" atv="-1.837" style="popup" img-url="skin/img/popup/the-alexander-1601-vine.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
 		<hotspot name="pop13-name" ath="142.06" atv="-3.937" url="skin/img/popup/the-alexander-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Huntsman Hall -->
-		<hotspot name="pop14" ath="-40.189" atv="3.963" style="popup" img-url="skin/img/popup/huntsman-hall.jpg"/>
+		<hotspot name="pop14" ath="-40.189" atv="3.963" style="popup" img-url="skin/img/popup/huntsman-hall.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
 		<hotspot name="pop14-name" ath="-38.177" atv="3.919" url="skin/img/popup/huntsman-hall-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Citizens Bank Park -->
-		<hotspot name="pop15" ath="-122.364" atv="1.675" style="popup" img-url="skin/img/popup/citizens-bank-park.jpg"/>
+		<hotspot name="pop15" ath="-122.364" atv="1.675" style="popup" img-url="skin/img/popup/citizens-bank-park.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
 		<hotspot name="pop15-name" ath="-122.364" atv="-0.675" url="skin/img/popup/citizens-bank-park-name.png" style="normal" edge="bottomcenter" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 	</scene>
