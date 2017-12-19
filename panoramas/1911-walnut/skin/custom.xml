@@ -47,6 +47,8 @@ if(webvr.isenabled,
 	for(set(i,0),i LT hotspot.count,inc(i),
 		set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale / 2.5));
 	);
+	<!-- This is a hacky way of ensuring that the menuvr doesn't get smaller -->
+	set(hotspot[menuvr].scale, calc(hotspot[menuvr].scale * 2.5));
 	<!-- Might need to do this for all scenes -->
 ,
 	vr_menu_hide(); 	
@@ -58,6 +60,7 @@ if(webvr.isenabled,
 		set(hotspot[get(i)].scale, calc(hotspot[get(i)].scale * 2.5));
 		<!-- This code block gets called when exiting the panorama -->
 	);
+	set(hotspot[menuvr].scale, calc(hotspot[menuvr].scale / 2.5));
 );
 </action>
 			
@@ -162,7 +165,7 @@ if(webvr.isenabled,
 <!-- Change the tween rotate from 180 back to 135 to get diagonal -->
 <!-- Set the edge to centertop so that popup images display downwards -->
   <style name="popup" url="custom/vtourskin_hotspot_multi.png" alpha="0" scale="0.5" depth="false"
-  	onover="tween(rotate,180); 
+  	onover="tween(rotate,90); 
   	set(hotspot[popup-img].ath,get(ath) ); 
   	set(hotspot[popup-img].atv,calc(atv + 3.5)); 
   	set(hotspot[popup-img].url,get(img-url) );  
@@ -173,10 +176,10 @@ if(webvr.isenabled,
   	onout="tween(rotate,0); 
   	tween(hotspot[popup-img].scale,0); 
   	tween(hotspot[popup-img].alpha,0);"
-    onclick="if(device.touch, if(rotate==180,tween(rotate,0); 
+    onclick="if(device.touch, if(rotate==90,tween(rotate,0); 
     tween(hotspot[popup-img].alpha,0); 
     tween(hotspot[popup-img].scale,0); , popup-close();  
-    tween(rotate,180); 
+    tween(rotate,90); 
     set(hotspot[popup-img].ath,get(ath) ); 
     set(hotspot[popup-img].atv,calc(atv + 3.5)); 
     set(hotspot[popup-img].url,get(img-url) );  
@@ -419,7 +422,7 @@ webvr.enterVR
 		</layer> -->
     <!-- <layer name="gallery-icon" keep="true" style="skin_glow" url="img/gallery-icon.png"  x="50" x.mobile="55"  y="13" align="rightbottom" scale=".2" onclick="show_gallery(get(galleryname))" galleryname="gallery1" /> -->
 		 
-		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/philly-by-drone-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="0.3" onclick="openurl(http://www.phillybydrone.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
+		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="0.4" onclick="openurl(http://www.lfdriscoll.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
 
 		<!-- This is what is successfully keeping the page black at first. -->
 		<!-- <layer name="window-tint" url="img/blk-px.png" autoalpha="true" align="center" width="150%" height="150%" preload="true" keep="true" scale="2" alpha="0.0" zorder="10" visible="" enabled="true" handcursor="false" onclick="close-about();"/> -->
@@ -427,15 +430,13 @@ webvr.enterVR
 		<layer name="html-skin_title" visible="true" url="%SWFPATH%/plugins/textfield.swf" keep="true" align="righttop" edge="" width="95%" height="32" autoheight="true" x="12" y="8" zorder="4" enabled="false" alpha="1" background="false" border="false" roundedge="0" 	       shadow="0.0" shadowrange="4.0" shadowangle="45" shadowcolor="0x000000" shadowalpha="1" textshadow="1" textshadowrange="6.0" textshadowangle="90" textshadowcolor="0x000000" textshadowalpha="1.0"	       css="text-align:right; color:#ffffff; font-family:Arial; font-weight:normal; font-size:18px;" css.mobile="text-align:right; color:#ffffff; font-family:Arial; font-weight:normal; font-size:18px;"     	   	/>
 		
 		<layer name="skin_np_title" visible="true"  url="%SWFPATH%/plugins/textfield.swf" keep="true" align="center" edge="" width="95%" height="32" autoheight="true"  zorder="4" enabled="false" alpha="1" background="false" border="false" roundedge="0" 	       shadow="0.0" shadowrange="4.0" shadowangle="45" shadowcolor="0x000000" shadowalpha="1" textshadow="1" textshadowrange="6.0" textshadowangle="90" textshadowcolor="0x000000" textshadowalpha="1.0"	       css="text-align:center; color:#ffffff; font-family:Arial; font-weight:normal; font-size:20px;" 		   	/>
-
-		<!-- <layer name="html-skin_btn_vr"        style="skin_base|skin_glow" crop="0|0|80|64"    align="leftbottom"     x="get:skin_settings.vr-icon-xoffset"   y="10"  scale="0.56"  visible="true" devices="webgl" onclick="webvr.enterVR();" />	 -->
 		
 		<!-- TODO: Re-enable VR button in the future -->
 		<layer name="html-skin_btn_vr"        style="custom_skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="10"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR();" />	
 
 		<layer name="skin_btn_gyrox" style="custom_skin_base|skin_glow" crop="0|384|64|64"  align="rightbottom"      x="get:skin_settings.gyro-icon-xoffset"  y="10"  scale="0.56" onclick="switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap_custom(false));" visible="true" devices="html5" />
 
-		<!-- <layer name="philly_by_drone_logo"        style="custom_skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="5"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="openurl(http://www.phillybydrone.com,_blank);" />	 -->
+		<!-- <layer name="philly_by_drone_logo"        style="custom_skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="0"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="openurl(http://www.phillybydrone.com,_blank);" />	 -->
 
 
 
@@ -483,10 +484,10 @@ webvr.enterVR
 						
 							<!-- TODO: Put full screen in bottom right -->
 							<layer name="html-skin_btn_fs2"        style="custom_skin_base|skin_glow" crop="0|576|64|64"   align="rightbottom"       x="0" x.mobile="0" x.tablet="0"  y="0"  scale="0.5125" onclick="switch(fullscreen);" onover2="set(layer[skin_tp_fs].visible,true);" onout2="set(layer[skin_tp_fs].visible,false);" devices="fullscreensupport" />											
-							<!-- <layer name="html-skin_btn_zout" visible="get:skin_settings.zoom_buttons"   onloaded="if(device.mobile,set(visible,false););"     style="custom_skin_base|skin_glow" crop="64|518|64|64"  align="rightbottom"      x="44" y="-2"  scale="0.5" onover2="set(layer[skin_tp_zout].visible,true);" onout2="set(layer[skin_tp_zout].visible,false);" ondown2="set(fov_moveforce,+1);" onup2="set(fov_moveforce,0);"  />		 -->
+							<!-- <layer name="html-skin_btn_zout" visible="get:skin_settings.zoom_buttons"   onloaded="if(device.mobile,set(visible,false););"     style="custom_skin_base|skin_glow" crop="64|518|64|64"  align="rightbottom"      x="44" y="0"  scale="0.5" onover2="set(layer[skin_tp_zout].visible,true);" onout2="set(layer[skin_tp_zout].visible,false);" ondown2="set(fov_moveforce,+1);" onup2="set(fov_moveforce,0);"  />		 -->
 
 							<!-- <layer name="skin_btn_gyrox"   onloaded="trace('loaded gyro');"     style="custom_skin_base|skin_glow" crop="0|384|64|64"  align="rightbottom"      x="100"  y="20"  scale="0.5" onclick="switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap_custom(false));" visible="true" devices="html5" /> -->			
-							<!-- <layer name="html-skin_btn_zin"  visible="get:skin_settings.zoom_buttons"  onloaded="if(device.mobile,set(visible,false););"   style="custom_skin_base|skin_glow" crop="0|518|64|64"  align="rightbottom"      x="87" y="-2"  scale="0.5" onover2="set(layer[skin_tp_zin].visible,true);" onout2="set(layer[skin_tp_zin].visible,false);" ondown2="set(fov_moveforce,-1);" onup2="set(fov_moveforce,0);"   />				 -->
+							<!-- <layer name="html-skin_btn_zin"  visible="get:skin_settings.zoom_buttons"  onloaded="if(device.mobile,set(visible,false););"   style="custom_skin_base|skin_glow" crop="0|518|64|64"  align="rightbottom"      x="87" y="0"  scale="0.5" onover2="set(layer[skin_tp_zin].visible,true);" onout2="set(layer[skin_tp_zin].visible,false);" ondown2="set(fov_moveforce,-1);" onup2="set(fov_moveforce,0);"   />				 -->
 							<!-- <layer name="html-skin_btn_sound"       visible="get:skin_settings.speak_buttons" style="custom_skin_base|skin_glow" crop="64|640|64|64"   align="rightbottom"       x="-40"   y="0"  scale="0.5" 				onover2="set(layer[skin_tp_sound].visible,true);" onout2="set(layer[skin_tp_sound].visible,false);" onclick="if(layer[soundinterface].mute == true, set(layer[soundinterface].mute, false);  set(hotspot[ videotv2].volume,1); set(hotspot[videof].volume,1);, set(layer[soundinterface].mute, true); set(hotspot[ videotv2].volume,0);  set(hotspot[videof].volume,0);); switch(crop, 0|640|64|64, 64|640|64|64 );  " onloaded="if(visible, set(layer[html-control-bar].ox,-37););"/>				 -->
 						</layer>
 			</layer>	
@@ -568,7 +569,9 @@ webvr.enterVR
 
 		if(skin_settings.littleplanetintro AND (device.webgl OR device.flash),
 			skin_setup_littleplanetintro();
-		  );
+	  ,
+	  	skin_setup_without_littleplanetintro();
+	  );
 		  
 		if(device.mobile, mobile_menu();
 );
@@ -956,9 +959,7 @@ if(device.flash,
 		set(layer[html-share-bar].visible,false);
 		
 		set(layer[flash-skin_btn_zout].x,-4);
-		set(layer[flash-skin_btn_zin].x,39);
-
- set(layer[above-vr-logo].onclick, open-about-small();)		
+		set(layer[flash-skin_btn_zin].x,39);	
 		,
 		
 		set(layer[flash-skin_btn_zout].x,44);
@@ -967,8 +968,7 @@ if(device.flash,
 		set(layer[html-share-bar].visible,true);
 		set(layer[flash-skin-con].alpha,0);
 		set(layer[html-skin-con].alpha,1);	
-		tween(layer[main-logo].scale,.25);		
- set(layer[above-vr-logo].onclick, open-about();)				
+		tween(layer[main-logo].scale,.25);			
 	tween(layer[prev_button_s].alpha,0); 
 	tween(layer[next_button_s].alpha,0); 
 
@@ -1003,7 +1003,6 @@ if(device.mobile,
 
 
 );		
- set(layer[above-vr-logo].onclick, open-about-small(););	
 		
 
 	if(scene[get(xml.scene)].index LT 1,
@@ -1035,8 +1034,7 @@ if(device.mobile,
 
 		set(layer[flash-skin-con].alpha,0);
 		set(layer[html-skin-con].alpha,1);	
-		tween(layer[main-logo].scale,.25);		
- set(layer[above-vr-logo].onclick, open-about(););				
+		tween(layer[main-logo].scale,.25);				
 
 
 
@@ -1045,11 +1043,6 @@ if(device.mobile,
 
 
 	);
-		
-	if(scene.count == 1,
-	tween(layer[prev_button_s].alpha,0); 
-	tween(layer[next_button_s].alpha,0); 	
-	);	
 	
 	</action>
 	
