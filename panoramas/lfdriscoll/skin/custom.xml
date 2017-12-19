@@ -165,7 +165,7 @@ if(webvr.isenabled,
 <!-- Change the tween rotate from 180 back to 135 to get diagonal -->
 <!-- Set the edge to centertop so that popup images display downwards -->
   <style name="popup" url="custom/vtourskin_hotspot_multi.png" alpha="0" scale="0.5" depth="false"
-  	onover="tween(rotate,180); 
+  	onover="tween(rotate,90); 
   	set(hotspot[popup-img].ath,get(ath) ); 
   	set(hotspot[popup-img].atv,calc(atv + 3.5)); 
   	set(hotspot[popup-img].url,get(img-url) );  
@@ -176,10 +176,10 @@ if(webvr.isenabled,
   	onout="tween(rotate,0); 
   	tween(hotspot[popup-img].scale,0); 
   	tween(hotspot[popup-img].alpha,0);"
-    onclick="if(device.touch, if(rotate==180,tween(rotate,0); 
+    onclick="if(device.touch, if(rotate==90,tween(rotate,0); 
     tween(hotspot[popup-img].alpha,0); 
     tween(hotspot[popup-img].scale,0); , popup-close();  
-    tween(rotate,180); 
+    tween(rotate,90); 
     set(hotspot[popup-img].ath,get(ath) ); 
     set(hotspot[popup-img].atv,calc(atv + 3.5)); 
     set(hotspot[popup-img].url,get(img-url) );  

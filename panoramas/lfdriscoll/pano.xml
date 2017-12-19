@@ -108,7 +108,7 @@
 
 		<!-- Penn Medicine Perelman Center for Advanced Medicine -->
 		<hotspot name="pop06" ath="-64.644" atv="3.354" style="popup" img-url="skin/img/popup/penn-medicine-pcam.jpg" onclick="openurl('http://structuretone.com/projects/lf-driscoll-healthcare-projects/raymond-ruth-perelman-center/', _blank);"/>
-		<hotspot name="pop06-name" ath="-63.644" atv="3.354" url="skin/img/popup/perelman-center-name.png" style="normal" edge="centerleft" ox="10" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop06-name" ath="-63.644" atv="1.954" url="skin/img/popup/perelman-center-name.png" style="normal" edge="topleft" ox="10" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Philadelphia Museum of Art -->
 		<hotspot name="pop07" ath="44.85" atv="2.58" style="popup" img-url="skin/img/popup/philadelphia-museum-of-art.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
@@ -140,7 +140,7 @@
 
 		<!-- Huntsman Hall -->
 		<hotspot name="pop14" ath="-40.189" atv="3.963" style="popup" img-url="skin/img/popup/huntsman-hall.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
-		<hotspot name="pop14-name" ath="-38.177" atv="3.919" url="skin/img/popup/huntsman-hall-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop14-name" ath="-38.177" atv="4.919" url="skin/img/popup/huntsman-hall-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Citizens Bank Park -->
 		<hotspot name="pop15" ath="-122.364" atv="1.675" style="popup" img-url="skin/img/popup/citizens-bank-park.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
