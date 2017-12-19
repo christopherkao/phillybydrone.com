@@ -1,4 +1,4 @@
-﻿<krpano version="1.19" title="BALA Projects" onstart="startup();" showerrors="false">
+﻿<krpano version="1.19" title="1911 Walnut" onstart="startup();" showerrors="false">
 	
 	<!-- the skin -->
 	<include url="skin/vtourskin.xml" />
