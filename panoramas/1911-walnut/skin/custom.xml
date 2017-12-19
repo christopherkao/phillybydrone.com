@@ -421,7 +421,7 @@ webvr.enterVR
 	
 		</layer> -->
 		 
-		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="0.3" scale.mobile="0.2" onclick="openurl(http://www.phillybydrone.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
+		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="0.3" scale.mobile="0.25" onclick="openurl(http://www.phillybydrone.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
 
 		<layer name="html-skin_title" visible="true" url="%SWFPATH%/plugins/textfield.swf" keep="true" align="righttop" edge="" width="95%" height="32" autoheight="true" x="12" y="8" zorder="4" enabled="false" alpha="1" background="false" border="false" roundedge="0" 	       shadow="0.0" shadowrange="4.0" shadowangle="45" shadowcolor="0x000000" shadowalpha="1" textshadow="1" textshadowrange="6.0" textshadowangle="90" textshadowcolor="0x000000" textshadowalpha="1.0"	       css="text-align:right; color:#ffffff; font-family:Arial; font-weight:normal; font-size:18px;" css.mobile="text-align:right; color:#ffffff; font-family:Arial; font-weight:normal; font-size:18px;"     	   	/>
 		
