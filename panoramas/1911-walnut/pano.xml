@@ -1,18 +1,16 @@
-﻿<krpano version="1.19" title="1911 Walnut" onstart="startup();" showerrors="false">
+﻿<krpano version="1.19" onstart="startup();" showerrors="false">
 	
-	<!-- the skin -->
 	<include url="skin/vtourskin.xml" />
 	<include url="skin/custom.xml" />
-	<include url="plugins/combobox.xml" />
 
-	<!-- This is the skin_settings where hs_anim_delay is set. -->
   <skin_settings maps="true"
 	               maps_type=""
 	               custom_map="false"	
 				   			 menu-btn="true"
 				         map-btn="false"
 				         navxoffset="0"
-				         vr-icon-xoffset="50"
+				         vr-icon-xoffset="20"
+				         fs-icon-xoffset="60"
 				         gyro-icon-xoffset="100"
 				  
 				   			 hs_delay="1"
@@ -53,12 +51,6 @@
  	); 
 
 	</action>
-
-	<!-- <combobox name="box1" design="vtour" >
-	    <item name="item1" caption="550 Feet" onclick="..." />
-	    <item name="item2" caption="500 Feet" onclick="..." />
-	    <item name="item3" caption="450 Feet" onclick="..." />
-	</combobox> -->
 
 	<scene name="scene" title="1911 Walnut" lat="" lng="" heading="" >
 
