@@ -28,7 +28,7 @@
 	               maps_zoombuttons="false"
 				   			 maps_zoom="25"
 				   			 share-btn="false"
-	               gyro="true"
+	               			 gyro="false"
 	               arrows_html="true"
 				   			 title="1" 
 				   			 grid_button="false"
@@ -38,7 +38,7 @@
 	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
 	
 	<action name="startup">
-		delayedcall(1, intro-page(););
+		intro-page();
 	</action>
 
 	<action name="intro-page">
