@@ -104,7 +104,7 @@
 
 		<!-- CHOP Roberts Center for Pediatric Research -->
 		<hotspot name="pop05" ath="-85.27" atv="2.44" style="popup" img-url="skin/img/popup/chop-roberts.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
-		<hotspot name="pop05-name" ath="-87.27" atv="2.94" url="skin/img/popup/chop-roberts-center-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop05-name" ath="-86.87" atv="2.94" url="skin/img/popup/chop-roberts-center-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Penn Medicine Perelman Center for Advanced Medicine -->
 		<hotspot name="pop06" ath="-64.644" atv="3.354" style="popup" img-url="skin/img/popup/penn-medicine-pcam.jpg" onclick="openurl('http://structuretone.com/projects/lf-driscoll-healthcare-projects/raymond-ruth-perelman-center/', _blank);"/>
@@ -136,7 +136,7 @@
 
 		<!-- The Alexander at 1601 Vine -->
 		<hotspot name="pop13" ath="142.06" atv="-1.837" style="popup" img-url="skin/img/popup/the-alexander-1601-vine.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
-		<hotspot name="pop13-name" ath="142.06" atv="-3.937" url="skin/img/popup/the-alexander-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
+		<hotspot name="pop13-name" ath="142.06" atv="-3.337" url="skin/img/popup/the-alexander-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/>
 
 		<!-- Huntsman Hall -->
 		<hotspot name="pop14" ath="-40.189" atv="3.963" style="popup" img-url="skin/img/popup/huntsman-hall.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
