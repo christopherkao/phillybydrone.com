@@ -54,11 +54,11 @@
 
 	</action>
 
-	<combobox name="box1" design="default" >
-	    <item name="item1" caption="Item 1" onclick="..." />
-	    <item name="item2" caption="Item 2" onclick="..." />
-	    <item name="item3" caption="Item 3" onclick="..." />
-	</combobox>
+	<!-- <combobox name="box1" design="vtour" >
+	    <item name="item1" caption="550 Feet" onclick="..." />
+	    <item name="item2" caption="500 Feet" onclick="..." />
+	    <item name="item3" caption="450 Feet" onclick="..." />
+	</combobox> -->
 
 	<scene name="scene" title="1911 Walnut" lat="" lng="" heading="" >
 
