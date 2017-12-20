@@ -354,7 +354,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 			</layer>
 
 		<layer name="skin_loadingtext" url="%SWFPATH%/plugins/textfield.swf" align="center" x="5" y="-5" html="get:skin_settings.loadingtext" visible="false" autoheight="true" background="false" border="false" enabled="false" css="calc:skin_settings.design_text_css + ' text-align:center; font-style:italic; font-size:22px;'" textshadow="get:skin_settings.design_text_shadow" />
-		<layer name="skin_buttonglow"  style="skin_base" crop="64|384|64|64" align="center" x="0" y="1" scale="1.0" alpha="0.0" visible="false" enabled="false" />
+		<layer name="skin_buttonglow"  style="skin_base" crop="64|384|64|64" align="center" x="0" y="1" scale="1.0" alpha="0.0" visible="false" enabled="false"/>
 		<layer name="skin_thumbborder" type="container" x="get:skin_settings.design_thumbborder_padding" y="get:skin_settings.design_thumbborder_padding" width="calc:skin_settings.thumbs_width - 2*skin_settings.design_thumbborder_padding" height="calc:skin_settings.thumbs_height - 2*skin_settings.design_thumbborder_padding" visible="false" enabled="false" align="lefttop" bgborder="get:skin_settings.design_thumbborder_bgborder" bgroundedge="get:skin_settings.design_thumbborder_bgroundedge" />
 	</layer>
 
@@ -1060,6 +1060,7 @@ tween(hotspot[pop20-name].alpha,1);
 	</action>
 
 
+	<!-- First parameter to function is parent. Second param is strength. -->
 	<action name="skin_buttonglow">
 		if('%1' !== 'null',
 			set(strength,0.7);
@@ -1075,6 +1076,20 @@ tween(hotspot[pop20-name].alpha,1);
 		  );
 	</action>
 
+	<action name="hotspot_glow">
+		if('%1' !== 'null',
+			set(strength,0.7);
+			if(%2 != null, set(strength,%2));
+			set(layer[skin_buttonglow].parent, hotspot[%1]);
+			set(layer[skin_buttonglow].visible, true);
+			tween(layer[skin_buttonglow].alpha, get(strength), 0.07);
+		  ,
+			tween(layer[skin_buttonglow].alpha, 0.0, 0.1, default,
+				set(layer[skin_buttonglow].parent, null);
+				set(layer[skin_buttonglow].visible, false);
+			  );
+		  );
+  </action>
 
 	<action name="skin_calc_opened_closed">
 		if(layer[get(name)].y_closed === null,
