@@ -355,7 +355,6 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 
 		<layer name="skin_loadingtext" url="%SWFPATH%/plugins/textfield.swf" align="center" x="5" y="-5" html="get:skin_settings.loadingtext" visible="false" autoheight="true" background="false" border="false" enabled="false" css="calc:skin_settings.design_text_css + ' text-align:center; font-style:italic; font-size:22px;'" textshadow="get:skin_settings.design_text_shadow" />
 		<layer name="skin_buttonglow"  style="skin_base" crop="64|384|64|64" align="center" x="0" y="1" scale="1.0" alpha="0.0" visible="false" enabled="false"/>
-		<layer name="hotspot_glow"  style="skin_base" crop="64|384|64|64" align="topleft" x="0" y="0" scale="1.0" alpha="0.0" visible="false" enabled="false"/>
 		<layer name="skin_thumbborder" type="container" x="get:skin_settings.design_thumbborder_padding" y="get:skin_settings.design_thumbborder_padding" width="calc:skin_settings.thumbs_width - 2*skin_settings.design_thumbborder_padding" height="calc:skin_settings.thumbs_height - 2*skin_settings.design_thumbborder_padding" visible="false" enabled="false" align="lefttop" bgborder="get:skin_settings.design_thumbborder_bgborder" bgroundedge="get:skin_settings.design_thumbborder_bgroundedge" />
 	</layer>
 
@@ -1076,27 +1075,6 @@ tween(hotspot[pop20-name].alpha,1);
 			  );
 		  );
 	</action>
-
-	<!-- 3rd param is x, 4th param is y -->
-	<action name="hotspot_glow">
-		if('%1' !== 'null',
-			set(strength,0.7);
-			if(%2 != null, set(strength,%2));
-			set(layer[hotspot_glow].x, calc(%3 - 32));
-			set(layer[hotspot_glow].y, calc(%4 - 32));
-			set(layer[hotspot_glow].parent, %1);
-			set(layer[hotspot_glow].visible, true);
-			trace('got to hotspot_glow');
-			trace(%3);
-			trace(calc(%3 - 64));
-			tween(layer[hotspot_glow].alpha, get(strength), 0.07);
-		  ,
-			tween(layer[hotspot_glow].alpha, 0.0, 0.1, default,
-				set(layer[hotspot_glow].parent, null);
-				set(layer[hotspot_glow].visible, false);
-			  );
-		  );
-  </action>
 
 	<action name="skin_calc_opened_closed">
 		if(layer[get(name)].y_closed === null,

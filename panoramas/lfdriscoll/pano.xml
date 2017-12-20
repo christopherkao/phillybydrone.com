@@ -61,7 +61,7 @@
 		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
 		
 		<!-- view settings -->
-		<view hlookat="-165" vlookat="3" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="90" fov="85" />
+		<view hlookat="-165" vlookat="0" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="75" fov="75" />
 		<!-- Set a tighter fov if device is mobile -->
 		<view fov="70" devices="mobile" />
 
