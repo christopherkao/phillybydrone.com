@@ -1,0 +1,217 @@
+﻿<krpano version="1.19" onstart="startup();" showerrors="false">
+	
+	<!-- the skin -->
+	<include url="skin/vtourskin.xml" />
+	<include url="skin/custom.xml" />
+
+	<!-- This is the skin_settings where hs_anim_delay is set. -->
+  <skin_settings maps="true"
+	               maps_type=""
+	               custom_map="false"	
+				   			 menu-btn="true"
+				         map-btn="false"
+				         navxoffset="0"
+				         vr-icon-xoffset="50"
+				         gyro-icon-xoffset="100"
+				  
+				   			 hs_delay="1"
+				   			 hs_anim_delay="0"
+				   			 bg_type="stretch"
+				   			 corporate_logo="true"
+				   			 corp-logo-xoffset="10"
+				   			 project_logo="true"
+				   
+				   			 zoom_buttons="false"	
+				   			 speak_buttons="false"
+				   			 password="false"
+				   			 start_screen="false"
+				   			 maps_bing_api_key=""
+	               maps_zoombuttons="false"
+				   			 maps_zoom="25"
+				   			 share-btn="false"
+	               gyro="true"
+	               arrows_html="true"
+				   			 title="1" 
+				   			 grid_button="false"
+				    		 littleplanetintro="false"
+	               />
+
+	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
+	
+	<action name="startup">
+		intro-page();
+	</action>
+
+	<action name="intro-page">
+
+		if(skin_settings.start_screen,
+ 	 		if(device.html, splash(); , flashsplash(); );,
+ 			set(layer[intro-con].visible,false);
+			set(intro_done,true);
+  		if(device.html, choose(); , flash-choose();
+  		); 
+ 		); 
+
+</action>
+
+	<!-- CENTER CITY SCENE -->
+	<scene name="scene_center_city" title="" lat="" lng="" heading="">
+
+		<!-- TODO: Remove this to take out the logs. -->
+		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
+		
+		<!-- view settings -->
+		<view hlookat="50" vlookat="10" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="80" fov="85" />
+		<!-- Set a tighter fov if device is mobile -->
+		<view fov="70" devices="mobile" />
+
+
+		<preview url="panos/center_city.tiles/preview.jpg" />
+
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="8192" tiledimageheight="8192">
+				<cube url="panos/center_city.tiles/%s/l4/%v/l4_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="4096" tiledimageheight="4096">
+				<cube url="panos/center_city.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="2048" tiledimageheight="2048">
+				<cube url="panos/center_city.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/center_city.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+
+		<!-- <hotspot name="spot1" style="skin_hotspotstyle" ath="-133" atv="-9" distorted="false" zoom="false" linkedscene="scene_old_city" /> -->
+		
+		<!-- Penn Park -->
+		<hotspot name="pop00" ath="-82.57" atv="11.36" style="popup" img-url="skin/img/popup/comcast-center.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
+		<!-- <hotspot name="pop01-name" ath="170.513" atv="-12.407" url="skin/img/popup/comcast-center-name.png" style="normal" edge="rightcenter" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Penn Relays -->
+		<hotspot name="pop01" ath="-85.83" atv="8.198" style="popup" img-url="skin/img/popup/comcast-technology-center.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-itc/', _blank);" />
+
+		<!-- University of Pennsylvania (Alumni Campaign) -->
+		<hotspot name="pop02" ath="-77.11" atv="5.47" style="popup" img-url="skin/img/popup/comcast-technology-center.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-itc/', _blank);" />
+		<!-- <hotspot name="pop02-name" ath="178.201" atv="-17.248" url="skin/img/popup/comcast-technology-center-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false" /> -->
+
+		<!-- BALA Panorama (University City) -->
+
+		<!-- Radian Apartments -->
+		<hotspot name="pop03" ath="-74.23" atv="3.31" style="popup" img-url="skin/img/popup/one-liberty-place.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
+		<!-- <hotspot name="pop03-name" ath="-171.789" atv="-9.74" url="skin/img/popup/one-liberty-place-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- 3675 Market -->
+		<hotspot name="pop04" ath="-61.05" atv="3.14" style="popup" img-url="skin/img/popup/rittenhouse-towers.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);" />
+		<!-- <hotspot name="pop04-name" ath="-139.071" atv="2.635" url="skin/img/popup/rittenhouse-towers-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Vue 32 -->
+		<hotspot name="pop04a" ath="-44.28" atv="4.24" style="popup" img-url="skin/img/popup/rittenhouse-towers.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);" />
+
+		<!-- Schuylkill Yards -->
+		<hotspot name="pop05" ath="-50.80" atv="8.25" style="popup" img-url="skin/img/popup/chop-roberts.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
+		<!-- <hotspot name="pop05-name" ath="-86.87" atv="2.94" url="skin/img/popup/chop-roberts-center-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- EVO -->
+		<hotspot name="pop06" ath="-64.01" atv="5.46" style="popup" img-url="skin/img/popup/penn-medicine-pcam.jpg" onclick="openurl('http://structuretone.com/projects/lf-driscoll-healthcare-projects/raymond-ruth-perelman-center/', _blank);"/>
+		<!-- <hotspot name="pop06-name" ath="-63.644" atv="1.954" url="skin/img/popup/perelman-center-name.png" style="normal" edge="topleft" ox="10" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- FMC Tower -->
+		<hotspot name="pop07" ath="-72.02" atv="0.05" style="popup" img-url="skin/img/popup/philadelphia-museum-of-art.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
+		<!-- <hotspot name="pop07-name" ath="43.1" atv="2.58" url="skin/img/popup/philadelphia-museum-of-art-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Appleford Estate -->
+		<hotspot name="pop07a" ath="-35.87" atv="0.756" style="popup" img-url="skin/img/popup/philadelphia-museum-of-art.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
+
+		<!-- Conshohocken (Seven Tower Bridge) -->
+		<hotspot name="pop08" ath="-24.65" atv="0.07" style="popup" img-url="skin/img/popup/pma-perelman.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
+		<!-- <hotspot name="pop08-name" ath="57.94" atv="1.71" url="skin/img/popup/philadelphia-museum-of-art-perelman-building-name.png" style="normal" edge="centerleft" ox="00" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+		
+		<!-- Conshohocken (SORA West) -->
+		<hotspot name="pop09" ath="-22.65" atv="0.07" style="popup" img-url="skin/img/popup/temple-morgan-hall.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
+		<!-- <hotspot name="pop09-name" ath="99.186" atv="-4.29" url="skin/img/popup/morgan-hall-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Philadelphia Museum of Art -->
+		<hotspot name="pop10" ath="-14.62" atv="3.81" style="popup" img-url="skin/img/popup/barnes-foundation.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/barnes-foundation/', _blank);"/>
+		<!-- <hotspot name="pop10-name" ath="113.27" atv="8.077" url="skin/img/popup/barnes-foundation-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Benjamin Franklin Parkway -->
+		<hotspot name="pop11" ath="10.22" atv="8.16" style="popup" img-url="skin/img/popup/lds-temple.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
+		<!-- <hotspot name="pop11-name" ath="137.90" atv="1.79" url="skin/img/popup/latter-day-saints-temple-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Schuylkill Riverwalk -->
+		<hotspot name="pop12" ath="-24.15" atv="13.01" style="popup" img-url="skin/img/popup/lds-meeting-house.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
+		<!-- <hotspot name="pop12-name" ath="143.950" atv="3.68" url="skin/img/popup/latter-day-saints-meeting-house-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- Mandeville Place -->
+		<hotspot name="pop13" ath="-67.26" atv="17.49" style="popup" img-url="skin/img/popup/the-alexander-1601-vine.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
+		<!-- <hotspot name="pop13-name" ath="142.06" atv="-3.337" url="skin/img/popup/the-alexander-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- 1919 Market -->
+		<hotspot name="pop13a" ath="13.91" atv="14.15" style="popup" img-url="skin/img/popup/lds-temple.jpg"/>
+
+		<!-- Comcast Technology Center -->
+		<hotspot name="pop14" ath="31.83" atv="-9.75" style="popup" img-url="skin/img/popup/huntsman-hall.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
+		<!-- <hotspot name="pop14-name" ath="-38.677" atv="4.519" url="skin/img/popup/huntsman-hall-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- 1301 Market -->
+		<hotspot name="pop15" ath="-122.364" atv="1.675" style="popup" img-url="skin/img/popup/citizens-bank-park.jpg" onclick="openurl('http://structuretone.com/lf-driscoll/safety/comcast-center/', _blank);"/>
+		<!-- <hotspot name="pop15-name" ath="-122.364" atv="0" url="skin/img/popup/citizens-bank-park-name.png" style="normal" edge="bottomcenter" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
+
+		<!-- City Hall (Statue Renovation) -->
+		<hotspot name="pop16" ath="79.56" atv="0.36" style="popup" img-url="skin/img/popup/.jpg"/>
+
+		<!-- The Ludlow (East Market) -->
+		<hotspot name="pop17" ath="94.04" atv="-0.69" style="popup" img-url="skin/img/popup/.jpg"/>
+
+		<!-- 1213 Walnut -->
+		<hotspot name="pop18" ath="107.83" atv="3.01" style="popup" img-url="skin/img/popup/.jpg"/>
+
+		<!-- The Rail Park -->
+		<hotspot name="pop19" ath="62.94" atv="3.62" style="popup" img-url="skin/img/popup/.jpg"/>
+		
+		<!-- Jeweler's Row -->
+		<hotspot name="pop20" ath="102.42" atv="3.10" style="popup" img-url="skin/img/popup/.jpg"/>
+		
+		<!-- BALA Panorama (Old City) -->
+		<hotspot name="pop21" ath="98.21" atv="2.72" style="popup" img-url="skin/img/popup/.jpg"/>
+		
+		<!-- Bridge On Race -->
+		<hotspot name="pop22" ath="92.58" atv="-0.46" style="popup" img-url="skin/img/popup/.jpg"/>
+		
+		<!-- Camden Waterfront -->
+		<hotspot name="pop24" ath="101.49" atv="1.55" style="popup" img-url="skin/img/popup/.jpg"/>
+		
+		<!-- 500 Walnut -->
+		<hotspot name="pop26" ath="109.01" atv="2.28" style="popup" img-url="skin/img/popup/.jpg"/>
+		
+		<!-- Liberty On the River -->
+		<hotspot name="pop27" ath="135.76" atv="3.37" style="popup" img-url="skin/img/popup/.jpg"/>
+		
+		<!-- 514 South Street -->
+		<hotspot name="pop28" ath="122.46" atv="4.65" style="popup" img-url="skin/img/popup/.jpg"/>
+		
+		<!-- 510-514 S. Broad Street (PIDC) -->
+		<hotspot name="pop29" ath="145.63" atv="8.96" style="popup" img-url="skin/img/popup/.jpg"/>
+		
+		<!-- Navy Yard (Amazon, PIDC, Liberty) -->
+		<hotspot name="pop30" ath="-168.06" atv="3.20" style="popup" img-url="skin/img/popup/.jpg"/>
+
+		<!-- Navy Yard Wanderlust -->
+		<hotspot name="pop31" ath="-170.06" atv="3.20" style="popup" img-url="skin/img/popup/.jpg"/>
+		
+		<!-- 1911 Walnut -->
+		<hotspot name="pop32" ath="46.35" atv="88.26" style="popup" img-url="skin/img/popup/.jpg"/>
+
+		<!-- Allan Domb (Rittenhouse Square) -->
+		<hotspot name="pop33" ath="-168.85" atv="27.94" style="popup" img-url="skin/img/popup/.jpg"/>
+
+		<!-- One Riverside -->
+		<hotspot name="pop34" ath="-89.23" atv="11.53" style="popup" img-url="skin/img/popup/.jpg"/>
+		
+
+	</scene>
+
+</krpano>
