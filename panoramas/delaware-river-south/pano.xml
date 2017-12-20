@@ -1,0 +1,66 @@
+﻿<krpano version="1.19" onstart="startup();" showerrors="false">
+	
+	<include url="skin/vtourskin.xml" />
+	<include url="skin/custom.xml" />
+
+  <skin_settings maps="true"
+	               maps_type=""
+	               custom_map="false"	
+				   			 menu-btn="true"
+				         map-btn="false"
+				         navxoffset="0"
+				         vr-icon-xoffset="20"
+				         fs-icon-xoffset="60"
+				         gyro-icon-xoffset="100"
+				  
+				   			 hs_delay="1"
+				   			 hs_anim_delay="0"
+				   			 bg_type="stretch"
+				   			 corporate_logo="true"
+				   			 corp-logo-xoffset="10"
+				   			 project_logo="true"
+				   
+				   			 zoom_buttons="false"	
+				   			 speak_buttons="false"
+				   			 password="false"
+				   			 start_screen="false"
+				   			 maps_bing_api_key=""
+	               maps_zoombuttons="false"
+				   			 maps_zoom="25"
+				   			 share-btn="false"
+	               			 gyro="false"
+	               arrows_html="true"
+				   			 title="1" 
+				   			 grid_button="false"
+				    		 littleplanetintro="false"
+	               />
+
+	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
+	
+	<action name="startup">
+		intro-page();
+	</action>
+
+	<action name="intro-page">
+
+		if(skin_settings.start_screen,
+ 	 		if(device.html, splash(); , flashsplash(); );,
+ 			set(layer[intro-con].visible,false);
+			set(intro_done,true);
+  		if(device.html, choose(); , flash-choose();); 
+ 	); 
+
+	</action>
+
+	<scene name="scene" title="Delaware River South" lat="" lng="" heading="" >
+
+		<view hlookat="0" vlookat="20" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="90" />
+
+
+		<image>
+			<cube url="pano.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+</krpano>
