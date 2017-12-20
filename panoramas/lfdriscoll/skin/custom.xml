@@ -188,10 +188,31 @@ if(webvr.isenabled,
   	set(hotspot[popup-img].edge, 'centertop');
   	if(webvr.isenabled == true, tween(hotspot[popup-img].scale, .2));
   	if(webvr.isenabled !== true, tween(hotspot[popup-img].scale, .5));
-  	tween(hotspot[popup-img].alpha,1);" 
+  	tween(hotspot[popup-img].alpha,1);
+
+  	if(skin_lockglow === null, 
+  		copy(skin_lockglow,name); 
+  		spheretoscreen(ath, atv, glow_x, glow_y);
+			hotspot_glow(get(name), 0.5, glow_x, glow_y)
+		); 
+		if(onover2, onover2() );
+
+  	" 
   	onout="tween(rotate,0); 
   	tween(hotspot[popup-img].scale,0); 
-  	tween(hotspot[popup-img].alpha,0);"
+  	tween(hotspot[popup-img].alpha,0);
+
+  	if(onup2, onup2()); 
+  	delayedcall(0, 
+  		if(hovering AND enabled, 
+  			hotspot_glow(get(name),0.5); , 
+
+  			hotspot_glow(null);
+  			delete(skin_lockglow); 
+  		); 
+  	);
+
+  	"
 
     onclick="if(device.touch, if(rotate==90,tween(rotate,0); 
     tween(hotspot[popup-img].alpha,0); 
