@@ -354,7 +354,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 			</layer>
 
 		<layer name="skin_loadingtext" url="%SWFPATH%/plugins/textfield.swf" align="center" x="5" y="-5" html="get:skin_settings.loadingtext" visible="false" autoheight="true" background="false" border="false" enabled="false" css="calc:skin_settings.design_text_css + ' text-align:center; font-style:italic; font-size:22px;'" textshadow="get:skin_settings.design_text_shadow" />
-		<layer name="skin_buttonglow"  style="skin_base" crop="64|384|64|64" align="center" x="0" y="1" scale="1.0" alpha="0.0" visible="false" enabled="false" />
+		<layer name="skin_buttonglow"  style="skin_base" crop="64|384|64|64" align="center" x="0" y="1" scale="1.0" alpha="0.0" visible="false" enabled="false"/>
 		<layer name="skin_thumbborder" type="container" x="get:skin_settings.design_thumbborder_padding" y="get:skin_settings.design_thumbborder_padding" width="calc:skin_settings.thumbs_width - 2*skin_settings.design_thumbborder_padding" height="calc:skin_settings.thumbs_height - 2*skin_settings.design_thumbborder_padding" visible="false" enabled="false" align="lefttop" bgborder="get:skin_settings.design_thumbborder_bgborder" bgroundedge="get:skin_settings.design_thumbborder_bgroundedge" />
 	</layer>
 
@@ -365,6 +365,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	<layer name="skin_btn_next_fs" keep="true" type="container" align="righttop" x="-50" width="40" height="100%" bgcapture="true" alpha="0.25" capture="false" zorder="2" onclick="skin_nextscene_loop(+1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
 		<layer name="skin_btn_next_fs_icon" style="skin_base" crop="64|64|64|64" align="center" scale="0.5" enabled="false" />
 		</layer>
+		<!-- <layer name="logolp" url="img/corp-logo.png" keep="true" align="topcenter" y="0" scale="1.0" scale.mobile="0.5" alpha="0"  enabled="false" onloaded="delayedcall(1, hsp-hide(); tween(y,40); tween(alpha,1); );" /> -->
 
 
 	<!-- gyro plugin -->
@@ -1059,6 +1060,7 @@ tween(hotspot[pop20-name].alpha,1);
 	</action>
 
 
+	<!-- First parameter to function is parent. Second param is strength. -->
 	<action name="skin_buttonglow">
 		if('%1' !== 'null',
 			set(strength,0.7);
@@ -1073,7 +1075,6 @@ tween(hotspot[pop20-name].alpha,1);
 			  );
 		  );
 	</action>
-
 
 	<action name="skin_calc_opened_closed">
 		if(layer[get(name)].y_closed === null,
