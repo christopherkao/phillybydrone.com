@@ -86,9 +86,47 @@
 
 
 		<!-- <hotspot name="spot1" style="skin_hotspotstyle" ath="-133" atv="-9" distorted="false" zoom="false" linkedscene="scene_old_city" /> -->
+
+		<!-- <hotspot name="iframe" ath="0" atv="0" url="skin/img/black.png" distorted="false" onloaded="add_iframe('https://player.vimeo.com/video/240951259', 640, 360);" renderer="css3d" />
+
+  	<action name="add_iframe" type="Javascript">
+	  	console.log('got to add_iframe');
+	    var iframe = document.createElement("iframe");
+	    iframe.style.position = "absolute";
+	    iframe.style.left = 0;
+	    iframe.style.top = 0;
+	    iframe.style.width = "100%";
+	    iframe.style.height = "100%";
+	    iframe.style.border = 0;
+	    iframe.src = args[1];
+	    caller.registercontentsize(args[2], args[3]);
+	    caller.sprite.appendChild(iframe);
+		</action> -->
+
+		<!-- <hotspot name="iframe"
+         url="skin/img/black.png"
+         ath="0" atv="0"
+         distorted="false"
+         onloaded="add_iframe('https://www.youtube.com/embed/p4j18C0CEEg', 640, 360);"
+         renderer="css3d"
+         /> -->
+<!-- 
+	  <action name="add_iframe" type="Javascript">
+	  	console.log('got to add_iframe');
+	    var iframe = document.createElement("iframe");
+	    iframe.style.position = "absolute";
+	    iframe.style.left = 0;
+	    iframe.style.top = 0;
+	    iframe.style.width = "100%";
+	    iframe.style.height = "100%";
+	    iframe.style.border = 0;
+	    iframe.src = args[1];
+	    caller.registercontentsize(args[2], args[3]);
+	    caller.sprite.appendChild(iframe);
+		</action> -->
 		
 		<!-- Penn Park -->
-		<hotspot name="pop00" ath="-82.57" atv="11.36" style="popup" img-url="skin/img/popup/comcast-center.jpg"/>
+		<hotspot name="pop00" ath="-82.57" atv="11.36" style="popup" iframe-url="https://player.vimeo.com/video/224009491?autoplay=1"/>
 		<!-- <hotspot name="pop01-name" ath="170.513" atv="-12.407" url="skin/img/popup/comcast-center-name.png" style="normal" edge="rightcenter" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
 
 		<!-- Penn Relays -->
@@ -112,7 +150,7 @@
 		<hotspot name="pop04a" ath="-44.28" atv="4.24" style="popup" img-url="skin/img/popup/rittenhouse-towers.jpg" />
 
 		<!-- Schuylkill Yards -->
-		<hotspot name="pop05" ath="-50.80" atv="8.25" style="popup" img-url="skin/img/popup/chop-roberts.jpg"/>
+		<hotspot name="pop05" ath="-50.80" atv="8.25" style="popup" iframe-url="https://player.vimeo.com/video/223036018?autoplay=1"/>
 		<!-- <hotspot name="pop05-name" ath="-86.87" atv="2.94" url="skin/img/popup/chop-roberts-center-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
 
 		<!-- EVO -->
@@ -131,7 +169,7 @@
 		<!-- <hotspot name="pop08-name" ath="57.94" atv="1.71" url="skin/img/popup/philadelphia-museum-of-art-perelman-building-name.png" style="normal" edge="centerleft" ox="00" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
 		
 		<!-- Conshohocken (SORA West) -->
-		<hotspot name="pop09" ath="-22.65" atv="0.07" style="popup" img-url="skin/img/popup/temple-morgan-hall.jpg" />
+		<hotspot name="pop09" ath="-22.65" atv="0.07" style="popup" iframe-url="https://player.vimeo.com/video/247052020?autoplay=1" />
 		<!-- <hotspot name="pop09-name" ath="99.186" atv="-4.29" url="skin/img/popup/morgan-hall-name.png" style="normal" edge="centerbottom" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
 
 		<!-- Philadelphia Museum of Art -->
@@ -154,7 +192,7 @@
 		<hotspot name="pop13a" ath="13.91" atv="14.15" style="popup" img-url="skin/img/popup/lds-temple.jpg"/>
 
 		<!-- Comcast Technology Center -->
-		<hotspot name="pop14" ath="31.83" atv="-9.75" style="popup" img-url="skin/img/popup/huntsman-hall.jpg" />
+		<hotspot name="pop14" ath="31.83" atv="-9.75" style="popup" iframe-url="https://player.vimeo.com/video/224009491?autoplay=1" />
 		<!-- <hotspot name="pop14-name" ath="-38.677" atv="4.519" url="skin/img/popup/huntsman-hall-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
 
 		<!-- 1301 Market -->
@@ -171,7 +209,7 @@
 		<hotspot name="pop18" ath="107.83" atv="3.01" style="popup" img-url="skin/img/popup/.jpg"/>
 
 		<!-- The Rail Park -->
-		<hotspot name="pop19" ath="62.94" atv="3.62" style="popup" img-url="skin/img/popup/.jpg"/>
+		<hotspot name="pop19" ath="62.94" atv="3.62" style="popup" iframe-url="https://player.vimeo.com/video/246619362?autoplay=1"/>
 		
 		<!-- Jeweler's Row -->
 		<hotspot name="pop20" ath="102.42" atv="3.10" style="popup" img-url="skin/img/popup/.jpg"/>

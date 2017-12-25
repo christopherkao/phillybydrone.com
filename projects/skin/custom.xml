@@ -163,8 +163,10 @@ if(webvr.isenabled,
 
 <!-- Change the tween rotate from 180 back to 135 to get diagonal -->
 <!-- Set the edge to centertop so that popup images display downwards -->
-<!-- Want popup to have a glow behind it -->
-<!-- TODO: May need to disable click on mobile -->
+
+<!-- TODO: Can have either iframe-url or img-url. Will call different
+functions depending on which is called. Or, maybe all will be iFrames? -->
+
   <style name="popup" url="custom/vtourskin_hotspot_multi.png" alpha="0" scale="0.5" depth="false"	
   	onover="set(hotspot[hotspot-glow].ath, get(ath));
   	set(hotspot[hotspot-glow].atv, get(atv));
@@ -182,22 +184,29 @@ if(webvr.isenabled,
 
   	"
 
-    onclick="if(rotate==90,tween(rotate,0); 
-    tween(hotspot[popup-img].alpha,0); 
-    tween(hotspot[popup-img].scale,0); , popup-close();  
-    tween(rotate,90); 
-    set(hotspot[popup-img].ath,get(ath) ); 
-    set(hotspot[popup-img].atv,calc(atv + 3.5)); 
-    set(hotspot[popup-img].url,get(img-url) );
-    set(hotspot[popup-img].edge, 'centertop');
-    set(hotspot[popup-img].scale,0); 
-    set(hotspot[popup-img].alpha,0); 
-    tween(hotspot[popup-img].scale,.5); 
-    tween(hotspot[popup-img].alpha,1); );"
+    onclick="if(rotate==90,
+    	tween(rotate,0); 
+    	tween(hotspot[iframe].alpha,0); 
+    	tween(hotspot[iframe].scale,0);
+    	set_iframe_src();
+    	 , 
+
+    	popup-close();  
+    	tween(rotate,90); 
+    	set_iframe_src(get(iframe-url));
+    	set(hotspot[iframe].ath,get(ath) ); 
+	    set(hotspot[iframe].atv,calc(atv + 3.5)); 
+	    set(hotspot[iframe].edge, 'centertop');
+	    set(hotspot[iframe].scale,0); 
+	    set(hotspot[iframe].alpha,0); 
+	    tween(hotspot[iframe].scale,.5); 
+	    tween(hotspot[iframe].alpha,1); );
+
+    "
 	
 		onloaded="delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear,set(enabled,true);); ); "
 
-	/>	
+	/>
 	
 	<!-- Try set scaleflying to false to have text be smaller in VR -->
  <style name="normal" alpha="0" onloaded="delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear););"	/>	
@@ -206,6 +215,26 @@ if(webvr.isenabled,
  <style name="popup-text" edge="centerbottom" scale="0" 	keep="true"		 oy="-20" visible="true" distorted="false" alpha="1"	         enabled="true" zorder="100"	        depth="off"	         polyline="false"	         scaleflying="false"	        tx="0"	         ty="0"	         tz="0"	        onclickx="if(webvr.isenabled !== true, tween(flying,0); tween(alpha,0); tween(oy,0 ); tween(scale,0 ); set(enabled,false);  ); set(first-view, get(view.fov) ); add(sec-view, -10,  get(first-view)); tween(view.fov,get(sec-view)); tween(hotspot[window-tint-hs].alpha,0 );  "	/>	
 
   <hotspot name="popup-img" ath="0" atv="0" style="popup-text" url="" enabled="false" />
+
+  <hotspot name="iframe" ath="0" atv="0" style="popup-text" url="img/black.png" enabled="true" distorted="false" onloaded="add_iframe(853, 480);" renderer="css3d" />
+
+  <action name="add_iframe" type="Javascript">
+    var iframe = document.createElement("iframe");
+    iframe.style.position = "absolute";
+    iframe.style.left = 0;
+    iframe.style.top = 0;
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = 0;
+    iframe.id = "iframe"
+    caller.registercontentsize(args[1], args[2]);
+    caller.sprite.appendChild(iframe);
+	</action>
+
+	<action name="set_iframe_src" type="Javascript">
+		var iframe = document.getElementById("iframe");
+		iframe.src = args[1];
+	</action>
 
   <hotspot name="hotspot-glow" ath="0" atv="0" url="" enabled="false"/>
 	
@@ -444,7 +473,7 @@ webvr.enterVR
 
 		<!-- <layer name="skin_btn_gyrox" style="custom_skin_base|skin_glow" crop="0|384|64|64"  align="rightbottom"      x="get:skin_settings.gyro-icon-xoffset"  y="30"  scale="0.56" onclick="switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap_custom(false));" visible="true" devices="html5" /> -->
 
-		<layer name="philly_by_drone_logo"        style="custom_skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="0"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="openurl(http://www.phillybydrone.com,_blank);" />	
+<!-- 		<layer name="philly_by_drone_logo"        style="custom_skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="0"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="openurl(http://www.phillybydrone.com,_blank);" />	 -->
 
 
 
