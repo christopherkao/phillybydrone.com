@@ -3,6 +3,8 @@
 	<!-- the skin -->
 	<include url="skin/vtourskin.xml" />
 	<include url="skin/custom.xml" />
+	<include url="skin/gallery.xml" />
+
 
 	<!-- This is the skin_settings where hs_anim_delay is set. -->
   <skin_settings maps="true"
@@ -154,7 +156,7 @@
 		<hotspot name="pop13a" ath="13.91" atv="14.15" style="popup" iframe-url="all/1919-market.html"/>
 
 		<!-- Comcast Technology Center -->
-		<hotspot name="pop14" ath="31.83" atv="-9.75" style="popup" iframe-url="https://player.vimeo.com/video/224009491?autoplay=1" />
+		<hotspot name="pop14" ath="31.83" atv="-9.75" style="popup" galleryname="gallery-1213-walnut" />
 		<!-- <hotspot name="pop14-name" ath="-38.677" atv="4.519" url="skin/img/popup/huntsman-hall-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
 
 		<!-- 1301 Market -->

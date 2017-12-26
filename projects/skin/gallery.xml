@@ -1,0 +1,38 @@
+<krpano>
+
+  <include url="%SWFPATH%/plugins/swipe_gallery.xml" />
+
+  <!-- events -->
+
+  <events onresize="make_gallery(get(activeGallery));" />
+
+
+  <!-- layers -->
+
+  <layer name="gallery" type="container" align="center" width="100%" height="100%" alpha="0" autoalpha="true" bgcolor="0x000000" bgalpha="0.8" keep="true">
+    <layer name="gallery_scrollarea" url="%SWFPATH%/plugins/scrollarea.js" keep="true" align="left" width="0" height="100%" zorder="1" direction="h" ondown="set(gallery_scrollarea_start_pos, get(x))">
+    </layer>
+    <layer name="arrow_left"  align="left"  x="10" keep="true" visible="false" zorder="2" onclick="move_image(left)" url="img/arrow_left.png"  />
+    <layer name="arrow_right" align="right" x="10" keep="true" visible="false" zorder="2" onclick="move_image(right)" url="img/arrow_right.png" />
+    <layer name="gallery_close" align="righttop" x="10" y="10" keep="true" zorder="2" onclick="hide_gallery()" url="img/close.png" />
+  </layer>
+  
+  <!-- data -->
+
+  <gallery name="gallery-1213-walnut" title="1213 Walnut">
+    <img name="img1" url="img/gallery/1213-walnut-1.jpg" />
+    <img name="img2" url="img/gallery/1213-walnut-2.jpg" />
+    <img name="img3" url="img/gallery/1213-walnut-3.jpg" />
+    <img name="img4" url="img/gallery/1213-walnut-4.jpg" />
+  </gallery>
+  
+  <gallery name="gallery2" title="Some other pictures">
+    <img name="img1" url="img/pic6.jpg" title="A dog" />
+    <img name="img2" url="img/pic7.jpg" title="My cat" />
+    <img name="img3" url="img/pic8.jpg" title="Canal" />
+    <img name="img4" url="img/pic9.jpg" title="Aquarium" />
+    <img name="img5" url="img/pic10.jpg" title="Aquarium" />
+    <img name="img6" url="img/pic11.jpg" title="Aquarium" />
+  </gallery>
+
+</krpano>

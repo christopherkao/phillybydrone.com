@@ -1,5 +1,7 @@
 ﻿<krpano>
 
+	<include url="%SWFPATH%/plugins/swipe_gallery.xml" />
+	
 	<action name="do_crop_animation">
 		<!-- add attributes to the hotspot -->
 		registerattribute(xframes, calc((imagewidth / %1) BOR 0));
@@ -184,7 +186,23 @@ functions depending on which is called. Or, maybe all will be iFrames? -->
 
   	"
 
-    onclick="if(rotate==90,
+    onclick="
+    show_gallery(get(galleryname));
+    if(rotate==90,
+    	tween(rotate,0); 
+    	show_gallery(get(galleryname));
+    	 , 
+    	show_gallery(get(galleryname));
+    	popup-close();  
+    	tween(rotate,90);
+
+    "
+	
+		onloaded="delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear,set(enabled,true);); ); "
+
+	/>
+
+	<!-- onclick="if(rotate==90,
     	tween(rotate,0); 
     	tween(hotspot[iframe].alpha,0); 
     	tween(hotspot[iframe].scale,0);
@@ -202,11 +220,7 @@ functions depending on which is called. Or, maybe all will be iFrames? -->
 	    tween(hotspot[iframe].scale,.5); 
 	    tween(hotspot[iframe].alpha,1); );
 
-    "
-	
-		onloaded="delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear,set(enabled,true);); ); "
-
-	/>
+    " -->
 	
 	<!-- Try set scaleflying to false to have text be smaller in VR -->
  <style name="normal" alpha="0" onloaded="delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear););"	/>	
@@ -488,12 +502,12 @@ webvr.enterVR
 				onup2=" skin_nextscene_loop(-1); " /> -->
 
 				<!-- Left and right buttons now navigate to the left and right -->
-		<layer	name="prev_button_s" keep="true"  style="skin_glow"	url="img/arrows.png"  align="left"  scale="0.5" scale.mobile="0.3" visible="get:skin_settings.arrows_html" autoalpha="false" alpha="1"
+		<!-- <layer	name="prev_button_s" keep="true"  style="skin_glow"	url="img/arrows.png"  align="left"  scale="0.5" scale.mobile="0.3" visible="get:skin_settings.arrows_html" autoalpha="false" alpha="1"
 				crop="0|120|85|120" ondown2="set(hlookat_moveforce,-1);" onup2=" set(hlookat_moveforce,0); " />
 				
 
 		<layer	name="next_button_s"  keep="true"  style="skin_glow" 	url="img/arrows.png"   align="right"  scale="0.5" scale.mobile="0.3" visible="get:skin_settings.arrows_html" autoalpha="false" alpha="1" 
-				crop="0|0|85|120"  ondown2="set(hlookat_moveforce,1);" onup2=" set(hlookat_moveforce,0); " />
+				crop="0|0|85|120"  ondown2="set(hlookat_moveforce,1);" onup2=" set(hlookat_moveforce,0); " /> -->
 
 		
 		<layer name="flash-skin-con" type="container" keep="true" visible="true" align="lefttop" width="100%" y="0" height="100%" autoalpha="true" alpha="0" >
@@ -1364,11 +1378,11 @@ set(active,1);
 	</action>
 
 
-<action name="hs-anim">
-tween(hotspot[get(name)].alpha,0,1.5,easeOutQuad,tween(hotspot[get(name)].alpha,1,.01,easeOut,   ); );
-tween(hotspot[get(name)].height,100,1.5,easeOutQuad,tween(hotspot[get(name)].height,40,.01,easeOut,   ); );
-tween(hotspot[get(name)].width,100,1.5,easeOutQuad,tween(hotspot[get(name)].width,40,.01,easeOut, hs-anim();  ); );
-</action>
+	<action name="hs-anim">
+	tween(hotspot[get(name)].alpha,0,1.5,easeOutQuad,tween(hotspot[get(name)].alpha,1,.01,easeOut,   ); );
+	tween(hotspot[get(name)].height,100,1.5,easeOutQuad,tween(hotspot[get(name)].height,40,.01,easeOut,   ); );
+	tween(hotspot[get(name)].width,100,1.5,easeOutQuad,tween(hotspot[get(name)].width,40,.01,easeOut, hs-anim();  ); );
+	</action>
 	
 	
 </krpano>
