@@ -86,44 +86,6 @@
 
 
 		<!-- <hotspot name="spot1" style="skin_hotspotstyle" ath="-133" atv="-9" distorted="false" zoom="false" linkedscene="scene_old_city" /> -->
-
-		<!-- <hotspot name="iframe" ath="0" atv="0" url="skin/img/black.png" distorted="false" onloaded="add_iframe('https://player.vimeo.com/video/240951259', 640, 360);" renderer="css3d" />
-
-  	<action name="add_iframe" type="Javascript">
-	  	console.log('got to add_iframe');
-	    var iframe = document.createElement("iframe");
-	    iframe.style.position = "absolute";
-	    iframe.style.left = 0;
-	    iframe.style.top = 0;
-	    iframe.style.width = "100%";
-	    iframe.style.height = "100%";
-	    iframe.style.border = 0;
-	    iframe.src = args[1];
-	    caller.registercontentsize(args[2], args[3]);
-	    caller.sprite.appendChild(iframe);
-		</action> -->
-
-		<!-- <hotspot name="iframe"
-         url="skin/img/black.png"
-         ath="0" atv="0"
-         distorted="false"
-         onloaded="add_iframe('https://www.youtube.com/embed/p4j18C0CEEg', 640, 360);"
-         renderer="css3d"
-         /> -->
-<!-- 
-	  <action name="add_iframe" type="Javascript">
-	  	console.log('got to add_iframe');
-	    var iframe = document.createElement("iframe");
-	    iframe.style.position = "absolute";
-	    iframe.style.left = 0;
-	    iframe.style.top = 0;
-	    iframe.style.width = "100%";
-	    iframe.style.height = "100%";
-	    iframe.style.border = 0;
-	    iframe.src = args[1];
-	    caller.registercontentsize(args[2], args[3]);
-	    caller.sprite.appendChild(iframe);
-		</action> -->
 		
 		<!-- Penn Park -->
 		<hotspot name="pop00" ath="-82.57" atv="11.36" style="popup" iframe-url="https://player.vimeo.com/video/224009491?autoplay=1"/>
@@ -177,7 +139,7 @@
 		<!-- <hotspot name="pop10-name" ath="113.27" atv="8.077" url="skin/img/popup/barnes-foundation-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
 
 		<!-- Benjamin Franklin Parkway -->
-		<hotspot name="pop11" ath="10.22" atv="8.16" style="popup" img-url="skin/img/popup/lds-temple.jpg" />
+		<hotspot name="pop11" ath="10.22" atv="8.16" style="popup" iframe-url="https://phillybydrone.com" />
 		<!-- <hotspot name="pop11-name" ath="137.90" atv="1.79" url="skin/img/popup/latter-day-saints-temple-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
 
 		<!-- Schuylkill Riverwalk -->
