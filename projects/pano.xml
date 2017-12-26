@@ -139,7 +139,7 @@
 		<!-- <hotspot name="pop10-name" ath="113.27" atv="8.077" url="skin/img/popup/barnes-foundation-name.png" style="normal" edge="centerleft" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
 
 		<!-- Benjamin Franklin Parkway -->
-		<hotspot name="pop11" ath="10.22" atv="8.16" style="popup" iframe-url="https://phillybydrone.com" />
+		<hotspot name="pop11" ath="10.22" atv="8.16" style="popup" iframe-url="http://phillybydrone.com" />
 		<!-- <hotspot name="pop11-name" ath="137.90" atv="1.79" url="skin/img/popup/latter-day-saints-temple-name.png" style="normal" edge="centerright" ox="0" oy="0" zorder="-1" depth="off" polyline="false" scaleflying="true" scale=".25" tx="0" ty="0" tz="0" enabled="false"/> -->
 
 		<!-- Schuylkill Riverwalk -->
