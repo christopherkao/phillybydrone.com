@@ -1,0 +1,47 @@
+.slick-prev:before, .slick-next:before {
+  color: white;
+  font-size: 100px;
+}
+
+.slick-dots li button:before {
+  color: white;
+  font-size: 30px;
+}
+
+.slick-dots {
+  bottom: 20px;
+}
+
+.slick-prev, .slick-next {
+  z-index: 999;
+}
+
+.slider-img {
+  width: 100%;
+}
+
+.slick-prev {
+  left: 10px;
+  top: 40%;
+}
+
+.slick-next {
+  right: 90px;
+  top: 40%;
+}
+
+.embed-container { 
+  position: relative; 
+  padding-bottom: 56.25%; 
+  height: 0; 
+  overflow: hidden; 
+  max-width: 100%; 
+  height: auto; } 
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+}
