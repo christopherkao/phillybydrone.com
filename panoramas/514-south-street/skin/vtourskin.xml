@@ -365,7 +365,7 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	<layer name="skin_btn_next_fs" keep="true" type="container" align="righttop" x="-50" width="40" height="100%" bgcapture="true" alpha="0.25" capture="false" zorder="2" onclick="skin_nextscene_loop(+1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
 		<layer name="skin_btn_next_fs_icon" style="skin_base" crop="64|64|64|64" align="center" scale="0.5" enabled="false" />
 	</layer>
-		<layer name="logolp" url="img/philly-by-drone-logo.png" keep="true" align="topcenter" y="0" scale="1.0" scale.mobile="0.5" alpha="0"  enabled="false" onloaded="delayedcall(1, hsp-hide(); tween(y,40); tween(alpha,1); );" />
+		<layer name="logolp" url="img/dalzell-capital-partners-logo.png" keep="true" align="topcenter" y="0" scale="1.0" scale.mobile="0.5" alpha="0"  enabled="false" onloaded="delayedcall(1, hsp-hide(); tween(y,40); tween(alpha,1); );" />
 
 
 	<!-- gyro plugin -->
