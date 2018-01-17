@@ -1,0 +1,97 @@
+﻿<krpano version="1.19" onstart="startup();" showerrors="false">
+	
+	<include url="skin/vtourskin.xml" />
+	<include url="skin/custom.xml" />
+
+  <skin_settings maps="true"
+	               maps_type=""
+	               custom_map="false"	
+				   			 menu-btn="true"
+				         map-btn="false"
+				         navxoffset="0"
+				         vr-icon-xoffset="20"
+				         fs-icon-xoffset="60"
+				         gyro-icon-xoffset="100"
+				  
+				   			 hs_delay="1"
+				   			 hs_anim_delay="0"
+				   			 bg_type="stretch"
+				   			 corporate_logo="true"
+				   			 corp-logo-xoffset="10"
+				   			 project_logo="true"
+				   
+				   			 zoom_buttons="false"	
+				   			 speak_buttons="false"
+				   			 password="false"
+				   			 start_screen="false"
+				   			 maps_bing_api_key=""
+	               maps_zoombuttons="false"
+				   			 maps_zoom="25"
+				   			 share-btn="false"
+	               			 gyro="false"
+	               arrows_html="true"
+				   			 title="1" 
+				   			 grid_button="false"
+				    		 littleplanetintro="false"
+	               />
+
+	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
+	
+	<action name="startup">
+		intro-page();
+	</action>
+
+	<action name="intro-page">
+
+		if(skin_settings.start_screen,
+ 	 		if(device.html, splash(); , flashsplash(); );,
+ 			set(layer[intro-con].visible,false);
+			set(intro_done,true);
+  		if(device.html, choose(); , flash-choose();); 
+ 	); 
+
+	</action>
+
+
+	<!-- <layer name="mappa" type="container" bgcapture="false" keep="true" align="left" edge="left" scalechildren="true" width="600" height="330" x="0" y="0" bgcolor="0xff8611" zorder="100" bgalpha="0.0" bgroundedge="0 10 10 0">
+		<layer name="map1" url="skin/01.png" keep="true" handcursor="true" align="lefttop" edge="lefttop" x="5" y="-5" alpha="0.6" zorder="1"/>
+		<layer name="map2" url="skin/02.png" background="false" bgcapture="false" keep="true" height="prop" widht="100%" handcursor="true" align="lefttop" edge="lefttop" x="5" y="-20" alpha="0.6" zorder="2" onclick="openmap();"/>
+		<layer name="map3" url="skin/03.png" background="false" bgcapture="false" keep="true" height="prop" widht="100%" handcursor="true" align="lefttop" edge="lefttop" x="5" y="-35" alpha="0.6" zorder="3" onclick="openmap();"/>
+		<layer name="map4" url="skin/04.png" background="false" bgcapture="false" keep="true" height="prop" widht="100%" handcursor="true" align="lefttop" edge="lefttop" x="5" y="-50" alpha="0.6" zorder="4" onclick="openmap();"/>
+	</layer> -->
+
+	<!-- Try inserting layers of text here -->
+	<layer name="map_nav" type="container" parent="mappa" keep="true" scalechildren="true" align="left" edge="left" width="40" height="300" x="0" y="0" bgcolor="0xff8611" zorder="100" bgalpha="0.0" maskchildren="true" bgroundedge="0 5 5 0">
+		<layer name="txt3" url="%SWFPATH%/plugins/textfield.swf" enabled="true" html="Floor" handcursor="true" align="rightttop" edge="rightttop" height="40" width="40" x="0" y="" zorder="100" keep="true" background="false" border="false" css="text-align:right; color:#ffffff; font-family: Geneva, Tahoma, Verdana, sans-serif; font-weight:bold; font-size:14px;" textshadow="1" onclick=""/>
+		<layer name="txt2" url="%SWFPATH%/plugins/textfield.swf" enabled="true" html="9th" handcursor="true" align="rightttop" edge="rightttop" height="30" width="40" x="0" y="20" zorder="100" keep="true" background="false" backgroundcolor="0x764413" border="false" css="text-align:right; color:#ffffff; font-family: Geneva, Tahoma, Verdana, sans-serif; font-weight:bold; font-size:20px;" textshadow="1" onover="tween(layer[map4].alpha, 1.0, 0.3); set(layer[txt2].background, true ); " onout="tween(layer[map4].alpha, 0.6, 0.3); set(layer[txt2].background, false );"/>
+		<layer name="txt1" url="%SWFPATH%/plugins/textfield.swf" html="8th" handcursor="true" align="rightttop" edge="rightttop" height="30" width="40" x="0" y="50" zorder="100" keep="true" background="false" backgroundcolor="0x764413" border="false" css="text-align:right; color:#ffffff; font-family: Geneva, Tahoma, Verdana, sans-serif; font-weight:bold; font-size:20px;" textshadow="1" onover="tween(layer[map3].alpha, 1.0, 0.3); tween(layer[map1].y, 150, 0.5); tween(layer[map2].y, 130, 0.5); tween(layer[map3].y, 110, 0.5); set(layer[txt1].background, true ); " onout="tween(layer[map3].alpha, 0.6, 0.3); tween(layer[map1].y, -5, 0.5); tween(layer[map2].y, -20, 0.5); tween(layer[map3].y, -35, 0.5); set(layer[txt1].background, false );"/>
+		<layer name="txt4" url="%SWFPATH%/plugins/textfield.swf" html="7th" handcursor="true" align="rightttop" edge="rightttop" height="30" width="40" x="0" y="80" zorder="100" keep="true" background="false" backgroundcolor="0x764413" border="false" css="text-align:right; color:#ffffff; font-family: Geneva, Tahoma, Verdana, sans-serif; font-weight:bold; font-size:20px;" textshadow="1" onover="tween(layer[map2].alpha, 1.0, 0.3); tween(layer[map1].y, 150, 0.5); tween(layer[map2].y, 130, 0.5); set(layer[txt4].background, true ); " onout="tween(layer[map2].alpha, 0.6, 0.3); tween(layer[map1].y, -5, 0.5); tween(layer[map2].y, -20, 0.5); set(layer[txt4].background, false );"/>
+		<layer name="txt5" url="%SWFPATH%/plugins/textfield.swf" html="6th" handcursor="true" align="rightttop" edge="rightttop" height="30" width="40" x="0" y="110" zorder="100" keep="true" background="false" backgroundcolor="0x764413" border="false" css="text-align:right; color:#ffffff; font-family: Geneva, Tahoma, Verdana, sans-serif; font-weight:bold; font-size:20px;" textshadow="1" onover="set(layer[map1].alpha, 1.0); tween(layer[map1].y, 150, 0.5); set(layer[txt5].background, true ); " onout="set(layer[map1].alpha, 0.6); tween(layer[map1].y, -5, 0.5); set(layer[txt5].background, false );"/>
+	</layer>
+
+
+	<scene name="scene" title="1911 Walnut" lat="" lng="" heading="" >
+
+		<view hlookat="50" vlookat="10" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="90" />
+
+
+		<preview url="pano.tiles/preview.jpg" />
+
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="8192" tiledimageheight="8192">
+				<cube url="pano.tiles/%s/l4/%v/l4_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="4096" tiledimageheight="4096">
+				<cube url="pano.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="2048" tiledimageheight="2048">
+				<cube url="pano.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="pano.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+	</scene>
+
+</krpano>
