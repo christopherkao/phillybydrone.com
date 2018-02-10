@@ -58,7 +58,7 @@
 	<scene name="scene_center_city" title="" lat="" lng="" heading="">
 
 		<!-- TODO: Remove this to take out the logs. -->
-		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
+		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
 		
 		<!-- view settings -->
 		<view hlookat="0" vlookat="2" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="85" fov="85" />
