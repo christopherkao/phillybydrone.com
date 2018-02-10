@@ -365,7 +365,6 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 	<layer name="skin_btn_next_fs" keep="true" type="container" align="righttop" x="-50" width="40" height="100%" bgcapture="true" alpha="0.25" capture="false" zorder="2" onclick="skin_nextscene_loop(+1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
 		<layer name="skin_btn_next_fs_icon" style="skin_base" crop="64|64|64|64" align="center" scale="0.5" enabled="false" />
 		</layer>
-		<!-- <layer name="logolp" url="img/corp-logo.png" keep="true" align="topcenter" y="0" scale="1.0" scale.mobile="0.5" alpha="0"  enabled="false" onloaded="delayedcall(1, hsp-hide(); tween(y,40); tween(alpha,1); );" /> -->
 
 
 	<!-- gyro plugin -->
@@ -532,7 +531,6 @@ set(hotspot[menuvr].state, 1); set(hotspot[menuvr].visible, false); set(hotspot[
 		zoomToSpotsExtent();
 	</action>
 
-	<!-- For some reason we have to set littleplanetintro to true to run this method which then generates the logos for HFF and 800 Brazos. Otherwise no logs if littleplanetintro is false. Modified delayedcall to go faster. -->
 	<!-- TODO: All I had to change is hs_anim_delay to 0. Before was 3 and 6!!! -->
 	<action name="skin_setup_littleplanetintro">
 	delayedcall(1, hsp-hide(); );
@@ -756,15 +754,6 @@ tween(hotspot[pop17].alpha,1);
 tween(hotspot[pop18].alpha,1); 
 tween(hotspot[pop19].alpha,1); 
 tween(hotspot[pop20].alpha,1);
- 
- 
-tween(hotspot[icon-1604-1].alpha,1); 
-tween(hotspot[icon-interstate-1].alpha,1); 
-tween(hotspot[icon-interstate-2].alpha,1); 
-tween(hotspot[spot1].alpha,1); 
-tween(hotspot[spot2].alpha,1); 
-tween(hotspot[spot3].alpha,1); 
-tween(hotspot[spot4].alpha,1); 
 
 tween(hotspot[pop01-name].alpha,1); 
 tween(hotspot[pop02-name].alpha,1); 
@@ -1337,74 +1326,11 @@ tween(hotspot[pop20-name].alpha,1);
 	</action>
 
 
-	<!-- context menu - http://krpano.com/docu/xml/#contextmenu -->
 	<contextmenu>
 		<item name="ab" caption="Created by PhillyByDrone.com" onclick="openurl(http://www.phillybydrone.com);"/>
 		<item name="fs" caption="FULLSCREEN" />
 		
 webvr.enterVR();		
 	</contextmenu>
-
-
-	<action name="skin_changecontrolmode">
-		switch(control.mouse, moveto, drag);
-		switch(control.touch, moveto, drag);
-	</action>
-
-	<action name="skin_view_look_straight">
-		if(view.vlookat LT -80 OR view.vlookat GT +80,
-			tween(view.vlookat, 0.0, 1.0, easeInOutSine);
-			tween(view.fov,     100, distance(150,0.8));
-		  );
-		skin_deeplinking_update_url(1.0);
-	</action>
-
-	<action name="skin_view_normal">
-		skin_view_look_straight();
-		tween(view.architectural, 0.0, distance(1.0,0.5));
-		tween(view.pannini,       0.0, distance(1.0,0.5));
-		tween(view.distortion,    0.0, distance(1.0,0.5));
-	</action>
-
-	<action name="skin_view_fisheye">
-		skin_view_look_straight();
-		tween(view.architectural, 0.0,  distance(1.0,0.5));
-		tween(view.pannini,       0.0,  distance(1.0,0.5));
-		tween(view.distortion,    0.35, distance(1.0,0.5));
-	</action>
-
-	<action name="skin_view_architectural">
-		skin_view_look_straight();
-		tween(view.architectural, 1.0, distance(1.0,0.5));
-		tween(view.pannini,       0.0, distance(1.0,0.5));
-		tween(view.distortion,    0.0, distance(1.0,0.5));
-	</action>
-
-	<action name="skin_view_stereographic">
-		skin_view_look_straight();
-		tween(view.architectural, 0.0, distance(1.0,0.5));
-		tween(view.pannini,       0.0, distance(1.0,0.5));
-		tween(view.distortion,    1.0, distance(1.0,0.8));
-	</action>
-
-	<action name="skin_view_pannini">
-		skin_view_look_straight();
-		tween(view.architectural, 0.0, distance(1.0,0.5));
-		tween(view.pannini,       1.0, distance(1.0,0.8));
-		if(view.distortion LT 0.1,
-			tween(view.distortion, 1.0, distance(1.0,0.8));
-		  );
-	</action>
-
-	<action name="skin_view_littleplanet">
-		tween(view.architectural, 0.0, distance(1.0,0.5));
-		tween(view.pannini,       0.0, distance(1.0,0.5));
-		tween(view.distortion,    1.0, distance(1.0,0.8));
-		tween(view.fov,           150, distance(150,0.8));
-		tween(view.vlookat,        90, distance(100,0.8));
-		add(new_hlookat, view.hlookat, 123.0);
-		tween(view.hlookat, get(new_hlookat), distance(100,0.8));
-		skin_deeplinking_update_url(1.0);
-	</action>
 
 </krpano>
