@@ -618,10 +618,6 @@ set(hotspot[pop19].visible,false);
 set(hotspot[pop20].visible,false);
 set(hotspot[pop21].visible,false); 
 set(hotspot[pop22].visible,false);
- 
-set(hotspot[icon-1604-1].visible,false); 
-set(hotspot[icon-interstate-1].visible,false); 
-set(hotspot[icon-interstate-2].visible,false); 
 
 
 set(hotspot[spot1].visible,false); 
@@ -629,7 +625,6 @@ set(hotspot[spot2].visible,false);
 set(hotspot[spot3].visible,false); 
 set(hotspot[spot4].visible,false);
 set(hotspot[spot5].visible,false); 
-
 
 
 set(hotspot[spot_anim_1].visible,false); 
