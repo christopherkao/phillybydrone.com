@@ -1092,12 +1092,6 @@
 	<!-- context menu - http://krpano.com/docu/xml/#contextmenu -->
 	<contextmenu>
 		<item name="ab" caption="Created by www.PhillyByDrone.com" onclick="openurl(http://www.phillybydrone.com);"/>
-		<item name="nv" caption="Normal View"        onclick="skin_view_normal();"        showif="view.vlookatrange == 180" separator="true"      />
-		<item name="fv" caption="Fisheye View"       onclick="skin_view_fisheye();"       showif="view.vlookatrange == 180" devices="flash|webgl" />
-		<item name="sv" caption="Stereographic View" onclick="skin_view_stereographic();" showif="view.vlookatrange == 180" devices="flash|webgl" />
-		<item name="av" caption="Architectural View" onclick="skin_view_architectural();" showif="view.vlookatrange == 180"                       />
-		<item name="pv" caption="Pannini View"       onclick="skin_view_pannini();"       showif="view.vlookatrange == 180" devices="flash|webgl" />
-		<item name="lp" caption="Little Planet View" onclick="skin_view_littleplanet();"  showif="view.vlookatrange == 180" devices="flash|webgl" />
 	</contextmenu>
 
 

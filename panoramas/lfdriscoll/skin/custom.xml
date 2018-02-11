@@ -127,20 +127,14 @@
   	set(hotspot[popup-img].atv,calc(atv + 3.5)); 
   	set(hotspot[popup-img].url,get(img-url) );  
   	set(hotspot[popup-img].edge, 'centertop');
-  	if(webvr.isenabled !== true, 
-  		tween(hotspot[popup-img].scale, .5);,
-  		tween(hotspot[popup-img].scale, .2);
-		);
+		tween(hotspot[popup-img].scale, .6);
   	tween(hotspot[popup-img].alpha,1);
 
   	set(hotspot[hotspot-glow].ath, get(ath));
   	set(hotspot[hotspot-glow].atv, get(atv));
   	set(hotspot[hotspot-glow].url, skin/glow.png);  
   	set(hotspot[hotspot-glow].edge, 'center');
-  	if(webvr.isenabled !== true, 
-  		tween(hotspot[hotspot-glow].scale, 1);,
-  		tween(hotspot[hotspot-glow].scale, .5);
-  	);
+		tween(hotspot[hotspot-glow].scale, 1);
   	tween(hotspot[hotspot-glow].alpha, 0.5);
 
   	" 
@@ -152,18 +146,24 @@
 
   	"
 
-    onclick="if(device.touch, if(rotate==90,tween(rotate,0); 
-    tween(hotspot[popup-img].alpha,0); 
-    tween(hotspot[popup-img].scale,0); , popup-close();  
-    tween(rotate,90); 
-    set(hotspot[popup-img].ath,get(ath) ); 
-    set(hotspot[popup-img].atv,calc(atv + 3.5)); 
-    set(hotspot[popup-img].url,get(img-url) );  
-    set(hotspot[popup-img].edge, 'centertop');
-    set(hotspot[popup-img].scale,0); 
-    set(hotspot[popup-img].alpha,0); 
-    tween(hotspot[popup-img].scale,.35); 
-    tween(hotspot[popup-img].alpha,1); ); );"
+    onclick="if(device.touch, 
+	    if(rotate==90,
+	    	tween(rotate,0); 
+	    	tween(hotspot[popup-img].alpha,0); 
+	    	tween(hotspot[popup-img].scale,0); ,
+	    
+	    	tween(rotate,90); 
+	    	set(hotspot[popup-img].ath,get(ath)); 
+	    	set(hotspot[popup-img].atv,calc(atv + 3.5)); 
+	    	set(hotspot[popup-img].url,get(img-url) );  
+	    	set(hotspot[popup-img].edge, 'centertop');
+	    	set(hotspot[popup-img].scale,0); 
+	    	set(hotspot[popup-img].alpha,0); 
+	    	tween(hotspot[popup-img].scale,.5); 
+	    	tween(hotspot[popup-img].alpha,1); 
+	  	); ,
+	  	openurl(get(web-url), _blank);
+  	);"
 	
 		onloaded="delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear,set(enabled,true);); ); "
 
@@ -171,62 +171,26 @@
 	
  	<style name="normal" alpha="0" onloaded="delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear););" zorder="-1" depth="off" polyline="false" scaleflying="true" enabled="false" />	
 	 
-	 <!-- Changed depth from 1000 to 100 -->
 	 <style name="popup-text" edge="centerbottom" scale="0" 	keep="true"		 oy="-20" visible="true" distorted="false" alpha="1"	         enabled="true" zorder="100"	        depth="off"	         polyline="false"	         scaleflying="false"	        tx="0"	         ty="0"	         tz="0"	        onclickx="if(webvr.isenabled !== true, tween(flying,0); tween(alpha,0); tween(oy,0 ); tween(scale,0 ); set(enabled,false);  ); set(first-view, get(view.fov) ); add(sec-view, -10,  get(first-view)); tween(view.fov,get(sec-view)); tween(hotspot[window-tint-hs].alpha,0 );  "	/>	
 
 	<hotspot name="popup-img" ath="0" atv="0" style="popup-text" url="" enabled="false" />
 
 	<hotspot name="hotspot-glow" ath="0" atv="0" url="" enabled="false"/>
-
-	<action name="popup-close" >
-		tween(hotspot[pop01].rotate,0); 
-		tween(hotspot[pop02].rotate,0);
-		tween(hotspot[pop03].rotate,0);
-		tween(hotspot[pop04].rotate,0);
-		tween(hotspot[pop05].rotate,0);
-		tween(hotspot[pop06].rotate,0);
-		tween(hotspot[pop07].rotate,0);
-		tween(hotspot[pop08].rotate,0);
-		tween(hotspot[pop09].rotate,0);
-		tween(hotspot[pop10].rotate,0);
-		tween(hotspot[pop11].rotate,0);
-		tween(hotspot[pop12].rotate,0);
-		tween(hotspot[pop13].rotate,0);
-		tween(hotspot[pop14].rotate,0);
-		tween(hotspot[pop15].rotate,0);
-	</action>
  
  <!-- custom Layout -->
  	<layer name="tooltip_hs" keep="true"  url="%SWFPATH%/plugins/textfield.swf" visible="true" alpha="1" enabled="false" align="topleft" edge="center" oy="-90" autoheight="true" autowidth="true"	       background="false" backgroundcolor="0x000000" backgroundalpha="0.5" padding="5 10 5 10" 	       border="fasle" bordercolor="0xffffff" borderalpha="1.0" borderwidth="3.0" roundedge="0" 	       shadow="0.0" shadowrange="4.0" shadowangle="45" shadowcolor="0x000000" shadowalpha="1" textshadow="1" textshadowrange="6.0" textshadowangle="90" textshadowcolor="0x000000" textshadowalpha="1.0"	       css="text-align:center; color:#ffffff; font-family:Arial; font-weight:normal; font-size:20px;" html="Tooltip Headline"	       y="0" x="0" 		   	/>
-	
-<layer name="intro-con" keep="true" visible="true" type="container" x="0" y="0" align="lefttop" width="100%" height="100%" autoalpha="true" alpha="1" scalechildren="true"  preload="true"  >
-
-
-	<layer name="flash-intro" type="container" keep="true" visible="true" align="center"  	   width="100%" height="100%" zorder="50"  scalechildren="true"	 >
-
-	</layer>
-
-	<layer name="html-windowtint" type="container" keep="true" visible="get:skin_settings.start_screen" align="centertop" x="0" y="0" scale="1" width="1000%" height="1000%" bgcolor="0X000000" bgalpha="1" scalechildren="true" alpha="1" zorder="1" >
-	</layer>	
-
-</layer> 
 
 <action name="choose" >
-
 loadscene(get(scene[0].name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend)); 
- 
-
 </action>
 
  
 	<layer name="main-skin-con" type="container" keep="true" visible="false"  align="lefttop" width="100%" y="0" height="100%" autoalpha="true" alpha="0" zorder="50" >
 		<layer name="grad-con" type="container" keep="true" url="img/gradient.png" visible="true" align="leftbottom" width="100%" x="0" y="0" height="100" enabled="false" alpha=".5" zorder="-1"  ></layer>
-
-		<layer name="html-skin_title" visible="true" url="%SWFPATH%/plugins/textfield.swf" keep="true" align="righttop" edge="" width="95%" height="32" autoheight="true" x="12" y="8" zorder="4" enabled="false" alpha="1" background="false" border="false" roundedge="0" 	       shadow="0.0" shadowrange="4.0" shadowangle="45" shadowcolor="0x000000" shadowalpha="1" textshadow="1" textshadowrange="6.0" textshadowangle="90" textshadowcolor="0x000000" textshadowalpha="1.0"	       css="text-align:right; color:#ffffff; font-family:Arial; font-weight:normal; font-size:18px;" css.mobile="text-align:right; color:#ffffff; font-family:Arial; font-weight:normal; font-size:18px;"     	   	/>
-		
-		<layer name="skin_np_title" visible="true"  url="%SWFPATH%/plugins/textfield.swf" keep="true" align="center" edge="" width="95%" height="32" autoheight="true"  zorder="4" enabled="false" alpha="1" background="false" border="false" roundedge="0" 	       shadow="0.0" shadowrange="4.0" shadowangle="45" shadowcolor="0x000000" shadowalpha="1" textshadow="1" textshadowrange="6.0" textshadowangle="90" textshadowcolor="0x000000" textshadowalpha="1.0"	       css="text-align:center; color:#ffffff; font-family:Arial; font-weight:normal; font-size:20px;" 		   	/>
 		
 		<layer name="html-skin_btn_vr"        style="skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="30"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR();" />	
+
+		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="0.4" onclick="openurl(http://www.lfdriscoll.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
 
 		<layer name="philly_by_drone_logo"        style="skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="0"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="openurl(http://www.phillybydrone.com,_blank);" />	
 
@@ -236,22 +200,13 @@ loadscene(get(scene[0].name),null,get(skin_settings.loadscene_flags),get(skin_se
 				
 		<layer	name="next_button_s"  keep="true"  style="skin_glow" 	url="img/arrows.png"   align="right"  scale="0.5" scale.mobile="0.3" visible="get:skin_settings.arrows_html" autoalpha="false" alpha="1" 
 				crop="0|0|85|120"  ondown2="set(hlookat_moveforce,1);" onup2=" set(hlookat_moveforce,0); " />
-		
-		<layer name="flash-skin-con" type="container" keep="true" visible="true" align="lefttop" width="100%" y="0" height="100%" autoalpha="true" alpha="0" >
-
-			<layer name="flash-nav-bar-con" type="container" align="rightbottom" x="0" onloaded="if(device.mobile, if(layer[html-menu-mobile].visible,set(x,get(skin_settings.navxoffset));,set(x,0);); , if(layer[html-menu-desktop].visible,set(x,get(skin_settings.navxoffset));,set(x,0);););"  y="10" ox="-55" keep="true" width="100%" height="100" maskchildren="false" >			
-						<layer name="flash-skin_btn_share"     style="skin_base|skin_glow" crop="0|320|64|64"   align="rightbottom"       x="-45"    y="-2"  scale="0.58" active="1" visible="false"  />				
-						<layer name="flash-control-bar" type="container" align="rightbottom" x="0" y="0" keep="true" width="100%" height="100" autoalpha="true" alpha="1" >			
-						</layer>
-			</layer>	
-		</layer>
 
 		<layer name="html-skin-con" type="container" keep="true" visible="true" align="lefttop" width="100%" height="100%"   autoalpha="true" alpha="1" >
 			<layer name="html-nav-bar-con" type="container" align="rightbottom" x="0" onloaded="if(device.mobile, if(layer[html-menu-mobile].visible,set(x,get(skin_settings.navxoffset));,set(x,0);); , if(layer[html-menu-desktop].visible,set(x,get(skin_settings.navxoffset));,set(x,0);););"  y="10" ox="-55" keep="true" width="100%" height="100" maskchildren="false" >	
 			
 						<layer name="html-control-bar" type="container" align="rightbottom" x="0" y="0"  keep="true" width="100%" height="100" autoalpha="true" alpha="1"   onloaded="if(layer[html-skin_btn_share].visible, set(x,0); , set(x,-45) );" >
 						
-							<layer name="html-skin_btn_fs2"        style="skin_base|skin_glow" crop="0|576|64|64"   align="rightbottom"       x="get:skin_settings.fs-icon-xoffset" x.mobile="0" x.tablet="0"  y="20"  scale="0.56" onclick="switch(fullscreen);" onover2="set(layer[skin_tp_fs].visible,true);" onout2="set(layer[skin_tp_fs].visible,false);" devices="fullscreensupport" />											
+							<layer name="html-skin_btn_fs2"        style="skin_base|skin_glow" crop="0|576|64|64"   align="rightbottom"       x="get:skin_settings.fs-icon-xoffset" y="20"  scale="0.56" onclick="switch(fullscreen);" onover2="set(layer[skin_tp_fs].visible,true);" onout2="set(layer[skin_tp_fs].visible,false);" devices="fullscreensupport" />											
 						</layer>
 			</layer>	
 		</layer>
@@ -292,7 +247,6 @@ loadscene(get(scene[0].name),null,get(skin_settings.loadscene_flags),get(skin_se
 		copy(hotspot[get(rnd_hs)].atv,hotspot[get(hs_name)].atv);
 		set(hotspot[get(rnd_hs)].url, get(scene[get(i)].thumburl));		
 		hotspot[get(rnd_hs)].loadstyle(skin_hotspot_round);		
-
 
 		);	
 </action>	
@@ -336,21 +290,15 @@ set(layer[skin_splitter_bottom].visible,false );
 	if(skin_settings.title,
 		copy(layer[html-skin_title].html, scene[get(xml.scene)].title );
 	);
-	tween(layer[skin_np_title].alpha,0,.5);
-			
-	tween(layer[skin_np_title].alpha,0);
+
 	set(layer[tooltip_hs].alpha,0);
 	 
 	if(device.mobile,	
 		set(layer[mobile-thumbs-con].active,1);
 	, 
 	
-	
-	set(layer[main-logo].visible,get(skin_settings.project_logo)); 
 	set(layer[html-skin_title].alpha,1);
-	set(layer[flash-skin-con].alpha,1);
 	set(layer[html-skin-con].alpha,1);
-	responsive_interface();
 	tween(layer[skin_btn_vr].alpha,1,.5,default,set(layer[skin_btn_vr].enabled,true););
 	tween(layer[skin_btn_zin].alpha,1,.5,default,set(layer[skin_btn_zin].enabled,true);); 
 	tween(layer[skin_btn_zout].alpha,1,.5,default,set(layer[skin_btn_zout].enabled,true);); 
@@ -400,139 +348,12 @@ if(device.mobile OR device.tablet,
 	  );
 </action>
 
-
 <action name="hotspot_animate">		
 	 inc(frame,1,get(lastframe),0);		
 	 mul(ypos,frame,frameheight);		
 	 txtadd(crop,'0|',get(ypos),'|',get(framewidth),'|',get(frameheight));
 	 delayedcall(0.03, if(animated == 1, hotspot_animate(); ); );	
 </action>	
-
-<action name="showscenename">	
-	copy(cursceneindex, scene[get(xml.scene)].index);
-	set(nextindex,%1);
-	add(nextindex,%1, cursceneindex);
-	if(nextindex LT 0,
-	add(nextindex, scene.count);
-	);
-	if(nextindex === scene.count,
-	set(nextindex, 0);
-	);
-	tween(layer[skin_np_title].alpha,1);
-	copy(layer[skin_np_title].html, scene[get(nextindex)].title );		
-</action>
-
-	<action name="skin_showmap_custom">
-		if(%1 == null, if(layer[skin_map].state == 'closed', set(show,true), set(show,false)); , set(show,%1); );
-
-		if(show,
-			add(maph, area.pixelheight, 200);
-			
-			set(layer[skin_map].visible, true);
-			tween(layer[skin_map].alpha, 1.0);
-			tween(layer[skin_map].height, get(maph));
-			set(layer[skin_map].state, 'opened');
-			
-		  ,
-		  	if(layer[skin_map].state != 'closed',
-			set(layer[skin_map].state, 'closed');
-			tween(layer[skin_map].height, 0);
-			tween(layer[skin_map].alpha, 1);
-			set(layer[skin_map].visible,true) 
-
-			);
-		  );
-	</action>
-	
-	
-	
-<action	name="responsive_interface" >
-if(device.flash,
-	if((stageheight LT 450) OR (stagewidth LT 850),
-	
-	set(layer[html-share-bar].visible,false);
-		set(layer[flash-skin-con].alpha,1);
-		set(layer[html-skin-con].alpha,0);
-		tween(layer[main-logo].scale,.15);	
-		set(layer[html-share-bar].visible,false);
-		
-		set(layer[flash-skin_btn_zout].x,-4);
-		set(layer[flash-skin_btn_zin].x,39);	
-		,
-		
-		set(layer[flash-skin_btn_zout].x,44);
-		set(layer[flash-skin_btn_zin].x,87);
-		set(layer[html-share-bar].visible,true);		
-		set(layer[html-share-bar].visible,true);
-		set(layer[flash-skin-con].alpha,0);
-		set(layer[html-skin-con].alpha,1);	
-		tween(layer[main-logo].scale,.25);			
-	tween(layer[prev_button_s].alpha,0); 
-	tween(layer[next_button_s].alpha,0); 
-
-	);
-
-
-	);
-
-	
-	
-if(device.html5,
-	if((stageheight LT 450) OR (stagewidth LT 850),
-	
-	set(layer[html-share-bar].visible,true);
-		set(layer[flash-skin-con].alpha,0);
-		set(layer[html-skin-con].alpha,1);
-		tween(layer[main-logo].scale,.15);	
-if(device.mobile,
-		set(layer[html-share-bar].visible,true);
-		
-		set(layer[html-skin_btn_zout].x,-4);
-		set(layer[html-skin_btn_zin].x,39);
-		set(layer[html-skin_btn_fs].x,45);	
-		
-		,
-
-		set(layer[html-share-bar].visible,false);
-	
-		set(layer[html-skin_btn_zout].x,-4);
-		set(layer[html-skin_btn_zin].x,39);
-		set(layer[html-skin_btn_fs].x,-45);	
-
-
-);		
-		
-
-	if(scene[get(xml.scene)].index LT 1,
-	tween(layer[prev_button_s].alpha,1); 	
-	tween(layer[next_button_s].alpha,1); 
-
-	,
-	
-	tween(layer[prev_button_s].alpha,1); 
-	tween(layer[next_button_s].alpha,1); 
-
-	);
-
-	if(scene[get(xml.scene)].index GT lastscene ,
-	tween(layer[prev_button_s].alpha,1); 
-	tween(layer[next_button_s].alpha,1); 
-
-
-	);	
-	
-		,
-		set(layer[html-skin_btn_fs].x,0);		
-		set(layer[html-skin_btn_zout].x,44);
-		set(layer[html-skin_btn_zin].x,87);
-		set(layer[html-share-bar].visible,true);		
-
-		set(layer[flash-skin-con].alpha,0);
-		set(layer[html-skin-con].alpha,1);	
-		tween(layer[main-logo].scale,.25);				
-	);
-	);
-	</action>
 
 	<action name="calc_layer_pos">	
 	asyncloop(hovering,	spheretoscreen(hotspot[%1].ath,hotspot[%1].atv,x,y);
