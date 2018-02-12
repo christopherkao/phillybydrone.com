@@ -127,15 +127,17 @@
   	set(hotspot[popup-img].atv,calc(atv + 3.5)); 
   	set(hotspot[popup-img].url,get(img-url) );  
   	set(hotspot[popup-img].edge, 'centertop');
-		tween(hotspot[popup-img].scale, .6);
+	tween(hotspot[popup-img].scale, .6);
   	tween(hotspot[popup-img].alpha,1);
 
   	set(hotspot[hotspot-glow].ath, get(ath));
   	set(hotspot[hotspot-glow].atv, get(atv));
   	set(hotspot[hotspot-glow].url, skin/glow.png);  
   	set(hotspot[hotspot-glow].edge, 'center');
-		tween(hotspot[hotspot-glow].scale, 1);
+	tween(hotspot[hotspot-glow].scale, 1);
   	tween(hotspot[hotspot-glow].alpha, 0.5);
+
+  	js(ga('send', 'event', 'popup', 'onover', get(img-url)));
 
   	" 
   	onout="tween(rotate,0); 
