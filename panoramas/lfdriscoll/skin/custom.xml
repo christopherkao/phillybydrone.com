@@ -127,14 +127,14 @@
   	set(hotspot[popup-img].atv,calc(atv + 3.5)); 
   	set(hotspot[popup-img].url,get(img-url) );  
   	set(hotspot[popup-img].edge, 'centertop');
-	tween(hotspot[popup-img].scale, .6);
+		tween(hotspot[popup-img].scale, .6);
   	tween(hotspot[popup-img].alpha,1);
 
   	set(hotspot[hotspot-glow].ath, get(ath));
   	set(hotspot[hotspot-glow].atv, get(atv));
   	set(hotspot[hotspot-glow].url, skin/glow.png);  
   	set(hotspot[hotspot-glow].edge, 'center');
-	tween(hotspot[hotspot-glow].scale, 1);
+		tween(hotspot[hotspot-glow].scale, 1);
   	tween(hotspot[hotspot-glow].alpha, 0.5);
 
   	js(ga('send', 'event', 'popup', 'onover', get(img-url)));
@@ -148,7 +148,8 @@
 
   	"
 
-    onclick="if(device.touch, 
+    onclick="js(ga('send', 'event', 'popup', 'onclick', get(img-url)));
+    if(device.touch, 
 	    if(rotate==90,
 	    	tween(rotate,0); 
 	    	tween(hotspot[popup-img].alpha,0); 
@@ -190,25 +191,25 @@ loadscene(get(scene[0].name),null,get(skin_settings.loadscene_flags),get(skin_se
 	<layer name="main-skin-con" type="container" keep="true" visible="false"  align="lefttop" width="100%" y="0" height="100%" autoalpha="true" alpha="0" zorder="50" >
 		<layer name="grad-con" type="container" keep="true" url="img/gradient.png" visible="true" align="leftbottom" width="100%" x="0" y="0" height="100" enabled="false" alpha=".5" zorder="-1"  ></layer>
 		
-		<layer name="html-skin_btn_vr"        style="skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="30"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR();" />	
+		<layer name="html-skin_btn_vr"        style="skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="30"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR(); js(ga('send', 'event', 'vr-button', 'onclick'));" />	
 
-		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="0.4" onclick="openurl(http://www.lfdriscoll.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
+		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="0.4" onclick="js(ga('send', 'event', 'corp-logo', 'onclick')); openurl(http://www.lfdriscoll.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
 
-		<layer name="philly_by_drone_logo"        style="skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="0"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="openurl(http://www.phillybydrone.com,_blank);" />	
+		<layer name="philly_by_drone_logo"        style="skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="0"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="js(ga('send', 'event', 'philly-by-drone-logo', 'onclick')); openurl(http://www.phillybydrone.com,_blank);" />	
 
 		<!-- Left and right buttons now navigate to the left and right -->
 		<layer	name="prev_button_s" keep="true"  style="skin_glow"	url="img/arrows.png"  align="left"  scale="0.5" scale.mobile="0.3" visible="get:skin_settings.arrows_html" autoalpha="false" alpha="1"
-				crop="0|120|85|120" ondown2="set(hlookat_moveforce,-1);" onup2=" set(hlookat_moveforce,0); " />
+				crop="0|120|85|120" ondown2="js(ga('send', 'event', 'left-arrow', 'onclick')); set(hlookat_moveforce,-1);" onup2=" set(hlookat_moveforce,0); " />
 				
 		<layer	name="next_button_s"  keep="true"  style="skin_glow" 	url="img/arrows.png"   align="right"  scale="0.5" scale.mobile="0.3" visible="get:skin_settings.arrows_html" autoalpha="false" alpha="1" 
-				crop="0|0|85|120"  ondown2="set(hlookat_moveforce,1);" onup2=" set(hlookat_moveforce,0); " />
+				crop="0|0|85|120"  ondown2="js(ga('send', 'event', 'right-arrow', 'onclick')); set(hlookat_moveforce,1);" onup2=" set(hlookat_moveforce,0); " />
 
 		<layer name="html-skin-con" type="container" keep="true" visible="true" align="lefttop" width="100%" height="100%"   autoalpha="true" alpha="1" >
 			<layer name="html-nav-bar-con" type="container" align="rightbottom" x="0" onloaded="if(device.mobile, if(layer[html-menu-mobile].visible,set(x,get(skin_settings.navxoffset));,set(x,0);); , if(layer[html-menu-desktop].visible,set(x,get(skin_settings.navxoffset));,set(x,0);););"  y="10" ox="-55" keep="true" width="100%" height="100" maskchildren="false" >	
 			
 						<layer name="html-control-bar" type="container" align="rightbottom" x="0" y="0"  keep="true" width="100%" height="100" autoalpha="true" alpha="1"   onloaded="if(layer[html-skin_btn_share].visible, set(x,0); , set(x,-45) );" >
 						
-							<layer name="html-skin_btn_fs2"        style="skin_base|skin_glow" crop="0|576|64|64"   align="rightbottom"       x="get:skin_settings.fs-icon-xoffset" y="20"  scale="0.56" onclick="switch(fullscreen);" onover2="set(layer[skin_tp_fs].visible,true);" onout2="set(layer[skin_tp_fs].visible,false);" devices="fullscreensupport" />											
+							<layer name="html-skin_btn_fs2"        style="skin_base|skin_glow" crop="0|576|64|64"   align="rightbottom"       x="get:skin_settings.fs-icon-xoffset" y="20"  scale="0.56" onclick="switch(fullscreen); js(ga('send', 'event', 'fs-button', 'onclick'));" onover2="set(layer[skin_tp_fs].visible,true);" onout2="set(layer[skin_tp_fs].visible,false);" devices="fullscreensupport" />											
 						</layer>
 			</layer>	
 		</layer>
