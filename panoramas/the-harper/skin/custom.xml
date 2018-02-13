@@ -170,6 +170,12 @@
 
 		<layer name="philly-by-drone-logo"        style="skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="0"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="js(ga('send', 'event', 'philly-by-drone-logo', 'onclick')); openurl(http://www.phillybydrone.com,_blank);" />	
 
+		<!-- Add a project logo for The Harper -->
+
+		<!-- TODO: Will want to get the fonts and colors to match The Harper style -->
+
+		<!-- TODO: Think about how to navigate between floors in VR -->
+
 		<!-- <layer name="left-button-s" keep="true"  style="skin_glow"	url="img/arrows.png"  align="left"  scale="0.5" scale.mobile="0.3" visible="get:skin_settings.arrows_html" autoalpha="false" alpha="1"
 				crop="0|120|85|120" ondown2="js(ga('send', 'event', 'left-arrow', 'onclick')); set(hlookat_moveforce,-1);" onup2=" set(hlookat_moveforce,0); " />
 				
