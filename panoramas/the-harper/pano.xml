@@ -16,6 +16,7 @@
    	/>
 	
 	<action name="startup">
+		<!-- TODO: Add analytics on which floors are visited most, which directions are looked at most. -->
 		set(scene_name, "floor_22");
 		if(fl !== null,
 			txtadd(scene_name, "floor_", get(fl));
