@@ -136,31 +136,28 @@
 	<layer name="main-skin-con" type="container" keep="true" visible="false"  align="lefttop" width="100%" y="0" height="100%" autoalpha="true" alpha="0" zorder="50" >
 		<layer name="grad-con" type="container" keep="true" url="img/gradient.png" visible="true" align="leftbottom" width="100%" x="0" y="0" height="100" enabled="false" alpha=".5" zorder="-1" />
 
+		<!-- TODO: Figure out a way to put a nice dark background behind the floor thumbnails -->
+		<!-- <layer name="grad-con-floors" type="container" keep="true" url="img/gradient-horizontal.png" visible="true" align="centerleft" width="120" height="100%" alpha=".5" zorder="-1" /> -->
+
 		<!-- Thumbnails to toggle between different floors, view on all devices. -->
-		<layer name="floors" type="container" keep="true"  visible="true" align="centerleft" width="120" height="500" zorder="10" devices="desktop|tablet|mobile"> 
+		<layer name="floors" type="container" keep="true"  visible="true" align="centerleft" width="120" height="300" zorder="10" devices="desktop|tablet|mobile"> 
 
 				<!-- Create a style guide for these -->
-        <layer name="floor-22-thumb" url="%SWFPATH%/skin/thumbs/floor_22_thumb.png" style="floor-thumbs" y="0" scene-name="floor_22" />	
+        <layer name="floor-24-thumb" url="%SWFPATH%/skin/thumbs/floor_24_thumb.png" style="floor-thumbs" y="0" scene-name="floor_24" />	
 
-        <layer name="floor-20-thumb" url="%SWFPATH%/skin/thumbs/floor_20_thumb.png" style="floor-thumbs" y="40" scene-name="floor_20" />
+        <layer name="floor-21-thumb" url="%SWFPATH%/skin/thumbs/floor_21_thumb.png" style="floor-thumbs" y="40" scene-name="floor_21" />
 
-        <layer name="floor-18-thumb" url="%SWFPATH%/skin/thumbs/floor_18_thumb.png" style="floor-thumbs" y="80" />
+        <layer name="floor-18-thumb" url="%SWFPATH%/skin/thumbs/floor_18_thumb.png" style="floor-thumbs" y="80" scene-name="floor_18" />
 
-        <layer name="floor-16-thumb" url="%SWFPATH%/skin/thumbs/floor_16_thumb.png" style="floor-thumbs" y="120" />
+        <layer name="floor-15-thumb" url="%SWFPATH%/skin/thumbs/floor_15_thumb.png" style="floor-thumbs" y="120" scene-name="floor_15" />
 
-        <layer name="floor-14-thumb" url="%SWFPATH%/skin/thumbs/floor_14_thumb.png" style="floor-thumbs" y="160" />
+        <layer name="floor-12-thumb" url="%SWFPATH%/skin/thumbs/floor_12_thumb.png" style="floor-thumbs" y="160" scene-name="floor_12" />
 
-        <layer name="floor-12-thumb" url="%SWFPATH%/skin/thumbs/floor_12_thumb.png" style="floor-thumbs" y="200" />
+        <layer name="floor-9-thumb" url="%SWFPATH%/skin/thumbs/floor_9_thumb.png" style="floor-thumbs" y="200" scene-name="floor_9" />
 
-        <layer name="floor-10-thumb" url="%SWFPATH%/skin/thumbs/floor_10_thumb.png" style="floor-thumbs" y="240" />
+        <layer name="floor-6-thumb" url="%SWFPATH%/skin/thumbs/floor_6_thumb.png" style="floor-thumbs" y="240" scene-name="floor_6" />
 
-        <layer name="floor-8-thumb" url="%SWFPATH%/skin/thumbs/floor_8_thumb.png" style="floor-thumbs" y="280" />
-
-        <layer name="floor-6-thumb" url="%SWFPATH%/skin/thumbs/floor_6_thumb.png" style="floor-thumbs" y="320" />
-
-        <layer name="floor-4-thumb" url="%SWFPATH%/skin/thumbs/floor_4_thumb.png" style="floor-thumbs" y="360" />
-
-        <layer name="floor-2-thumb" url="%SWFPATH%/skin/thumbs/floor_2_thumb.png" style="floor-thumbs" y="400" />
+        <layer name="floor-3-thumb" url="%SWFPATH%/skin/thumbs/floor_3_thumb.png" style="floor-thumbs" y="280" scene-name="floor_3" />
 		</layer>
 		
 		<layer name="html-skin_btn_vr"        style="skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="30"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR(); js(ga('send', 'event', 'vr-button', 'onclick'));" />	
