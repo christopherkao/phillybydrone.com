@@ -24,7 +24,7 @@
 		set(layer[intro-con].visible,false);
 		set(intro_done,true);
 		loadscene(get(scene_name),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend)); 
-		<!-- If there is a view passed in (north, west, east, south) -->
+
 		if(dir !== null,
 			if(dir == 'n',
 				set(offset, 0);
