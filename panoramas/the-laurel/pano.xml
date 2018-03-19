@@ -1,0 +1,78 @@
+﻿<krpano version="1.19" onstart="startup();" showerrors="false">
+	
+	<include url="skin/vtourskin.xml" />
+	<include url="skin/custom.xml" />
+
+  <skin_settings maps="true"
+	               maps_type=""
+	               custom_map="false"	
+				   			 menu-btn="true"
+				         map-btn="false"
+				         navxoffset="0"
+				         vr-icon-xoffset="20"
+				         fs-icon-xoffset="60"
+				         gyro-icon-xoffset="100"
+				  
+				   			 hs_delay="1"
+				   			 hs_anim_delay="0"
+				   			 bg_type="stretch"
+				   			 corporate_logo="true"
+				   			 corp-logo-xoffset="10"
+				   			 project_logo="true"
+				   
+				   			 zoom_buttons="false"	
+				   			 speak_buttons="false"
+				   			 password="false"
+				   			 start_screen="false"
+				   			 maps_bing_api_key=""
+	               maps_zoombuttons="false"
+				   			 maps_zoom="25"
+				   			 share-btn="false"
+	               			 gyro="false"
+	               arrows_html="true"
+				   			 title="1" 
+				   			 grid_button="false"
+				    		 littleplanetintro="false"
+	               />
+
+	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
+	
+	<action name="startup">
+		intro-page();
+	</action>
+
+	<action name="intro-page">
+
+		if(skin_settings.start_screen,
+ 	 		if(device.html, splash(); , flashsplash(); );,
+ 			set(layer[intro-con].visible,false);
+			set(intro_done,true);
+  		if(device.html, choose(); , flash-choose();); 
+ 	); 
+
+	</action>
+
+	<scene name="scene" title="Laurel Hill Cemetery" lat="" lng="" heading="" >
+
+		<view hlookat="15" vlookat="10" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="30" fovmax="110" />
+
+
+		<preview url="pano.tiles/preview.jpg" />
+
+			<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+				<level tiledimagewidth="8256" tiledimageheight="8256">
+					<cube url="pano.tiles/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+				</level>
+				<level tiledimagewidth="4160" tiledimageheight="4160">
+					<cube url="pano.tiles/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+				</level>
+				<level tiledimagewidth="2048" tiledimageheight="2048">
+					<cube url="pano.tiles/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+				</level>
+				<level tiledimagewidth="1024" tiledimageheight="1024">
+					<cube url="pano.tiles/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+				</level>
+			</image>
+	</scene>
+
+</krpano>
