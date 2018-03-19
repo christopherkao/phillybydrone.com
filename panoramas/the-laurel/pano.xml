@@ -52,7 +52,7 @@
 
 	</action>
 
-	<scene name="scene" title="Laurel Hill Cemetery" lat="" lng="" heading="" >
+	<scene name="scene" title="The Laurel" lat="" lng="" heading="" >
 
 		<view hlookat="15" vlookat="10" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="30" fovmax="110" />
 
