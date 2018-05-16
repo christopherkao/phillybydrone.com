@@ -1,4 +1,4 @@
-﻿<krpano version="1.19" title="LF Driscoll Projects" onstart="startup();" showerrors="false">
+﻿<krpano version="1.19" title="The Harper Views" onstart="startup();" showerrors="false">
 	
 	<!-- the skin -->
 	<include url="skin/vtourskin.xml" />
@@ -44,17 +44,19 @@
 
 	<!-- FLOOR 24 SCENE -->
 	<scene name="floor_24" title="" lat="" lng="" heading="">
+
+		<!-- TODO: Remove this to take out the logs. -->
+		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
 		
 		<!-- view settings -->
-		<view hlookat="0" vlookat="5" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="85" fov="85" />
+		<view hlookat="58" vlookat="1.5" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="85" fov="85" />
 
 		<preview url="panos/floor_24.tiles/preview.jpg" />
-
-		<image type="CUBE" prealign="0|40.0|0" multires="true" tilesize="512">
-			<level tiledimagewidth="8192" tiledimageheight="8192">
+		<image type="CUBE" prealign="0|32.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="8256" tiledimageheight="8256">
 				<cube url="panos/floor_24.tiles/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
 			</level>
-			<level tiledimagewidth="4096" tiledimageheight="4096">
+			<level tiledimagewidth="4160" tiledimageheight="4160">
 				<cube url="panos/floor_24.tiles/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
 			</level>
 			<level tiledimagewidth="2048" tiledimageheight="2048">
@@ -70,58 +72,124 @@
 	<!-- FLOOR 21 SCENE -->
 	<scene name="floor_21" title="" lat="" lng="" heading="">
 		<preview url="panos/floor_21.tiles/preview.jpg" />
-		<image prealign="0|-45.0|0">
-			<cube url="panos/floor_21.tiles/pano_%s.jpg" />
+		<image type="CUBE" prealign="0|-7.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="8256" tiledimageheight="8256">
+				<cube url="panos/floor_21.tiles/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="4160" tiledimageheight="4160">
+				<cube url="panos/floor_21.tiles/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2048" tiledimageheight="2048">
+				<cube url="panos/floor_21.tiles/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/floor_21.tiles/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
 		</image>
 	</scene>
 
 	<!-- FLOOR 18 SCENE -->
 	<scene name="floor_18" title="" lat="" lng="" heading="">
 		<preview url="panos/floor_18.tiles/preview.jpg" />
-		<image prealign="0|45.0|0">
-			<cube url="panos/floor_18.tiles/pano_%s.jpg" />
+		<image type="CUBE" prealign="0|-21.7|0" multires="true" tilesize="512">
+			<level tiledimagewidth="8256" tiledimageheight="8256">
+				<cube url="panos/floor_18.tiles/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="4160" tiledimageheight="4160">
+				<cube url="panos/floor_18.tiles/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2048" tiledimageheight="2048">
+				<cube url="panos/floor_18.tiles/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/floor_18.tiles/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
 		</image>
 	</scene>
 
 	<!-- FLOOR 15 SCENE -->
 	<scene name="floor_15" title="" lat="" lng="" heading="">
 		<preview url="panos/floor_15.tiles/preview.jpg" />
-		<image prealign="0|-45.0|0">
-			<cube url="panos/floor_15.tiles/pano_%s.jpg" />
+		<image type="CUBE" prealign="0|-22.3|0" multires="true" tilesize="512">
+			<level tiledimagewidth="8256" tiledimageheight="8256">
+				<cube url="panos/floor_15.tiles/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="4160" tiledimageheight="4160">
+				<cube url="panos/floor_15.tiles/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2048" tiledimageheight="2048">
+				<cube url="panos/floor_15.tiles/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/floor_15.tiles/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
 		</image>
 	</scene>
 
 	<!-- FLOOR 12 SCENE -->
 	<scene name="floor_12" title="" lat="" lng="" heading="">
 		<preview url="panos/floor_12.tiles/preview.jpg" />
-		<image prealign="0|45.0|0">
-			<cube url="panos/floor_12.tiles/pano_%s.jpg" />
+		<image type="CUBE" prealign="0|159.1|0" multires="true" tilesize="512">
+			<level tiledimagewidth="8256" tiledimageheight="8256">
+				<cube url="panos/floor_12.tiles/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="4160" tiledimageheight="4160">
+				<cube url="panos/floor_12.tiles/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2048" tiledimageheight="2048">
+				<cube url="panos/floor_12.tiles/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/floor_12.tiles/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
 		</image>
 	</scene>
 
 	<!-- FLOOR 9 SCENE -->
 	<scene name="floor_9" title="" lat="" lng="" heading="">
 		<preview url="panos/floor_9.tiles/preview.jpg" />
-		<image prealign="0|-45.0|0">
-			<cube url="panos/floor_9.tiles/pano_%s.jpg" />
+		<image type="CUBE" prealign="0|83.9|0" multires="true" tilesize="512">
+			<level tiledimagewidth="8256" tiledimageheight="8256">
+				<cube url="panos/floor_9.tiles/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="4160" tiledimageheight="4160">
+				<cube url="panos/floor_9.tiles/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2048" tiledimageheight="2048">
+				<cube url="panos/floor_9.tiles/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/floor_9.tiles/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
 		</image>
 	</scene>
 
 	<!-- FLOOR 6 SCENE -->
 	<scene name="floor_6" title="" lat="" lng="" heading="">
 		<preview url="panos/floor_6.tiles/preview.jpg" />
-		<image prealign="0|75.0|0">
-			<cube url="panos/floor_6.tiles/pano_%s.jpg" />
+		<image type="CUBE" prealign="0|-31.9|0" multires="true" tilesize="512">
+			<level tiledimagewidth="8320" tiledimageheight="8320">
+				<cube url="panos/floor_6.tiles/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="4160" tiledimageheight="4160">
+				<cube url="panos/floor_6.tiles/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2048" tiledimageheight="2048">
+				<cube url="panos/floor_6.tiles/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/floor_6.tiles/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
 		</image>
 	</scene>
 
 	<!-- FLOOR 3 SCENE -->
-	<scene name="floor_3" title="" lat="" lng="" heading="">
+<!-- 	<scene name="floor_3" title="" lat="" lng="" heading="">
 		<preview url="panos/floor_3.tiles/preview.jpg" />
 		<image prealign="0|45.0|0">
 			<cube url="panos/floor_3.tiles/pano_%s.jpg" />
 		</image>
-	</scene>
+	</scene> -->
 
 
 
