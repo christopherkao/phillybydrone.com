@@ -20,7 +20,7 @@
 		set(scene_name, "floor_24");
 		set(view.fov, 110);
 		set(view.fovmax, 110);
-		set(view.fovmin, 20);
+		set(view.fovmin, 40);
 		if(fl !== null,
 			txtadd(scene_name, "floor_", get(fl));
 		);
