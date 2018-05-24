@@ -18,6 +18,9 @@
 	<action name="startup">
 		<!-- TODO: Add analytics on which floors are visited most, which directions are looked at most. -->
 		set(scene_name, "floor_24");
+		set(view.fov, 110);
+		set(view.fovmax, 110);
+		set(view.fovmin, 20);
 		if(fl !== null,
 			txtadd(scene_name, "floor_", get(fl));
 		);
@@ -49,7 +52,7 @@
 		<events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" />
 		
 		<!-- view settings -->
-		<view hlookat="58" vlookat="1.5" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="85" fov="85" />
+		<view hlookat="58" vlookat="1.5" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" />
 
 		<preview url="panos/floor_24.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|32.0|0" multires="true" tilesize="512">
