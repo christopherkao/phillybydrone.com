@@ -59,20 +59,20 @@
 
 		<preview url="pano.tiles/preview.jpg" />
 
-			<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
-				<level tiledimagewidth="8256" tiledimageheight="8256">
-					<cube url="pano.tiles/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
-				</level>
-				<level tiledimagewidth="4160" tiledimageheight="4160">
-					<cube url="pano.tiles/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
-				</level>
-				<level tiledimagewidth="2048" tiledimageheight="2048">
-					<cube url="pano.tiles/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
-				</level>
-				<level tiledimagewidth="1024" tiledimageheight="1024">
-					<cube url="pano.tiles/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
-				</level>
-			</image>
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="8256" tiledimageheight="8256">
+				<cube url="pano.tiles/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="4160" tiledimageheight="4160">
+				<cube url="pano.tiles/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2048" tiledimageheight="2048">
+				<cube url="pano.tiles/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="pano.tiles/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
 	</scene>
 
 </krpano>
