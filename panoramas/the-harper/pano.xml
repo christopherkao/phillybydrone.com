@@ -151,7 +151,7 @@
 	<!-- FLOOR 9 SCENE -->
 	<scene name="floor_9" title="" lat="" lng="" heading="">
 		<preview url="panos/floor_9.tiles/preview.jpg" />
-		<image type="CUBE" prealign="0|83.9|0" multires="true" tilesize="512">
+		<image type="CUBE" prealign="0|-135.9|0" multires="true" tilesize="512">
 			<level tiledimagewidth="8256" tiledimageheight="8256">
 				<cube url="panos/floor_9.tiles/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
 			</level>
