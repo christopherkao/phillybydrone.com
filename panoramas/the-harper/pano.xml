@@ -52,7 +52,7 @@
 		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
 		
 		<!-- view settings -->
-		<view hlookat="58" vlookat="1.5" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" />
+		<view hlookat="58" vlookat="1.5" fovtype="MFOV" vlookatmax="-60" vlookatmin="90" limitview="range" />
 
 		<preview url="panos/floor_24.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|32.0|0" multires="true" tilesize="512">
@@ -74,6 +74,9 @@
 
 	<!-- FLOOR 21 SCENE -->
 	<scene name="floor_21" title="" lat="" lng="" heading="">
+
+		<view vlookatmax="-60" vlookatmin="90" limitview="range" />
+
 		<preview url="panos/floor_21.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|-7.0|0" multires="true" tilesize="512">
 			<level tiledimagewidth="8256" tiledimageheight="8256">
@@ -93,6 +96,9 @@
 
 	<!-- FLOOR 18 SCENE -->
 	<scene name="floor_18" title="" lat="" lng="" heading="">
+		
+		<view vlookatmax="-60" vlookatmin="90" limitview="range" />
+
 		<preview url="panos/floor_18.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|-21.7|0" multires="true" tilesize="512">
 			<level tiledimagewidth="8256" tiledimageheight="8256">
@@ -112,6 +118,9 @@
 
 	<!-- FLOOR 15 SCENE -->
 	<scene name="floor_15" title="" lat="" lng="" heading="">
+		
+		<view vlookatmax="-60" vlookatmin="90" limitview="range" />
+
 		<preview url="panos/floor_15.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|-22.3|0" multires="true" tilesize="512">
 			<level tiledimagewidth="8256" tiledimageheight="8256">
@@ -131,6 +140,9 @@
 
 	<!-- FLOOR 12 SCENE -->
 	<scene name="floor_12" title="" lat="" lng="" heading="">
+		
+		<view vlookatmax="-60" vlookatmin="90" limitview="range" />
+
 		<preview url="panos/floor_12.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|159.1|0" multires="true" tilesize="512">
 			<level tiledimagewidth="8256" tiledimageheight="8256">
@@ -150,6 +162,8 @@
 
 	<!-- FLOOR 9 SCENE -->
 	<scene name="floor_9" title="" lat="" lng="" heading="">
+		<view vlookatmax="-60" vlookatmin="90" limitview="range" />
+
 		<preview url="panos/floor_9.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|-135.9|0" multires="true" tilesize="512">
 			<level tiledimagewidth="8256" tiledimageheight="8256">
@@ -169,6 +183,9 @@
 
 	<!-- FLOOR 6 SCENE -->
 	<scene name="floor_6" title="" lat="" lng="" heading="">
+		
+		<view vlookatmax="-60" vlookatmin="90" limitview="range" />
+
 		<preview url="panos/floor_6.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|-31.9|0" multires="true" tilesize="512">
 			<level tiledimagewidth="8320" tiledimageheight="8320">
@@ -185,15 +202,5 @@
 			</level>
 		</image>
 	</scene>
-
-	<!-- FLOOR 3 SCENE -->
-<!-- 	<scene name="floor_3" title="" lat="" lng="" heading="">
-		<preview url="panos/floor_3.tiles/preview.jpg" />
-		<image prealign="0|45.0|0">
-			<cube url="panos/floor_3.tiles/pano_%s.jpg" />
-		</image>
-	</scene> -->
-
-
 
 </krpano>

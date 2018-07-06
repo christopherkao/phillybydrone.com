@@ -165,7 +165,9 @@
 
 		<layer name="html-skin_btn_fs2"        style="skin_base|skin_glow" crop="0|576|64|64"   align="rightbottom"       x="get:skin_settings.fs-icon-xoffset" y="30"  scale="0.56" onclick="switch(fullscreen); js(ga('send', 'event', 'fs-button', 'onclick'));" onover2="set(layer[skin_tp_fs].visible,true);" onout2="set(layer[skin_tp_fs].visible,false);" devices="fullscreensupport" />
 
-		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="1.0" onclick="js(ga('send', 'event', 'corp-logo', 'onclick')); openurl(http://www.lfdriscoll.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
+		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="0.5" onclick="js(ga('send', 'event', 'corp-logo', 'onclick')); openurl(https://pearl-properties.com/portfolio/the-harper/,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
+
+		<layer name="html-skin_btn_corp2" keep="true" style="skin_glow" url="img/corp-logo-pearl.png" alpha="1"  align="lefttop" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="15"  scale="0.5" onclick="js(ga('send', 'event', 'corp-logo', 'onclick')); openurl(https://pearl-properties.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
 
 		<layer name="philly-by-drone-logo"        style="skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="0"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="js(ga('send', 'event', 'philly-by-drone-logo', 'onclick')); openurl(http://www.phillybydrone.com,_blank);" />	
 
