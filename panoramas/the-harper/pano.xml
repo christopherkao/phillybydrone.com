@@ -18,9 +18,6 @@
 	<action name="startup">
 		<!-- TODO: Add analytics on which floors are visited most, which directions are looked at most. -->
 		set(scene_name, "floor_24");
-		set(view.fov, 110);
-		set(view.fovmax, 110);
-		set(view.fovmin, 40);
 		if(fl !== null,
 			txtadd(scene_name, "floor_", get(fl));
 		);
@@ -52,7 +49,7 @@
 		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
 		
 		<!-- view settings -->
-		<view hlookat="58" vlookat="1.5" fovtype="MFOV" vlookatmax="-60" vlookatmin="90" limitview="range" />
+		<view hlookat="58" vlookat="1.5" fovtype="MFOV" vlookatmax="-60" vlookatmin="90" limitview="range" fov="110" fovmax="110" fovmin="50"/>
 
 		<preview url="panos/floor_24.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|32.0|0" multires="true" tilesize="512">
@@ -75,7 +72,7 @@
 	<!-- FLOOR 21 SCENE -->
 	<scene name="floor_21" title="" lat="" lng="" heading="">
 
-		<view vlookatmax="-60" vlookatmin="90" limitview="range" />
+		<view hlookat="58" vlookat="1.5" fovtype="MFOV" vlookatmax="-60" vlookatmin="90" limitview="range" fov="110" fovmax="110" fovmin="50"/>
 
 		<preview url="panos/floor_21.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|-7.0|0" multires="true" tilesize="512">
@@ -97,7 +94,7 @@
 	<!-- FLOOR 18 SCENE -->
 	<scene name="floor_18" title="" lat="" lng="" heading="">
 		
-		<view vlookatmax="-60" vlookatmin="90" limitview="range" />
+		<view hlookat="58" vlookat="1.5" fovtype="MFOV" vlookatmax="-60" vlookatmin="90" limitview="range" fov="110" fovmax="110" fovmin="50"/>
 
 		<preview url="panos/floor_18.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|-21.7|0" multires="true" tilesize="512">
@@ -119,7 +116,7 @@
 	<!-- FLOOR 15 SCENE -->
 	<scene name="floor_15" title="" lat="" lng="" heading="">
 		
-		<view vlookatmax="-60" vlookatmin="90" limitview="range" />
+		<view hlookat="58" vlookat="1.5" fovtype="MFOV" vlookatmax="-60" vlookatmin="90" limitview="range" fov="110" fovmax="110" fovmin="50"/>
 
 		<preview url="panos/floor_15.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|-22.3|0" multires="true" tilesize="512">
@@ -141,7 +138,7 @@
 	<!-- FLOOR 12 SCENE -->
 	<scene name="floor_12" title="" lat="" lng="" heading="">
 		
-		<view vlookatmax="-60" vlookatmin="90" limitview="range" />
+		<view hlookat="58" vlookat="1.5" fovtype="MFOV" vlookatmax="-60" vlookatmin="90" limitview="range" fov="110" fovmax="110" fovmin="50"/>
 
 		<preview url="panos/floor_12.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|159.1|0" multires="true" tilesize="512">
@@ -162,7 +159,8 @@
 
 	<!-- FLOOR 9 SCENE -->
 	<scene name="floor_9" title="" lat="" lng="" heading="">
-		<view vlookatmax="-60" vlookatmin="90" limitview="range" />
+		
+		<view hlookat="58" vlookat="1.5" fovtype="MFOV" vlookatmax="-60" vlookatmin="90" limitview="range" fov="110" fovmax="110" fovmin="50"/>
 
 		<preview url="panos/floor_9.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|-135.9|0" multires="true" tilesize="512">
@@ -184,7 +182,7 @@
 	<!-- FLOOR 6 SCENE -->
 	<scene name="floor_6" title="" lat="" lng="" heading="">
 		
-		<view vlookatmax="-60" vlookatmin="90" limitview="range" />
+		<view hlookat="58" vlookat="1.5" fovtype="MFOV" vlookatmax="-60" vlookatmin="90" limitview="range" fov="110" fovmax="110" fovmin="50"/>
 
 		<preview url="panos/floor_6.tiles/preview.jpg" />
 		<image type="CUBE" prealign="0|-31.9|0" multires="true" tilesize="512">
