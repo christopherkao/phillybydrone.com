@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>The Harper Views</title>
-  <meta name="description" content="Drone panorama showcasing LF Driscoll projects in Philadelphia.">
+  <meta name="description" content="Stunning views from The Harper">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -33,15 +33,14 @@
 	<script>
 		// Get the floor number from url and pass it as a query into pano.xml.
 		// If there is no query floor number, then don't pass in anything.
-		// Or pass in 24 by default since that is the heightest floor.
+		// Or pass in 25 by default since that is the heightest floor.
 
 		// Additionally get the direction from url. It can be north, west, east, or south, and pass in that direction as well. 
 
-		// e.g. www.theharper.com/views?fl=22&dir=n
-		// This would load the 24th floor view
+		// e.g. www.theharper.com/views?fl=25&dir=n
+		// This would load the 25th floor view
 
-		// TODO: Also need to indicate which floor we are currently on.
-		embedpano({swf:"pano.swf", xml:"pano.xml", target:"pano", html5:"only", mobilescale:1.0, passQueryParameters:true, consolelog:true, debugmode:true});
+		embedpano({swf:"pano.swf", xml:"pano.xml", target:"pano", html5:"only", mobilescale:1.0, passQueryParameters:true, consolelog:false, debugmode:false});
 	</script>
 </div>
 
