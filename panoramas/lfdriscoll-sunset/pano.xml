@@ -1,0 +1,16 @@
+﻿<krpano>
+	
+	<!-- the skin -->
+	<include url="skin/defaultskin.xml" />
+	
+	<!-- view settings -->
+	<view hlookat="0" vlookat="0" maxpixelzoom="1.0" fovmax="150" limitview="auto" />
+	
+
+	<preview url="DJI_0001-2_Panorama.tiles/preview.jpg" />
+
+	<image prealign="0|0.0|0">
+		<cube url="DJI_0001-2_Panorama.tiles/pano_%s.jpg" />
+	</image>
+
+</krpano>
