@@ -1,0 +1,265 @@
+﻿<krpano>
+
+	<!-- Written by Christopher Kao for Philly By Drone -->
+	<!-- 2/12/18 -->
+
+	<!-- This is a slightly revised version of skin_events from vtourskin.xml -->
+	<events name="skin_events" keep="true"
+	        onxmlcomplete="skin_startup_custom();"
+	        onnewpano="skin_update_scene_infos(); new_scene_update(); skin_deeplinking_update_url(); "
+	        onremovepano=""
+	        onloadcomplete=""
+	        onidle="skin_deeplinking_update_url();"
+	        onenterfullscreen.fullscreensupport="set(layer[skin_btn_fs].crop, '64|576|64|64');"
+	        onexitfullscreen.fullscreensupport="set(layer[skin_btn_fs].crop, '0|576|64|64');"
+	        onkeydown="skin_keydown_event();"
+    />
+	
+	<!-- This is a redefined method of skin_hotspotstyle from vtourskin.xml which opens new scene -->
+	<style name="skin_hotspotstyle" url="vtourskin_hotspot_round.png" scale="0.5" edge="center" distorted="false" alpha="0" enabled="false"
+	       tooltip=""
+	       linkedscene=""
+	       linkedscene_lookat=""
+	       onclick="skin_hotspotstyle_clicked(); 
+	       tween(layer[tooltip_hs].alpha,0,.5);"
+	       onover="set(layer[tooltip_hs].html, get(scene[get(linkedscene)].title)); 
+	       calc_layer_pos(get(name)); 
+	       tween(layer[tooltip_hs].alpha,1,.5); 
+	       subtxt(spot_id, get(name), 4, 2); 
+	       txtadd(anim-hs,'spot_anim_', get(scene[get(linkedscene)].index));   txtadd(back-hs,'spot_back_', get(scene[get(linkedscene)].index)); 
+	       set(hotspot[get(back-hs)].ath,get(ath));  
+	       set(hotspot[get(back-hs)].atv,get(atv));  
+	       set(hotspot[get(back-hs)].visible,true);  
+	       tween(scale,2); 
+	       tween(alpha,0); 
+	       tween(hotspot[get(back-hs)].scale,.4); 
+	       tween(hotspot[get(back-hs)].alpha,1); 
+	       tween(hotspot[get(anim-hs)].scale,4); 
+	       set(hotspot[get(anim-hs)].visible,false); 
+	       tween(hotspot[get(anim-hs)].alpha,0);"
+	       onout="tween(layer[tooltip_hs].alpha,0,.5);  
+	       tween(scale,0.5); 
+	       tween(alpha,1); 
+	       tween(hotspot[get(back-hs)].scale,.1); 
+	       tween(hotspot[get(back-hs)].alpha,0); 
+	       tween(hotspot[get(anim-hs)].scale,1); 
+	       set(hotspot[get(anim-hs)].visible,true); 
+	       set(hotspot[get(anim-hs)].alpha,0); "
+	       onloaded=" delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear,set(enabled,true);); 
+	       set(skin_settings.hs_anim_delay,get(skin_settings.hs_delay));); 
+	       subtxt(spot_id, get(name), 4, 2); 
+	       txtadd(anim-hs,'spot_anim_', get(scene[get(linkedscene)].index));  
+	       set(hotspot[get(anim-hs)].ath,get(ath));
+	       set(hotspot[get(anim-hs)].atv,get(atv));
+	       set(hotspot[get(anim-hs)].visible,true);
+	       if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); 
+	       loadstyle(skin_tooltips); );"
+   	/>
+		
+	<!-- Custom code used to animate the hotspot which takes us to different scenes -->
+	<style name="skin_hotspot_anim" url="new-hotspot.png" keep="false" visible="false" alpha="0" scale="1" width="40" height="40" edge="center" distorted="false" enabled="false" zorder="-1"
+		   onloaded="set(alpha, 0); delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,0,1,linear, hs-anim(); ); set(skin_settings.hs_anim_delay,get(skin_settings.hs_delay));); " 
+   />
+	
+	<!-- Custom style used to define hotspot to different scene -->
+	<style name="skin_hotspot_round" keep="true"  visible="false" alpha="0" enabled="false" scale=".1" distorted="false" zorder="0" 	/>			   
+		   
+	<style name="skin_base" url="vtourskin.png" />
+
+	<!-- Change the tween rotate from 180 back to 135 to get diagonal -->
+	<!-- Set the edge to centertop so that popup images display downwards -->
+  	<style name="popup" url="vtourskin_hotspot_popup.png" alpha="0" scale="0.5" depth="false"	
+	  	onover="tween(rotate,90); 
+	  	set(hotspot[popup-img].ath,get(ath) ); 
+	  	set(hotspot[popup-img].atv,calc(atv + 3.5)); 
+	  	set(hotspot[popup-img].url,get(img-url) );  
+	  	set(hotspot[popup-img].edge, 'centertop');
+			tween(hotspot[popup-img].scale, .6);
+	  	tween(hotspot[popup-img].alpha,1);
+
+	  	set(hotspot[hotspot-glow].ath, get(ath));
+	  	set(hotspot[hotspot-glow].atv, get(atv));
+	  	set(hotspot[hotspot-glow].url, skin/glow.png);  
+	  	set(hotspot[hotspot-glow].edge, 'center');
+			tween(hotspot[hotspot-glow].scale, 1);
+	  	tween(hotspot[hotspot-glow].alpha, 0.5);
+
+	  	js(ga('send', 'event', 'popup', 'onover', get(img-url)));" 
+	  	onout="tween(rotate,0); 
+	  	tween(hotspot[popup-img].scale,0); 
+	  	tween(hotspot[popup-img].alpha,0);
+	  	tween(hotspot[hotspot-glow].scale, 0);
+	  	tween(hotspot[hotspot-glow].alpha, 0);"
+
+	    onclick="js(ga('send', 'event', 'popup', 'onclick', get(img-url)));
+	    if(device.touch, 
+		    if(rotate==90,
+		    	tween(rotate,0); 
+		    	tween(hotspot[popup-img].alpha,0); 
+		    	tween(hotspot[popup-img].scale,0); ,
+		    
+		    	tween(rotate,90); 
+		    	set(hotspot[popup-img].ath,get(ath)); 
+		    	set(hotspot[popup-img].atv,calc(atv + 3.5)); 
+		    	set(hotspot[popup-img].url,get(img-url) );  
+		    	set(hotspot[popup-img].edge, 'centertop');
+		    	set(hotspot[popup-img].scale,0); 
+		    	set(hotspot[popup-img].alpha,0); 
+		    	tween(hotspot[popup-img].scale,.5); 
+		    	tween(hotspot[popup-img].alpha,1); 
+		  	); ,
+		  	openurl(get(web-url), _blank);
+	  	);"
+	
+		onloaded="delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear,set(enabled,true);); ); "
+	/>	
+	
+	<!-- Ensures that name labels have a slight delay before appearing -->
+ 	<style name="name-label" alpha="0" onloaded="delayedcall(get(skin_settings.hs_anim_delay),tween(alpha,1,1,linear););" zorder="-1" depth="off" polyline="false" scaleflying="true" enabled="false" />	
+	 
+	<!-- Style for the images that come up -->
+	<style name="popup-text" edge="centerbottom" scale="0" 	keep="true"		 oy="-20" visible="true" distorted="false" alpha="1"	         enabled="true" zorder="100"	        depth="off"	         polyline="false"	         scaleflying="false"	        tx="0"	         ty="0"	         tz="0"	        onclickx="if(webvr.isenabled !== true, tween(flying,0); tween(alpha,0); tween(oy,0 ); tween(scale,0 ); set(enabled,false);  ); set(first-view, get(view.fov) ); add(sec-view, -10,  get(first-view)); tween(view.fov,get(sec-view)); tween(hotspot[window-tint-hs].alpha,0 );  "	/>	
+
+	<hotspot name="popup-img" ath="0" atv="0" style="popup-text" url="" enabled="false" />
+
+	<!-- Custom defined glow that appears -->
+	<hotspot name="hotspot-glow" ath="0" atv="0" enabled="false"/>
+ 
+ 	<!-- Tooltip is important for displaying name of scene when hovering over hotspot -->
+ 	<layer name="tooltip_hs" keep="true"  url="%SWFPATH%/plugins/textfield.swf" visible="true" alpha="1" enabled="false" align="topleft" edge="center" oy="-90" autoheight="true" autowidth="true"	       background="false" backgroundcolor="0x000000" backgroundalpha="0.5" padding="5 10 5 10" 	       border="fasle" bordercolor="0xffffff" borderalpha="1.0" borderwidth="3.0" roundedge="0" 	       shadow="0.0" shadowrange="4.0" shadowangle="45" shadowcolor="0x000000" shadowalpha="1" textshadow="1" textshadowrange="6.0" textshadowangle="90" textshadowcolor="0x000000" textshadowalpha="1.0"	       css="text-align:center; color:#ffffff; font-family:Arial; font-weight:normal; font-size:20px;" html="Tooltip Headline"	       y="0" x="0" 		   	/>
+ 
+ 	<!-- Main skin layers are defined here. -->
+	<layer name="main-skin-con" type="container" keep="true" visible="false"  align="lefttop" width="100%" y="0" height="100%" autoalpha="true" alpha="0" zorder="50" >
+		<layer name="grad-con" type="container" keep="true" url="img/gradient.png" visible="true" align="leftbottom" width="100%" x="0" y="0" height="100" enabled="false" alpha=".5" zorder="-1"  ></layer>
+		
+		<layer name="html-skin_btn_vr"        style="skin_base|skin_glow" crop="0|0|80|64"    align="rightbottom"     x="get:skin_settings.vr-icon-xoffset"   y="30"  scale="0.56"  visible="true" devices="webgl|mobile" onclick="webvr.enterVR(); js(ga('send', 'event', 'vr-button', 'onclick'));" />	
+
+		<layer name="html-skin_btn_fs2"        style="skin_base|skin_glow" crop="0|576|64|64"   align="rightbottom"       x="get:skin_settings.fs-icon-xoffset" y="30"  scale="0.56" onclick="switch(fullscreen); js(ga('send', 'event', 'fs-button', 'onclick'));" onover2="set(layer[skin_tp_fs].visible,true);" onout2="set(layer[skin_tp_fs].visible,false);" devices="fullscreensupport" />
+
+		<layer name="html-skin_btn_corp" keep="true" style="skin_glow" url="img/corp-logo.png" alpha="1"  align="leftbottom" x="get:skin_settings.corp-logo-xoffset" y="0" ox="10" oy="-15"  scale="0.4" onclick="js(ga('send', 'event', 'corp-logo', 'onclick')); openurl(http://www.lfdriscoll.com,_blank);" visible="get:skin_settings.corporate_logo"   onloaded=""/>
+
+		<layer name="philly-by-drone-logo"        style="skin_base|skin_glow" url="img/philly-by-drone-logo.png"    align="rightbottom"     x="0"   y="10"  scale="0.2"  visible="true" devices="webgl|mobile" onclick="js(ga('send', 'event', 'philly-by-drone-logo', 'onclick')); openurl(http://www.phillybydrone.com,_blank);" />	
+
+		<layer name="left-button-s" keep="true"  style="skin_glow"	url="img/arrows.png"  align="left"  scale="0.5" scale.mobile="0.3" visible="get:skin_settings.arrows_html" autoalpha="false" alpha="1"
+				crop="0|120|85|120" ondown2="js(ga('send', 'event', 'left-arrow', 'onclick')); set(hlookat_moveforce,-1);" onup2=" set(hlookat_moveforce,0); " />
+				
+		<layer name="right-button-s"  keep="true"  style="skin_glow" 	url="img/arrows.png"   align="right"  scale="0.5" scale.mobile="0.3" visible="get:skin_settings.arrows_html" autoalpha="false" alpha="1" 
+				crop="0|0|85|120"  ondown2="js(ga('send', 'event', 'right-arrow', 'onclick')); set(hlookat_moveforce,1);" onup2=" set(hlookat_moveforce,0); " />
+	</layer>  
+
+	<!-- My own method that brings up the skin layer and hotspots. -->
+	<action name="skin_setup">
+		tween(layer[main-skin-con].alpha, 1); 
+		delayedcall(0.5,  
+			tween(hotspot[region].alpha, 1, 2);   
+		);
+		set(control.usercontrol, all); 
+	</action>	   
+
+	<!-- Create hotspots that will take to different scenes. -->
+	<action name="hs_create">
+		for(set(i,0), i LT scene.count, inc(i),
+
+		add(j, get(i),1); txtadd(nr_hs,'spot_anim_',get(i));	 
+		txtadd(mnr_hs,'mspot_anim_',get(j));		
+		txtadd(hs_name,'spot',get(j));                           
+		txtadd(mhs_name,'mspot',get(j));
+		addhotspot(get(nr_hs));	                                 
+		addhotspot(get(mnr_hs));	
+
+		copy(hotspot[get(nr_hs)].ath,hotspot[get(hs_name)].ath); 
+		copy(hotspot[get(mnr_hs)].ath,hotspot[get(mhs_name)].ath);	
+		copy(hotspot[get(nr_hs)].atv,hotspot[get(hs_name)].atv); 
+		copy(hotspot[get(mnr_hs)].atv,hotspot[get(mhs_name)].atv);	
+		hotspot[get(nr_hs)].loadstyle(skin_hotspot_anim);        
+		hotspot[get(mnr_hs)].loadstyle(skin_hotspot_anim);
+		copy(hotspot[get(nr_hs)].keep,false);	                 
+		copy(hotspot[get(mnr_hs)].keep,false);
+		
+		txtadd(rnd_hs,'spot_back_',get(i));					
+		addhotspot(get(rnd_hs));
+		copy(hotspot[get(rnd_hs)].ath,hotspot[get(hs_name)].ath);	
+		copy(hotspot[get(rnd_hs)].atv,hotspot[get(hs_name)].atv);
+		set(hotspot[get(rnd_hs)].url, get(scene[get(i)].thumburl));		
+		hotspot[get(rnd_hs)].loadstyle(skin_hotspot_round);		
+
+		);	
+	</action>	
+
+	<!-- Custom skin startup that hides some skin layers, brings up main skin, creates hotspots -->
+	<action name="skin_startup_custom">
+		set(layer[skin_scroll_window].visible,false );
+		set(layer[skin_control_bar].visible,false );
+		set(layer[skin_splitter_bottom].visible,false );
+
+		if(skin_settings.webvr AND device.html5 AND device.webgl,
+			copy(plugin[WebVR].url, plugin[WebVR].pluginurl);
+	    );
+
+		skin_setup();
+
+		hs_create();		
+	</action>
+
+	<!-- What happens when a new scene is loaded -->
+	<action name="new_scene_update">
+		set(hotspot[popup-img].enabled, false);
+		set(hotspot[popup-img].alpha, 0);
+
+		set(hotspot[hotspot-glow].enabled, false);
+		set(hotspot[hotspot-glow].alpha, 0);
+
+		if(skin_settings.title,
+			copy(layer[html-skin_title].html, scene[get(xml.scene)].title );
+		);
+
+		set(layer[tooltip_hs].alpha,0);
+		
+		set(layer[html-skin_title].alpha,1);
+		tween(layer[skin_btn_vr].alpha,1,.5,default,set(layer[skin_btn_vr].enabled,true);); 
+		tween(layer[skin_btn_fs].alpha,1,.5,default,set(layer[skin_btn_fs].enabled,true);); 
+		set(layer[prev_button_s].x,0);
+		set(layer[next_button_s].x,0);
+	</action>	
+
+	<!-- Load the new scene with the hotspot is clicked -->
+	<action name="skin_hotspotstyle_clicked">
+		if(linkedscene,
+			if(linkedscene_lookat,
+				txtsplit(linkedscene_lookat, ',', hs_lookat_h, hs_lookat_v, hs_lookat_fov);
+		  	);
+			set(enabled, false);
+			skin_hidetooltips();
+			tween(alpha|oy|rx,0.0|0|0, 0.5, default,
+				skin_loadscene(get(linkedscene), get(skin_settings.loadscene_blend));
+				if(hs_lookat_h !== null,
+					skin_lookat(get(hs_lookat_h), get(hs_lookat_v), get(hs_lookat_fov));
+					delete(hs_lookat_h, hs_lookat_v, hs_lookat_fov);
+			  	);
+				skin_updatescroll();
+		  	);
+	  	);
+	</action>
+
+	<!-- Recalculate position for tooltip on hotspot for new scene -->
+	<action name="calc_layer_pos">	
+		asyncloop(hovering,	spheretoscreen(hotspot[%1].ath,hotspot[%1].atv,x,y);
+		copy(layer[tooltip_hs].x,x);
+		copy(layer[tooltip_hs].y,y); );		
+	</action>	
+	
+	<action name="calc_layer_pos_popup">	
+		asyncloop(hovering,	spheretoscreen(hotspot[%1].ath,hotspot[%1].atv,x,y);
+		add(x,hotspot[%1].ox); add(y,hotspot[%1].oy);
+		copy(layer[tooltip_hs].x,x);
+		copy(layer[tooltip_hs].y,y); );		
+	</action>
+
+	<!-- Animates the hotspot which takes us to different scenes -->
+	<action name="hs-anim">
+		tween(hotspot[get(name)].alpha,0,1.5,easeOutQuad,tween(hotspot[get(name)].alpha,1,.01,easeOut,   ); );
+		tween(hotspot[get(name)].height,100,1.5,easeOutQuad,tween(hotspot[get(name)].height,40,.01,easeOut,   ); );
+		tween(hotspot[get(name)].width,100,1.5,easeOutQuad,tween(hotspot[get(name)].width,40,.01,easeOut, hs-anim();  ); );
+	</action>
+	
+</krpano>
