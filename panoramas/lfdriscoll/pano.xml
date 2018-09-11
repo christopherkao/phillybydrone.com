@@ -28,14 +28,14 @@
 		<!-- <events onclick="screentosphere(mouse.x, mouse.y, m_ath, m_atv); showlog(); trace('clicked at ath=',m_ath,' atv=',m_atv);" /> -->
 		
 		<!-- view settings -->
-		<view hlookat="0" vlookat="2" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="40" fovmax="85" fov="85" />
+		<view hlookat="-10" vlookat="10" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="60" fovmax="120" fov="100" />
 		<!-- Set a tighter fov if device is mobile -->
 		<view fov="70" devices="mobile" />
 
 		<preview url="panos/center_city.tiles/preview.jpg" />
 
-		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
-			<level tiledimagewidth="8320" tiledimageheight="8320">
+		<image type="CUBE" prealign="-1.0|-8.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="8256" tiledimageheight="8256">
 				<cube url="panos/center_city.tiles/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
 			</level>
 			<level tiledimagewidth="4160" tiledimageheight="4160">
@@ -74,24 +74,24 @@
 		<hotspot name="pop06-name" ath="112.5" atv="2.7" url="skin/img/popup/perelman-center-name.png" style="name-label" edge="centerleft" scale=".25" />
 
 		<!-- Philadelphia Museum of Art -->
-		<hotspot name="pop07" ath="-139.66" atv="3.68" style="popup" img-url="skin/img/popup/philadelphia-museum-of-art.jpg" web-url="http://structuretone.com/lf-driscoll/safety/comcast-center/" />
-		<hotspot name="pop07-name" ath="-141.1" atv="3.68" url="skin/img/popup/philadelphia-museum-of-art-name.png" style="name-label" edge="centerright" scale=".25" />
+		<hotspot name="pop07" ath="-138.66" atv="5.68" style="popup" img-url="skin/img/popup/philadelphia-museum-of-art.jpg" web-url="http://structuretone.com/lf-driscoll/safety/comcast-center/" />
+		<hotspot name="pop07-name" ath="-140.1" atv="5.68" url="skin/img/popup/philadelphia-museum-of-art-name.png" style="name-label" edge="centerright" scale=".25" />
 
 		<!-- Philadelphia Museum of Art, Raymond G. Perelman Building -->
-		<hotspot name="pop08" ath="-129.08" atv="2.91" style="popup" img-url="skin/img/popup/pma-perelman.jpg" web-url="http://structuretone.com/lf-driscoll/safety/comcast-center/" />
-		<hotspot name="pop08-name" ath="-127.5" atv="2.91" url="skin/img/popup/philadelphia-museum-of-art-perelman-building-name.png" style="name-label" edge="centerleft" scale=".25" />
+		<hotspot name="pop08" ath="-129.08" atv="4.91" style="popup" img-url="skin/img/popup/pma-perelman.jpg" web-url="http://structuretone.com/lf-driscoll/safety/comcast-center/" />
+		<hotspot name="pop08-name" ath="-127.5" atv="4.91" url="skin/img/popup/philadelphia-museum-of-art-perelman-building-name.png" style="name-label" edge="centerleft" scale=".25" />
 		
 		<!-- Temple University Mitchell and Hilarie Morgan Hall Complex -->
-		<hotspot name="pop09" ath="-85.13" atv="-1.28" style="popup" img-url="skin/img/popup/temple-morgan-hall.jpg" web-url="http://structuretone.com/lf-driscoll/safety/comcast-center/" />
-		<hotspot name="pop09-name" ath="-85.13" atv="-2.79" url="skin/img/popup/morgan-hall-name.png" style="name-label" edge="centerbottom" scale=".25" />
+		<hotspot name="pop09" ath="-85.13" atv="0.5" style="popup" img-url="skin/img/popup/temple-morgan-hall.jpg" web-url="http://structuretone.com/lf-driscoll/safety/comcast-center/" />
+		<hotspot name="pop09-name" ath="-85.13" atv="-1" url="skin/img/popup/morgan-hall-name.png" style="name-label" edge="centerbottom" scale=".25" />
 
 		<!-- Barnes Foundation -->
-		<hotspot name="pop10" ath="-72.0" atv="9.7" style="popup" img-url="skin/img/popup/barnes-foundation.jpg" web-url="http://structuretone.com/lf-driscoll/safety/barnes-foundation/" />
-		<hotspot name="pop10-name" ath="-70.5" atv="9.7" url="skin/img/popup/barnes-foundation-name.png" style="name-label" edge="centerleft" scale=".25" />
+		<hotspot name="pop10" ath="-72.0" atv="11.0" style="popup" img-url="skin/img/popup/barnes-foundation.jpg" web-url="http://structuretone.com/lf-driscoll/safety/barnes-foundation/" />
+		<hotspot name="pop10-name" ath="-70.5" atv="11.0" url="skin/img/popup/barnes-foundation-name.png" style="name-label" edge="centerleft" scale=".25" />
 
 		<!-- The Church of Jesus Christ of Latter-Day Saints -->
-		<hotspot name="pop11" ath="-46.40" atv="4.89" style="popup" img-url="skin/img/popup/lds-temple.jpg" web-url="http://structuretone.com/lf-driscoll/safety/comcast-center/" />
-		<hotspot name="pop11-name" ath="-47.60" atv="3.89" url="skin/img/popup/latter-day-saints-temple-name.png" style="name-label" edge="centerbottom" scale=".25" />
+		<hotspot name="pop11" ath="-45.40" atv="4.89" style="popup" img-url="skin/img/popup/lds-temple.jpg" web-url="http://structuretone.com/lf-driscoll/safety/comcast-center/" />
+		<hotspot name="pop11-name" ath="-48.60" atv="5.89" url="skin/img/popup/latter-day-saints-temple-name.png" style="name-label" edge="centerbottom" scale=".25" />
 
 		<!-- LDS Meeting house -->
 		<hotspot name="pop12" ath="-42.67" atv="5.36" style="popup" img-url="skin/img/popup/lds-meeting-house.jpg" web-url="http://structuretone.com/lf-driscoll/safety/comcast-center/" />
@@ -102,8 +102,8 @@
 		<hotspot name="pop13-name" ath="-41" atv="-0.74" url="skin/img/popup/the-alexander-name.png" style="name-label" edge="centerleft" scale=".25" />
 
 		<!-- Huntsman Hall -->
-		<hotspot name="pop14" ath="135.39" atv="1.85" style="popup" img-url="skin/img/popup/huntsman-hall.jpg" web-url="http://structuretone.com/lf-driscoll/safety/comcast-center/" />
-		<hotspot name="pop14-name" ath="136.8" atv="1.85" url="skin/img/popup/huntsman-hall-name.png" style="name-label" edge="centerleft" scale=".25" />
+		<hotspot name="pop14" ath="135.39" atv="2.85" style="popup" img-url="skin/img/popup/huntsman-hall.jpg" web-url="http://structuretone.com/lf-driscoll/safety/comcast-center/" />
+		<hotspot name="pop14-name" ath="136.8" atv="2.85" url="skin/img/popup/huntsman-hall-name.png" style="name-label" edge="centerleft" scale=".25" />
 
 		<!-- Citizens Bank Park -->
 		<hotspot name="pop15" ath="53.37" atv="0.22" style="popup" img-url="skin/img/popup/citizens-bank-park.jpg" web-url="http://structuretone.com/lf-driscoll/safety/comcast-center/" />
