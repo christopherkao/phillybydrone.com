@@ -93,7 +93,6 @@ header img {
 }
 header video {
     z-index: -1; /* This was the trick to get the video in the back! Yes! */
-    height: 100%;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -220,6 +219,16 @@ header .intro-text .skills {
 @media (min-width: 1681px) {
     header {
         height: 1400px
+    }
+}
+@media screen and (max-aspect-ratio: 1920/1080) {
+    header > video {
+        height: 100%;
+    }
+}
+@media screen and (min-aspect-ratio: 1920/1080) {
+    header > video {
+        width: 100%;
     }
 }
 section {
