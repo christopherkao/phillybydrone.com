@@ -78,7 +78,9 @@ header {
   -o-background-size: cover;
   background-size: cover;
   color: white;
-  padding-top: 50px;
+  padding-top: 0px;
+  width: 100%;
+  overflow: hidden;
   /*background: #A85253;*/
 }
 header .container {
@@ -88,6 +90,16 @@ header .container {
 header img {
   display: block;
   margin: 0 auto 20px;
+}
+header video {
+    z-index: -1; /* This was the trick to get the video in the back! Yes! */
+    height: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
 }
 header .intro-text .name {
   display: block;
@@ -100,7 +112,11 @@ header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 999px) {
+    /*    Make header taller on tablets*/
+    header {
+        height: 800px
+    }
   header .container {
     padding-top: 200px;
     padding-bottom: 100px;
@@ -182,6 +198,29 @@ header .intro-text .skills {
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
   }
+}
+@media (max-width: 767px) {
+    /*    Make cover photo not as tall on mobile */
+    header {
+        height: 700px
+    }
+    .navbar-custom .navbar-brand {
+        font-size: 1.1em;
+    }
+}
+
+/*Make cover photo even taller on laptop and small desktops */
+@media (min-width: 1000px) and (max-width: 1680px) {
+    header {
+        height: 1000px
+    }
+}
+
+/*Make cover photo even taller on large desktops */
+@media (min-width: 1681px) {
+    header {
+        height: 1400px
+    }
 }
 section {
   padding: 100px 0;
@@ -593,10 +632,6 @@ h5 {
 
 iframe {
   border: 0px;
-}
-
-header {
-  background-color: #A85253;
 }
 
 #aerial-panoramas { 
