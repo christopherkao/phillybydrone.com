@@ -52,7 +52,7 @@
 
 	</action>
 
-	<scene name="scene" title="Rittenhouse Square" lat="" lng="" heading="" >
+	<scene name="scene" title="" lat="" lng="" heading="" >
 
 		<view hlookat="10" vlookat="10" fovtype="MFOV" vlookatmax="-90" vlookatmin="90" limitview="range" fovmin="30" fovmax="110" />
 
