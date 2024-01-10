@@ -1,12 +1,13 @@
-# Philly By Drone Website (http://www.phillybydrone.com) 
-README was last updated on December 19, 2017
+# Philly By Drone Website 
 
-## TO DO
+## About
 
-[] Want to have separate page for Orbit - interactive drone panorama.
-[] Video on home page can be updated, size is off and doesn't play on mobile.
-[] Update the updates on the home page
-[] Really focus on promoting the Orbit technology because it is huge!
+This is the company website for Philly By Drone: [https://www.phillybydrone.com](https://www.phillybydrone.com). It was created by Christopher Kao. 
 
-## Creator
-Created by and is maintained by **[Christopher Kao](http://www.christopherkao.me)**
+## Tech
+
+This is a single page Bootstrap website.
+
+## Last Updated
+
+Last updated on January 9, 2024.
